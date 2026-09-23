@@ -5,7 +5,7 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const CDIR = join(ROOT, 'components'), EDIR = join(ROOT, 'editors');
-const NATIVE = new Set(['substrate', 'portal', 'zone', 'piece', 'aivatar', 'thot-memory', 'participant', 'remote-participant']);
+const NATIVE = new Set(['substrate', 'portal', 'zone', 'piece', 'aivatar', 'thot-memory', 'participant', 'remote-participant', 'sceptre', 'orb']);
 const SKIP = new Set(['id', 'name', 'type', 'parentId', 'sessionId', 'pick', 'visible']);
 const COLOR = /(^|[a-z])(color|tint|bg)$|Color$/i, ASSET = /^(url|src|model|vrm|texture|image|audio|video|file|href|glb)$/i;
 const INT = /^(count|rows|cols|puffs|rays|sparks|segments|seed|nodes|rate|dims|run)$/;

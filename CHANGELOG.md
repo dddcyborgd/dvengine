@@ -1,5 +1,12 @@
 # Changelog — dvengine
 
+## 0.0.2-alpha — 2026-09-23
+
+- `input/`: DVJoystick · DVChords · DVMouseStick · DVSenseStick · DVControls — old-school joystick layouts (ESDF·A/C·Space / IJKL;, with K the core button of combinations / arrows), the mouse, the mic and the camera as sources, chords, gamepad, persisted custom layouts.
+- `verse/field.js` (DVField, alias DVSphere) + `field.math.js`: the resizable field of influence — items (sceptre, orb) on its surface, arm reach, drivers (mouse arcball, right stick, XR), recognition (degree = r/max × outflow, the bound at extent − 1), the hierarchy's two dials, modes open · connected · private with links.
+- components `sceptre`, `orb`; editors regenerated (47 schemas); dist lane `dvengine-input.js`.
+- 92 tests.
+
 ## 0.0.1-alpha — 2026-09-23
 
 The first complete alpha: a DeltaVerse can enter a cyborg space, edit it, and hand it to the triad.

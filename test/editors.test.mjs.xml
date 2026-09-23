@@ -2,7 +2,7 @@
 <doc for="test/editors.test.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
   <lane>node</lane>
   <kind>test</kind>
-  <github sha="a601e2910b18f91ec236d6ac21da13dd878ce25c" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <github sha="bea42ffc1611240077af768d974cfcaeb8a6e268" upstream="https://github.com/dddcyborgd/dvengine"/>
   <migration target="stays-mjs" status="live">
     <how>node --test.</how>
     <why>No test framework dependency.</why>

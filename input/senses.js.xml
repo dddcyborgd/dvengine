@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="input/senses.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-input</kind>
+  <github sha="ff823bda10e42b728fe918157c17ead83fdc0a36" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVJoystick · DVChords · DVMouseStick · DVSenseStick · DVControls: every source (keys, gamepad, mouse, mic, camera) becomes the same stick model; the merger wires it to the participant, the field of influence and the net.</how>
+    <why>Old-school joystick controls (ESDF·A/C·Space · IJKL; with K the core of combinations · arrows) that any input can emulate.</why>
+  </migration>
+</doc>

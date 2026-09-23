@@ -44,7 +44,7 @@
   }
 
   /** The component types the world needs: the native set + every type the document names. */
-  var NATIVE = ['substrate', 'portal', 'zone', 'piece', 'aivatar', 'thot-memory', 'participant', 'remote-participant', 'lighting'];
+  var NATIVE = ['substrate', 'portal', 'zone', 'piece', 'aivatar', 'thot-memory', 'participant', 'remote-participant', 'lighting', 'sceptre', 'orb'];
   function typesOf(doc) { var t = NATIVE.slice(), c = (doc && doc.components) || {}; Object.keys(c).forEach(function (k) { var ty = c[k] && c[k].type; if (ty && t.indexOf(ty) < 0) t.push(ty); }); return t; }
   /** Register every needed type first (DVEngine.lazy resolves at once when already registered; a type that cannot load is skipped, never fatal). */
   function ensure(doc) {

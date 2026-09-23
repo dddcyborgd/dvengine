@@ -1,4 +1,4 @@
-// dvengine — editors/index.js (DVEditors) + the 45 generated editors/<type>/index.js + editors/registry.json · node --test (no three.js)
+// dvengine — editors/index.js (DVEditors) + the 47 generated editors/<type>/index.js + editors/registry.json · node --test (no three.js)
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
@@ -9,12 +9,12 @@ const registry = JSON.parse(readFileSync(new URL('../editors/registry.json', imp
 const manifest = JSON.parse(readFileSync(new URL('../components/manifest.json', import.meta.url), 'utf8'));
 const KINDS = new Set(ED.KINDS);
 
-test('every component folder has an editor that registers at load, and the registry lists all 45', () => {
+test('every component folder has an editor that registers at load, and the registry lists all 47', () => {
   const dirs = readdirSync(new URL('../components/', import.meta.url), { withFileTypes: true }).filter((e) => e.isDirectory()).map((e) => e.name).sort();
-  assert.equal(dirs.length, 45);
+  assert.equal(dirs.length, 47);
   for (const t of dirs) { const s = require(`../editors/${t}/index.js`); assert.equal(s.type, t); assert.ok(ED.has(t), t + ' registered'); }
   assert.deepEqual(ED.types(), dirs);
-  assert.equal(registry.count, 45); assert.deepEqual(Object.keys(registry.editors).sort(), dirs);
+  assert.equal(registry.count, 47); assert.deepEqual(Object.keys(registry.editors).sort(), dirs);
   assert.ok(manifest.components.every((c) => ED.has(c.type)), 'each manifest type has an editor');
 });
 

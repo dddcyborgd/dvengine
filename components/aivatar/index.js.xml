@@ -2,7 +2,7 @@
 <doc for="components/aivatar/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
   <lane>prototype</lane>
   <kind>dvengine-component</kind>
-  <github sha="bd41abb9c44a55fbc6126b832332dc2e91a100fe" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <github sha="dfad2e7a8fb7044590dbf967354d3aa55f826c4c" upstream="https://github.com/dddcyborgd/dvengine"/>
   <migration target="stays-js" status="live">
     <how>Folder-is-module component: registers itself with DVEngine at load; init(ctx) → update(dt,t) → dispose().</how>
     <why>Every world object is a component with one lifecycle (the awe design, kept).</why>

@@ -5,7 +5,8 @@
  * transform (net/interp.js: 200 ms buffer at 20 Hz, ≤100 ms extrapolation, shortest-arc yaw). The
  * animation state `a` drives the legs; `txt` shows as a bubble. The verse registers the root in
  * space.participants[sessionId] so aivatars can look at peers too.
- * API: push(state, ts), root, sessionId, name.
+ * API: push(state, ts), root, sessionId, name, setField({ r, max, mode, at }, visible) — a faint ring at shoulder height sized to the
+ *      peer's FIELD of influence (verse/field.js), shown only when the peer's mode allows this viewer and the local inflow > 0.
  */
 (function (global) {
   'use strict';
@@ -15,6 +16,7 @@
     props = props || {};
     var THREE, space, rig, root, sync = null, label = null, bubble = null, bubbleTxt = null, st = { anim: 'idle', phase: 0, last: null }, sid = props.sessionId || 'peer';
     var av = props.avatar || {};
+    var ring = null, ringR = 0, ringWant = 0;
     var comp = {
       type: 'remote-participant', sessionId: sid,
       init: function (ctx) {
@@ -40,10 +42,16 @@
         else { root.position.set(+s.p[0] || 0, +s.p[1] || 0, +s.p[2] || 0); root.rotation.y = +(s.r && s.r[1]) || 0; }
         if (s.s > 0) root.scale.setScalar(+s.s);
       },
-      get root() { return root; }, get name() { return props.name || sid; },
+      setField: function (fd, visible) {
+        if (!root || !fd) return; ringWant = visible && fd.r > 0 ? +fd.r : 0;
+        if (!ring && ringWant) { var g = new THREE.RingGeometry(0.96, 1, 48).rotateX(-Math.PI / 2), mm = new THREE.MeshBasicMaterial({ color: fd.at === 'bound' ? 0xf5c451 : 0x9fe9ff, transparent: true, opacity: 0.14, depthWrite: false, side: THREE.DoubleSide }); ring = new THREE.Mesh(g, mm); ring.position.y = 1.3; ring.name = 'remote-field'; root.add(ring); }
+        if (ring) { ring.material.color.setHex(fd.at === 'bound' ? 0xf5c451 : 0x9fe9ff); ring.userData.mode = fd.mode || 'open'; }
+      },
+      get root() { return root; }, get name() { return props.name || sid; }, get field() { return ring ? { r: ringR, mode: ring.userData.mode } : null; },
       update: function (dt, t) {
         if (!root) return;
         if (sync) sync.update(root, dt);
+        if (ring) { ringR += (ringWant - ringR) * Math.min(1, dt * 3); ring.visible = ringR > 0.05; if (ring.visible) { ring.scale.setScalar(ringR); ring.material.opacity = 0.1 + 0.05 * Math.sin(t * 1.5); } }
         var moved = root.position.distanceTo(st.last); st.last.copy(root.position);
         var moving = st.anim !== 'idle' || moved / (dt || 1) > 0.1;
         if (moving) st.phase += Math.max(moved, dt * 0.6) / 0.9 * Math.PI * 2;
@@ -52,7 +60,7 @@
         if (rig.pelvis !== root) rig.pelvis.position.y = 0.95 + (moving ? Math.abs(Math.sin(st.phase)) * 0.04 : 0.01 * Math.sin(t * 1.4));
         if (label) label.visible = !bubble;
       },
-      dispose: function () { if (space && space.participants) delete space.participants[sid]; if (label) { label.material.map.dispose(); label.material.dispose(); } if (bubble) { bubble.material.map.dispose(); bubble.material.dispose(); } if (rig) rig.dispose(); root = null; }
+      dispose: function () { if (ring) { ring.geometry.dispose(); ring.material.dispose(); } if (space && space.participants) delete space.participants[sid]; if (label) { label.material.map.dispose(); label.material.dispose(); } if (bubble) { bubble.material.map.dispose(); bubble.material.dispose(); } if (rig) rig.dispose(); root = null; }
     };
     return comp;
   });

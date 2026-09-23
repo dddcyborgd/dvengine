@@ -2,7 +2,7 @@
   "$schema": "dddcyborgd/editors.v1",
   "generatedBy": "scripts/gen-editors.mjs (rows derived from the props.<key> reads in components/<type>/index.js)",
   "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine-edit/src/editors",
-  "count": 45,
+  "count": 47,
   "editors": {
     "aivatar": {
       "type": "aivatar",
@@ -2565,6 +2565,102 @@
         }
       ]
     },
+    "orb": {
+      "type": "orb",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "#7fdcff",
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 0.44,
+          "step": 0.01,
+          "options": [],
+          "default": 0.11,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "float",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Float",
+          "group": "props"
+        },
+        {
+          "key": "glow",
+          "kind": "number",
+          "min": 0,
+          "max": 2.8,
+          "step": 0.01,
+          "options": [],
+          "default": 0.7,
+          "label": "Glow",
+          "group": "props"
+        }
+      ]
+    },
     "participant": {
       "type": "participant",
       "upstream": "DeltaVerse-native",
@@ -3450,6 +3546,102 @@
           "label": "Avatar",
           "group": "props",
           "json": true
+        }
+      ]
+    },
+    "sceptre": {
+      "type": "sceptre",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2829634,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "tint",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "#f5c451",
+          "label": "Tint",
+          "group": "look"
+        },
+        {
+          "key": "glow",
+          "kind": "number",
+          "min": 0,
+          "max": 3.2,
+          "step": 0.01,
+          "options": [],
+          "default": 0.8,
+          "label": "Glow",
+          "group": "props"
+        },
+        {
+          "key": "length",
+          "kind": "number",
+          "min": 0,
+          "max": 3.6,
+          "step": 0.01,
+          "options": [],
+          "default": 0.9,
+          "label": "Length",
+          "group": "props"
         }
       ]
     },

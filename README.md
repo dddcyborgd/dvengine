@@ -78,6 +78,17 @@ client · host · anchor. Every participant is a **client** of the **anchor** (c
 
 VRM: `VRMC_vrm · VRMC_springBone · VRMC_materials_mtoon · VRMC_node_constraint · VRM` pass through read → transform → write byte-for-byte (thumbnail references nulled like upstream).
 
+## Input: old-school joysticks, the mouse, the mic and the camera — and the field of influence
+
+`input/` feeds ONE joystick model from every source: the keyboard sticks (**E S D F** + `A`/`C` side buttons + `Space`
+thumb-fire; **I J K L ; ,** with **K the core button that only acts through combinations**; the **arrow keys**), the
+**mouse** (the [ArcballControls](https://threejs.org/examples/#misc_controls_arcball) extension of the pointer onto the
+ball), the **mic** and the **camera** (`DVParticipantInput`'s ladder: head → the right stick, gestures and onsets →
+button pulses), and gamepads. `DVChords` turns combinations into actions. `verse/field.js` is the **field of
+influence**: resizable up to the space extent − 1 (*infinity − 1*), always recognised by the DeltaVerse (degree =
+r/max × the hierarchy's `outflow` dial), private · connected · open, with the **sceptre** and the **orb** as its first
+items and the aivatar's arm reaching along it. See `input/README.md` and `verse/README.md`.
+
 ## Run it
 
 ```

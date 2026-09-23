@@ -1,12 +1,12 @@
 {
   "$schema": "dddcyborgd/components.v1",
   "generatedBy": "scripts/library.mjs",
-  "count": 45,
+  "count": 47,
   "components": [
     {
       "type": "aivatar",
       "file": "aivatar/index.js",
-      "lines": 273,
+      "lines": 276,
       "props": [
         "dims",
         "facePreset",
@@ -396,9 +396,25 @@
       "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/object"
     },
     {
+      "type": "orb",
+      "file": "orb/index.js",
+      "lines": 43,
+      "props": [
+        "color",
+        "float",
+        "glow",
+        "name",
+        "position",
+        "radius"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
       "type": "participant",
       "file": "participant/index.js",
-      "lines": 79,
+      "lines": 96,
       "props": [
         "height",
         "position",
@@ -521,12 +537,28 @@
     {
       "type": "remote-participant",
       "file": "remote-participant/index.js",
-      "lines": 61,
+      "lines": 69,
       "props": [
         "avatar",
         "name",
         "position",
         "sessionId"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "sceptre",
+      "file": "sceptre/index.js",
+      "lines": 46,
+      "props": [
+        "color",
+        "glow",
+        "length",
+        "name",
+        "position",
+        "tint"
       ],
       "upstream": "deltaverse-native",
       "lazy": true,

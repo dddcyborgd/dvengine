@@ -7,23 +7,23 @@ Home: https://github.com/dddcyborgd/dvengine · upstream: https://github.com/onc
 | lane | files | lines | globals |
 |---|---:|---:|---|
 | `engine/` | 3 | 569 | `DVEngine` `DVLegacyScene` `DVScene` |
-| `components/` | 47 | 4290 | `DVAivatar` `DVParticipant` `DVPiece` `DVPortal` `DVThotMemory` `DVZone` |
+| `components/` | 49 | 4439 | `DVAivatar` `DVParticipant` `DVPiece` `DVPortal` `DVThotMemory` `DVZone` |
 | `edit/` | 12 | 1378 | `DVCapture` `DVCommands` `DVGrid` `DVHistory` `DVTransform` `DVPivot` `DVSnap` |
-| `editors/` | 47 | 9379 | `DVEditors` |
+| `editors/` | 49 | 9777 | `DVEditors` |
 | `net/` | 4 | 570 | `DVHost` `DVNet` `DVPeer` |
 | `xr/` | 2 | 108 | `DVXR` |
-| `verse/` | 10 | 756 | `DVArcballMath` `DVVerse` |
+| `verse/` | 12 | 1030 | `DVArcballMath` `DVVerse` `DVField` `DVSphere` `DVFieldMath` `DVSphereMath` |
 | `legacy/` | 41 | 3451 | `AweRuntime` |
 | `studio/` | 10 | 416 | `DVStudioPanels` `DVStudio` |
 | `transform/` | 3 | 368 | — |
-| `scripts/` | 11 | 697 | — |
-| `test/` | 9 | 687 | — |
+| `scripts/` | 11 | 698 | — |
+| `test/` | 15 | 1162 | — |
 
-## Components (folder-is-module · `components/<type>/index.js`) — 45
+## Components (folder-is-module · `components/<type>/index.js`) — 47
 
 | type | props | lines | upstream |
 |---|---|---:|---|
-| `aivatar` | `dims` `facePreset` `id` `name` `pick` `position` `say` `seed` `tint` `type` `yaw` | 273 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
+| `aivatar` | `dims` `facePreset` `id` `name` `pick` `position` `say` `seed` `tint` `type` `yaw` | 276 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
 | `audio` | `color` `freq` `position` `range` | 77 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/audio) |
 | `avatar` | `color` `height` `position` | 78 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/avatar) |
 | `background` | `bottom` `color` `top` `type` | 61 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/background) |
@@ -49,7 +49,8 @@ Home: https://github.com/dddcyborgd/dvengine · upstream: https://github.com/onc
 | `model` | `color` `position` `scale` `spin` `url` | 63 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/model) |
 | `navmesh` | `cells` `color` `pathColor` `position` `size` | 97 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/navmesh) |
 | `object` | `color` `position` `rotation` `scale` | 51 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/object) |
-| `participant` | `height` `position` `run` `seed` `speed` `tint` | 79 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
+| `orb` | `color` `float` `glow` `name` `position` `radius` | 43 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
+| `participant` | `height` `position` `run` `seed` `speed` `tint` | 96 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
 | `particles` | `area` `color` `count` `size` `speed` | 64 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/particles) |
 | `piece` | `frameColor` `nft` `position` `rotation` `size` | 74 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
 | `portal` | `color` `height` `id` `label` `locked` `minRole` `position` `r` `seed` `to` | 85 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
@@ -57,7 +58,8 @@ Home: https://github.com/dddcyborgd/dvengine · upstream: https://github.com/onc
 | `quarks` | `color` `life` `rate` `size` `spread` | 80 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/quarks) |
 | `rain` | `area` `color` `count` `size` `speed` | 62 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/rain) |
 | `reflector` | `color` `opacity` `position` `size` | 63 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/reflector) |
-| `remote-participant` | `avatar` `name` `position` `sessionId` | 61 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
+| `remote-participant` | `avatar` `name` `position` `sessionId` | 69 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
+| `sceptre` | `color` `glow` `length` `name` `position` `tint` | 46 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
 | `spline` | `color` `points` `radius` `segments` `speed` | 73 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/spline) |
 | `substrate` | `fps` `height` `opacity` `position` `preset` `radius` `seed` `shape` `width` | 81 | [deltaverse-native](https://github.com/dddcyborgd/dvengine) |
 | `terrain` | `flat` `height` `high` `low` `mid` `position` `segments` `size` | 70 | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/terrain) |

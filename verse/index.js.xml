@@ -2,7 +2,7 @@
 <doc for="verse/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
   <lane>prototype</lane>
   <kind>dvengine-verse</kind>
-  <github sha="6937a1cc5fce2a3571944b4051ec85f6002fcbf2" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <github sha="cb7c35783d59a7a48d7743e23ab2ec94af3a9971" upstream="https://github.com/dddcyborgd/dvengine"/>
   <migration target="stays-js" status="live">
     <how>DVVerse: substrates as sky/floor/portals · rungs → themes · senses · holdings → pieces · iNFT NPCs · THOT memory.</how>
     <why>The DeltaVerse-native experience layer over the engine.</why>

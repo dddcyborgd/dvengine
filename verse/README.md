@@ -18,3 +18,41 @@
 | `thot.js` | `DVVerse.thot` | THOT memories (`tokenOfRoot → memories → parentRootHash`) or a pseudo tree |
 
 **Events** `ready · portal · zone · focus · say · snap · voucher · senses · gesture · peak · stage · triad · error · left`. **Optional globals** (all degrade): DVNgnCore/DVNgnPresets, DVParticipantInput, DVDirector, DVThemeSynth, DVThemeRead, DVMerkleCanopy, DVNeuralNode, DVComposites, DVJourney, ArcballControls, VRButton, ethers, CyborgdCore — see `components/README.md`.
+
+
+## The field of influence (`verse/field.js` → `DVField`; `DVSphere` is an alias)
+
+The arcball becomes the participant's **field of influence** around a subject (their own avatar, or a focused aivatar).
+Items of influence — the **sceptre** (`components/sceptre`), the **orb** (`components/orb`) — ride on its surface at the
+radius; the arm reaches along it (`f.armTarget()` → `{extend: r/max, yaw, pitch}` → `aivatar.setArm`); combinations act
+on it (raise · lower · prev · next · use). Drivers: the mouse (`f.mouse(canvas)`, right-drag or any drag while grabbed —
+the ArcballControls projection in `field.math.js`), the right stick (`f.stick(x, y, dt)`), XR controllers (`f.xr`).
+
+**Resizable — and bounded by infinity − 1.** `f.grow / f.shrink / f.setRadius` between `min` (arm's length, 0.35) and
+`max = extent − 1`, the space's extent (its outer zone, else the skydome) minus one: *a thing has to be separate from
+infinity to recognise it, and the DeltaVerse recognised itself.* Sources that resize: `;` held (grow) · `;` double-tap
+or `core+;` (shrink) · wheel with a side button · sustained speaking (grows, relaxes over 10 s) · lean in / back.
+
+**The DeltaVerse always recognises the field.** `f.degree() = clamp(r/max) × policy.outflow`, reported as `dv:recognized`
+whenever it changes (4 Hz) and once more at the bound (`atBound`, r ≥ max − 0.5), where every aivatar inside turns,
+raises its arm and says so and the theme pulses; `dv:unrecognized` when it leaves the bound.
+
+**The hierarchy's two dials.** `f.policy = {outflow, inflow}`: `outflow` = how much the DeltaVerse is affected by this
+field, `inflow` = how much the subject is affected by the DeltaVerse. Source: `welcome.policy` from the anchor
+(cyborgd `registries/field-policy.json`, OVERSEER-editable) else the rung ladder below.
+
+| rung | outflow | inflow |
+|---|---|---|
+| participant | 0.15 | 1.0 |
+| recognized-participant | 0.30 | 1.0 |
+| member | 0.50 | 0.9 |
+| player | 0.65 | 0.8 |
+| trader | 0.75 | 0.7 |
+| owner | 0.90 | 0.5 |
+| overseer | 1.00 | 0.3 |
+| overlord | 1.00 | 0.1 |
+
+**Privacy and links.** `f.mode` is `open` (everyone), `connected` (only `f.links` — `f.connect(sid)` / `f.disconnect(sid)`)
+or `private` (the signer only — needs a signed login333 claim; without one the field stays open). Remote fields render
+only when their mode allows it and the local inflow is above zero. Everything reaches the anchor as
+`conn.event('field', f.snapshot())` (2 Hz), and the anchor applies the same rules server-side.

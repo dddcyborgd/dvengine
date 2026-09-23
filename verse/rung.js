@@ -10,6 +10,8 @@
  *   DVVerse.rung.rankOf('overseer') → 6 · rungName(6) → 'overseer' · atLeast(rung, minRole) → bool
  *   DVVerse.rung.theme(rung, docTheme) → the emerged theme (DVThemeSynth when present; a table otherwise) — and applies it
  *   DVVerse.rung.veil(doc, rung) → { zones:{id:locked}, portals:{to:locked} }   what this rung may not enter
+ *   DVVerse.rung.rungPolicy(rung, table?) → { outflow, inflow }   the OVERLORD hierarchy's two dials on this rung's field of influence
+ *       (cyborgd registries/field-policy.json; the anchor's welcome.policy overrides; DVFieldMath.POLICY is the built-in ladder)
  */
 (function (global) {
   'use strict';
@@ -71,7 +73,9 @@
     return out;
   }
 
-  var api = { LADDER: LADDER, RANK: RANK, ROLE_THEME: ROLE_THEME, TIER_FALLBACK: TIER_FALLBACK, parseClaim: parseClaim, rungOfClaim: rungOfClaim, identify: identify, rankOf: rankOf, rungName: rungName, atLeast: atLeast, theme: theme, veil: veil, unb64u: unb64u };
+  var FIELD_POLICY = { participant: { outflow: 0.15, inflow: 1 }, 'recognized-participant': { outflow: 0.3, inflow: 1 }, member: { outflow: 0.5, inflow: 0.9 }, player: { outflow: 0.65, inflow: 0.8 }, trader: { outflow: 0.75, inflow: 0.7 }, owner: { outflow: 0.9, inflow: 0.5 }, overseer: { outflow: 1, inflow: 0.3 }, overlord: { outflow: 1, inflow: 0.1 }, mastermind: { outflow: 1, inflow: 0 } };
+  function rungPolicy(rung, table) { var name = typeof rung === 'number' ? rungName(rung) : String(rung || 'participant').toLowerCase(); var M = global.DVFieldMath; if (M && M.policyFor) return M.policyFor(name, table); var t = (table && table.rungs) || FIELD_POLICY; return t[name] || t.participant || FIELD_POLICY.participant; }
+  var api = { LADDER: LADDER, FIELD_POLICY: FIELD_POLICY, rungPolicy: rungPolicy, RANK: RANK, ROLE_THEME: ROLE_THEME, TIER_FALLBACK: TIER_FALLBACK, parseClaim: parseClaim, rungOfClaim: rungOfClaim, identify: identify, rankOf: rankOf, rungName: rungName, atLeast: atLeast, theme: theme, veil: veil, unb64u: unb64u };
   var NS = global.DVVerse = global.DVVerse || {}; NS.rung = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof window !== 'undefined' ? window : (typeof globalThis !== 'undefined' ? globalThis : this));

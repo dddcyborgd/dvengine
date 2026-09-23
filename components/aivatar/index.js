@@ -13,7 +13,8 @@
  * RESPONSE  say(text, emotion) → a speech-bubble sprite for 4 s (queued) + an emotion tint pulse;
  *         focus(true) → turn to the local participant + greet + `dv:focus` on the space (the verse swaps the
  *         camera to ArcballControls around this agent); a click on any part of the rig focuses it.
- * API on the comp: setPose({p,r,a,arm}), setArm(arm), reachToward(v3), say(text,emotion), gesture(name), focus(bool),
+ * API on the comp: setPose({p,r,a,arm}), setArm(arm, force) (force: the participant's FIELD of influence wins over the local prediction), reachToward(v3),
+ *         influence (m, set by the verse: the participant's field radius × outflow when the field covers this agent — widens turn-to-face / head tracking beyond 6 m), say(text,emotion), gesture(name), focus(bool),
  *         root, rig, id, emotion, state{walking,phase,yaw}. Pure helpers on window.DVAivatar (node-testable, no three):
  *         walkPhase · angleDelta · turnToward · yawTo · dimsStyle · SayQueue · armFor · EMOTIONS · GESTURES · buildRig(THREE,opts)
  */
@@ -189,7 +190,8 @@
         if (pose.a) st.anim = pose.a;
         if (pose.arm) comp.setArm(pose.arm);
       },
-      setArm: function (a) { if (!a) return; if (Date.now() < arm.localUntil) return; arm.extend = clamp(+a.extend || 0, 0, 1); arm.yaw = +a.yaw || 0; arm.pitch = +a.pitch || 0; arm.side = arm.yaw > 0 ? 'L' : 'R'; },
+      influence: 0,
+      setArm: function (a, force) { if (!a) return; if (!force && Date.now() < arm.localUntil) return; if (force) arm.localUntil = 0; arm.extend = clamp(+a.extend || 0, 0, 1); arm.yaw = +a.yaw || 0; arm.pitch = +a.pitch || 0; arm.side = arm.yaw > 0 ? 'L' : 'R'; },
       reachToward: function (worldPos) {
         if (!root || !worldPos) return null;
         var relR = localRel(worldPos, 'R'), side = relR.x > 0.15 ? 'L' : 'R';
@@ -216,7 +218,8 @@
         st.lastP.copy(root.position);
         if (st.walking) st.phase = walkPhase(st.phase, Math.max(moved, dt * 0.6));
         // turn to face (shortest arc)
-        if (!st.walking && !st.focused) { var n = nearestParticipant(); if (n && n.d < 6) st.targetYaw = yawTo(root.position, n); }
+        var infl = Math.max(6, +comp.influence || 0);
+        if (!st.walking && !st.focused) { var n = nearestParticipant(); if (n && n.d < infl) st.targetYaw = yawTo(root.position, n); }
         st.yaw = turnToward(st.yaw, st.targetYaw, dt * 3.2); root.rotation.y = st.yaw;
         // breathing + bob
         rig.torso.scale.y = 1 + 0.025 * Math.sin(t * 1.3 * k); rig.torso.position.y = 0.42 + 0.01 * Math.sin(t * 1.3 * k);
@@ -226,7 +229,7 @@
         rig.legL.hip.rotation.x += (swing - rig.legL.hip.rotation.x) * Math.min(1, dt * 10); rig.legR.hip.rotation.x += (-swing - rig.legR.hip.rotation.x) * Math.min(1, dt * 10);
         // head tracking toward the nearest participant
         var np = nearestParticipant(), hy = 0, hp = 0;
-        if (np && np.d < 8) { hy = clamp(angleDelta(st.yaw, yawTo(root.position, np)), -1.0, 1.0); hp = clamp(Math.atan2((np.y + 1.5) - (root.position.y + 1.72 * style.scale), np.d), -0.5, 0.4); }
+        if (np && np.d < Math.max(8, infl)) { hy = clamp(angleDelta(st.yaw, yawTo(root.position, np)), -1.0, 1.0); hp = clamp(Math.atan2((np.y + 1.5) - (root.position.y + 1.72 * style.scale), np.d), -0.5, 0.4); }
         headTarget += (hy - headTarget) * Math.min(1, dt * 5); headPitch += (hp - headPitch) * Math.min(1, dt * 5);
         rig.neck.rotation.y = headTarget; rig.neck.rotation.x = -headPitch;
         // gestures (overrides on top of the base pose)

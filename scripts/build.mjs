@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
 const PKG = JSON.parse(readFileSync(join(ROOT, 'package.json'), 'utf8'));
-const LANES = { 'dvengine-core.js': ['engine/index.js', 'engine/scene.js', 'engine/legacy.js'], 'dvengine-edit.js': ['edit/snap.js', 'edit/commands.js', 'edit/history.js', 'edit/grid.js', 'edit/capture.js', 'edit/pivot/index.js', 'edit/index.js'], 'dvengine-net.js': ['net/interp.js', 'net/index.js', 'net/peer.js', 'net/host.js'], 'dvengine-xr.js': ['xr/probe.js', 'xr/teleport.js'], 'dvengine-verse.js': ['verse/rung.js', 'verse/world.js', 'verse/senses.js', 'verse/journey.js', 'verse/holdings.js', 'verse/inft.js', 'verse/thot.js', 'verse/index.js'] };
+const LANES = { 'dvengine-core.js': ['engine/index.js', 'engine/scene.js', 'engine/legacy.js'], 'dvengine-edit.js': ['edit/snap.js', 'edit/commands.js', 'edit/history.js', 'edit/grid.js', 'edit/capture.js', 'edit/pivot/index.js', 'edit/index.js'], 'dvengine-net.js': ['net/interp.js', 'net/index.js', 'net/peer.js', 'net/host.js'], 'dvengine-xr.js': ['xr/probe.js', 'xr/teleport.js'], 'dvengine-input.js': ['input/joystick.js', 'input/chords.js', 'input/mouse.js', 'input/senses.js', 'input/controls.js'], 'dvengine-verse.js': ['verse/rung.js', 'verse/world.js', 'verse/senses.js', 'verse/journey.js', 'verse/holdings.js', 'verse/inft.js', 'verse/thot.js', 'verse/field.math.js', 'verse/field.js', 'verse/index.js'] };
 rmSync(DIST, { recursive: true, force: true }); mkdirSync(DIST, { recursive: true });
 const files = {};
 function record(p) { const b = readFileSync(p); files[relative(DIST, p).split('\\').join('/')] = { bytes: b.length, sha256: createHash('sha256').update(b).digest('hex') }; }

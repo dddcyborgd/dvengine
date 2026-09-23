@@ -2,7 +2,7 @@
 <doc for="components/participant/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
   <lane>prototype</lane>
   <kind>dvengine-component</kind>
-  <github sha="84817f8ad38b782482fa569d30b5362296c4a677" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <github sha="f1a17db5e07d61e8c3b0f08af4f4f1f76fc1d358" upstream="https://github.com/dddcyborgd/dvengine"/>
   <migration target="stays-js" status="live">
     <how>Folder-is-module component: registers itself with DVEngine at load; init(ctx) → update(dt,t) → dispose().</how>
     <why>Every world object is a component with one lifecycle (the awe design, kept).</why>

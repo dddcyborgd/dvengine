@@ -341,7 +341,7 @@
     setComponentBase: setComponentBase,
     propsOf: propsOf,
     ordered: ordered,
-    version: '0.0.1-alpha',
+    version: '0.0.2-alpha',
     upstream: 'https://github.com/oncyberio/awe — @oncyberio/engine © oncyberio — MIT — component designs',
     home: 'https://github.com/dddcyborgd/dvengine',
     legacy: global.AweRuntime || null,

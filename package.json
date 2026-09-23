@@ -1,6 +1,6 @@
 {
   "name": "@dddcyborgd/dvengine",
-  "version": "0.0.1-alpha",
+  "version": "0.0.2-alpha",
   "private": true,
   "description": "dvengine \u2014 the DeltaVerse 3D participant engine (three.js), refined from the oncyberio awe engine (MIT). Zero runtime dependencies; window.THREE is read at use time.",
   "license": "MIT",

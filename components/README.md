@@ -50,6 +50,8 @@ Every component is one file, `components/<type>/index.js`: a zero-dependency UMD
 | `vrmanims` | `color` `speed` | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/vrmanims) |
 | `water` | `color` `size` `deep` `segments` | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/water) |
 | `wave` | `color` `size` `amplitude` `segments` | [awe](https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/wave) |
+| `sceptre` | `length` `color` `tint` `glow` `name` `position` | DeltaVerse-native — the first item of influence: a rod with a glowing head; `use()` pulses and emits `dv:item` |
+| `orb` | `radius` `color` `glow` `float` `name` `position` | DeltaVerse-native — a floating item of influence |
 | `zone` | `bounds` `locked` `minRole` | DeltaVerse-native |
 
 Upstream base: https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/`<type>`. The `vrm-anims` component of upstream is the `vrmanims` folder here (folder names carry no dash for the 37 ports; the natives keep theirs).
