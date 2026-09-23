@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="edit/pivot/box-slider.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-transform</kind>
+  <github sha="e6d2a6a61e27cda954348b4859cd95fbcfaabec1" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVTransform: pivot gizmo · snap · drag proxy · command stack (clean-room over awe engine-edit + three/addons TransformControls).</how>
+    <why>The transform tools are a client lane; no upstream React or GSAP.</why>
+  </migration>
+</doc>

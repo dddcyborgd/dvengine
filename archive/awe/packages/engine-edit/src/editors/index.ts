@@ -1,0 +1,67 @@
+import { registerEditor } from "./editor-registry";
+
+import { AudioEditor } from "./audio/editor";
+import { AvatarEditor } from "./avatar/editor";
+import { BackgroundEditor } from "./background/editor";
+import { BatchComponentEditor } from "./batch/editor";
+import { BirdComponentEditor } from "./bird/editor";
+import { CameraEditor } from "./camera/editor";
+import { CloudComponentEditor } from "./cloud/editor";
+import { DestinationComponentEditor } from "./destination/editor";
+import { EnvmapEditor } from "./envmap/editor";
+import { FogEditor } from "./fog/editor";
+import { GodRayComponentEditor } from "./godray/editor";
+import { GrassComponentEditor } from "./grass/editor";
+import { GroupEditor } from "./group/editor";
+import { IframeEditor } from "./iframe/editor";
+import { ImageComponentEditor } from "./image/editor";
+import { LightingEditor } from "./lighting/editor";
+import { MeshComponentEditor } from "./mesh/editor";
+import { ModelEditor } from "./model/editor";
+import { NavmeshComponentEditor } from "./navmesh/editor";
+import { ObjectEditor } from "./object/editor";
+import { PostProcessingEditor } from "./postprocessing/editor";
+import { QuarksComponentEditor } from "./quarks/editor";
+import { ReflectorEditor } from "./reflector/editor";
+import { SplineEditor } from "./spline/editor";
+import { TerrainEditor } from "./terrain/editor";
+import { TextEditor } from "./text/editor";
+import { VideoEditor } from "./video/editor";
+import { VRMAnimComponentEditor } from "./vrmanims/editor";
+import { WaterEditor } from "./water/editor";
+import { WaveEditor } from "./wave/editor";
+
+export function registerAllEditors() {
+  registerEditor("audio", AudioEditor);
+  registerEditor("avatar", AvatarEditor);
+  registerEditor("background", BackgroundEditor);
+  registerEditor("batch", BatchComponentEditor);
+  registerEditor("bird", BirdComponentEditor);
+  registerEditor("camera", CameraEditor);
+  registerEditor("cloud", CloudComponentEditor);
+  registerEditor("destination", DestinationComponentEditor);
+  registerEditor("envmap", EnvmapEditor);
+  registerEditor("fog", FogEditor);
+  registerEditor("godray", GodRayComponentEditor);
+  registerEditor("grass", GrassComponentEditor);
+  registerEditor("group", GroupEditor);
+  registerEditor("iframe", IframeEditor);
+  registerEditor("image", ImageComponentEditor);
+  registerEditor("lighting", LightingEditor);
+  registerEditor("mesh", MeshComponentEditor);
+  registerEditor("model", ModelEditor);
+  registerEditor("navmesh", NavmeshComponentEditor);
+  registerEditor("object", ObjectEditor);
+  registerEditor("postprocessing", PostProcessingEditor);
+  registerEditor("quarks", QuarksComponentEditor);
+  registerEditor("reflector", ReflectorEditor);
+  registerEditor("spline", SplineEditor);
+  registerEditor("terrain", TerrainEditor);
+  registerEditor("text", TextEditor);
+  registerEditor("video", VideoEditor);
+  registerEditor("vrm-anims", VRMAnimComponentEditor);
+  registerEditor("water", WaterEditor);
+  registerEditor("wave", WaveEditor);
+}
+
+export { registerEditor, getEditorClass, getOrCreateEditor } from "./editor-registry";

@@ -1,0 +1,356 @@
+{
+  "$schema": "https://deltaverse.pythai.net/schema/cyborg-space.v1.json",
+  "format": "cyborg-space/1",
+  "id": "agora",
+  "name": "The Agora",
+  "concept": "journey",
+  "description": "The public square of the DeltaVerse: eight zones named after the eight stages of the journey, the eight pieces of the genesis room on the ring, three agents who speak.",
+  "creatorId": "bankon.eth",
+  "editors": [
+    "bankon.eth"
+  ],
+  "room": {
+    "roomId": 0,
+    "contract": null,
+    "chain": null
+  },
+  "token": {
+    "standard": "ERC-721",
+    "type": "iNFT",
+    "compatible": [
+      "ERC-7857",
+      "ERC-6551",
+      "ERC-5192"
+    ],
+    "chain": null,
+    "soulbound": false,
+    "tba": true
+  },
+  "agent": {
+    "inft": null,
+    "thotRoot": "0x7a1c9d4e2b6f0813a5c7e9d1b3f5a7c9e1d3b5f7a9c1e3d5b7f9a1c3e5d7b9f1"
+  },
+  "skin": "shadow-field",
+  "theme": "default-dark",
+  "traits": [
+    {
+      "k": "lineage",
+      "v": "genesis"
+    },
+    {
+      "k": "gate",
+      "v": "public"
+    }
+  ],
+  "nfts": [
+    {
+      "id": "thot-001",
+      "title": "First Thought",
+      "artist": "mindX",
+      "type": "THOT",
+      "seed": 7
+    },
+    {
+      "id": "inft-alice",
+      "title": "A.L.I.C.E.",
+      "artist": "R. S. Wallace",
+      "type": "iNFT",
+      "seed": 1999
+    },
+    {
+      "id": "dnft-aurora",
+      "title": "Aurora Veil",
+      "artist": "nGn",
+      "type": "dNFT",
+      "seed": 42
+    },
+    {
+      "id": "anft-weaver",
+      "title": "The Weaver",
+      "artist": "DeltaVerse",
+      "type": "aNFT",
+      "seed": 314
+    },
+    {
+      "id": "inft-overlord",
+      "title": "OVERLORD Eye",
+      "artist": "cypherpunk2048",
+      "type": "iNFT",
+      "seed": 2048
+    },
+    {
+      "id": "dnft-horizon",
+      "title": "Crypto Horizon",
+      "artist": "parsec",
+      "type": "dNFT",
+      "seed": 618
+    },
+    {
+      "id": "thot-vault",
+      "title": "GNUVAULT Crest",
+      "artist": "GNUGUI",
+      "type": "THOT",
+      "seed": 88
+    },
+    {
+      "id": "anft-fibonacci",
+      "title": "Phyllotaxis",
+      "artist": "nGn",
+      "type": "aNFT",
+      "seed": 137
+    }
+  ],
+  "zones": [
+    {
+      "id": "arrival",
+      "name": "Arrival",
+      "minRole": "public",
+      "bounds": {
+        "c": [
+          0,
+          0,
+          0
+        ],
+        "r": 6.5
+      },
+      "portalTo": "recognition"
+    },
+    {
+      "id": "recognition",
+      "name": "Recognition",
+      "minRole": "public",
+      "bounds": {
+        "c": [
+          12.02,
+          0,
+          12.02
+        ],
+        "r": 6.5
+      },
+      "portalTo": "communion"
+    },
+    {
+      "id": "communion",
+      "name": "Communion",
+      "minRole": "recognized-participant",
+      "bounds": {
+        "c": [
+          17,
+          0,
+          0
+        ],
+        "r": 6.5
+      },
+      "portalTo": "chain-of-thought"
+    },
+    {
+      "id": "chain-of-thought",
+      "name": "Chain of Thought",
+      "minRole": "member",
+      "bounds": {
+        "c": [
+          12.02,
+          0,
+          -12.02
+        ],
+        "r": 6.5
+      },
+      "portalTo": "ascension"
+    },
+    {
+      "id": "ascension",
+      "name": "Ascension",
+      "minRole": "player",
+      "bounds": {
+        "c": [
+          0,
+          0,
+          -17
+        ],
+        "r": 6.5
+      },
+      "portalTo": "market-pulse"
+    },
+    {
+      "id": "market-pulse",
+      "name": "Market Pulse",
+      "minRole": "trader",
+      "bounds": {
+        "c": [
+          -12.02,
+          0,
+          -12.02
+        ],
+        "r": 6.5
+      },
+      "portalTo": "swarm-bloom"
+    },
+    {
+      "id": "swarm-bloom",
+      "name": "Swarm Bloom",
+      "minRole": "member",
+      "bounds": {
+        "c": [
+          -17,
+          0,
+          0
+        ],
+        "r": 6.5
+      },
+      "portalTo": "free-roam"
+    },
+    {
+      "id": "free-roam",
+      "name": "Free Roam",
+      "minRole": "public",
+      "bounds": {
+        "c": [
+          -12.02,
+          0,
+          12.02
+        ],
+        "r": 6.5
+      },
+      "portalTo": "arrival"
+    }
+  ],
+  "agents": [
+    {
+      "id": "alice",
+      "type": "iNFT",
+      "name": "A.L.I.C.E.",
+      "seed": 1999,
+      "tint": "#c77dff",
+      "zone": "arrival",
+      "dims": [
+        0.78,
+        0.4,
+        0.62
+      ],
+      "say": [
+        "Welcome to the Agora. I am A.L.I.C.E. — ask me anything, and I will answer with a question.",
+        "The journey has eight stages. You are standing in the first.",
+        "A riddle: I have keys but open no locks, space but no room. What am I?"
+      ],
+      "riddle": {
+        "q": "I have keys but open no locks, space but no room, and you can enter but not go in. What am I?",
+        "a": "keyboard",
+        "reward": "voucher:LUV"
+      }
+    },
+    {
+      "id": "first-thought",
+      "type": "THOT",
+      "name": "First Thought",
+      "seed": 7,
+      "tint": "#ff7ac8",
+      "zone": "chain-of-thought",
+      "dims": [
+        0.93,
+        -0.2,
+        0.31
+      ],
+      "say": [
+        "Every memory I hold is a hash, and every hash has a parent.",
+        "Reach toward me and I will reach back — that is the arcball."
+      ]
+    },
+    {
+      "id": "aurora",
+      "type": "dNFT",
+      "name": "Aurora Veil",
+      "seed": 42,
+      "tint": "#22d3ee",
+      "zone": "ascension",
+      "dims": [
+        0.52,
+        0.9,
+        0.88
+      ],
+      "say": [
+        "My metadata changes as the room evolves. So do I.",
+        "Look up — the sky is a substrate."
+      ]
+    }
+  ],
+  "components": {
+    "lighting": {
+      "id": "lighting",
+      "name": "Lighting",
+      "type": "lighting",
+      "data": {
+        "intensity": 1.2,
+        "ambientIntensity": 0.55,
+        "animate": false,
+        "sunPosition": {
+          "x": 6,
+          "y": 14,
+          "z": 8
+        }
+      }
+    },
+    "background": {
+      "id": "background",
+      "name": "Background",
+      "type": "background",
+      "data": {
+        "type": "gradient",
+        "top": "#070912",
+        "bottom": "#12172a"
+      }
+    },
+    "fog": {
+      "id": "fog",
+      "name": "Fog",
+      "type": "fog",
+      "data": {
+        "type": "exp2",
+        "color": "#070912",
+        "density": 0.012
+      }
+    },
+    "grass": {
+      "id": "grass",
+      "name": "Grass",
+      "type": "grass",
+      "data": {
+        "count": 1400,
+        "ground": 26,
+        "size": 0.5,
+        "color": "#1f5a3a",
+        "windStrength": 0.6
+      }
+    },
+    "dust": {
+      "id": "dust",
+      "name": "Dust",
+      "type": "dust",
+      "data": {
+        "count": 400,
+        "area": 30,
+        "size": 0.05,
+        "color": "#9fe9ff"
+      }
+    },
+    "title": {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "data": {
+        "text": "THE AGORA",
+        "color": "#f5c451",
+        "size": 6
+      },
+      "position": {
+        "x": 0,
+        "y": 6.5,
+        "z": -10
+      }
+    }
+  },
+  "params": {},
+  "image": "",
+  "animation_url": "",
+  "legacy": null,
+  "createdAt": 1758500000000
+}

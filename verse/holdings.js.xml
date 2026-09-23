@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="verse/holdings.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-verse</kind>
+  <github sha="a2234e4350b9156f025eee18169dd9e904e64d7c" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVVerse: substrates as sky/floor/portals · rungs → themes · senses · holdings → pieces · iNFT NPCs · THOT memory.</how>
+    <why>The DeltaVerse-native experience layer over the engine.</why>
+  </migration>
+</doc>

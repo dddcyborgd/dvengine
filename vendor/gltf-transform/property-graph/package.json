@@ -1,0 +1,10 @@
+{
+  "name": "property-graph",
+  "version": "1.3.1",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./property-graph.modern.js",
+  "repository": "github:donmccurdy/property-graph",
+  "vendoredFrom": "https://registry.npmjs.org/property-graph/-/property-graph-1.3.1.tgz",
+  "sha256": "a53d705489e6ae19d677ed3ae341a305e86a6a9f85fc1f71a449a68f9b412325"
+}

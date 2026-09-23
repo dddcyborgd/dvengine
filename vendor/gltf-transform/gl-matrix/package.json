@@ -1,0 +1,9 @@
+{
+  "name": "gl-matrix",
+  "version": "3.4.3",
+  "license": "MIT",
+  "type": "module",
+  "note": "esm/{common,mat3,mat4,vec3,vec4,quat}.js only — the modules the fork imports at top level",
+  "vendoredFrom": "https://registry.npmjs.org/gl-matrix/-/gl-matrix-3.4.3.tgz",
+  "sha256": "b1ec4d97dc97f9884f5f017b7f9c3555884b4d3191534cdc59b7ede27dc4ea75"
+}

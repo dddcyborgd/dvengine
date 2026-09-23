@@ -1,0 +1,54 @@
+{
+  "name": "@oncyberio/studio",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles": "./src/ui/styles/global.css",
+    "./scene-events-route": "./src/scene-events-route.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@oncyberio/engine": "workspace:*",
+    "@oncyberio/engine-edit": "workspace:*",
+    "@oncyberio/tools": "workspace:*",
+    "@gsap/react": "^2.1.0",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@reservoir0x/reservoir-sdk": "^2.4.6",
+    "@splidejs/splide": "^4.1.4",
+    "@tanstack/react-query": "^5.62.0",
+    "@taquito/beacon-wallet": "^20.1.1",
+    "@taquito/taquito": "^20.1.1",
+    "@wagmi/connectors": "^5.7.0",
+    "@wagmi/core": "^2.16.0",
+    "clsx": "^2.1.1",
+    "ethers": "6.13.1",
+    "framer-motion": "^10.16.15",
+    "gsap": "^3.12.2",
+    "immer": "^10.0.3",
+    "nanoid": "^5.0.3",
+    "react-select": "^5.8.0",
+    "swr": "^2.2.4",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4",
+    "viem": "^2.21.0",
+    "wagmi": "^2.14.0",
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.170.0"
+  },
+  "peerDependencies": {
+    "next": ">=14",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "three": "^0.170.0"
+  }
+}

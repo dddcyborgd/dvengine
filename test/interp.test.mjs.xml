@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="test/interp.test.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>test</kind>
+  <github sha="82bc736a4add8d8588cafb13eab39ad2e4314330" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>node --test.</how>
+    <why>No test framework dependency.</why>
+  </migration>
+</doc>

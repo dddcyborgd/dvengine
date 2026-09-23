@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="scripts/check-syntax.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>tooling</kind>
+  <github sha="d6ecfbd1069e2ce4caddee762250daf7beca92de" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>Repo tooling (fetch/catalogue/build/sidecars).</how>
+    <why>Generators are re-runnable and --check-able.</why>
+  </migration>
+</doc>

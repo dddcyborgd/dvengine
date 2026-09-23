@@ -1,0 +1,53 @@
+{
+  "$schema": "dddcyborgd/transform-registry.v1",
+  "generatedBy": "hand-authored · read by transform/gates.mjs (enabled = static intent; gates.mjs computes the live verdict)",
+  "upstream": {
+    "gltfTransform": "https://github.com/donmccurdy/glTF-Transform",
+    "docs": "https://gltf-transform.dev",
+    "fork": "https://github.com/oncyberio/gltftransform",
+    "aweTools": "https://github.com/oncyberio/awe/tree/main/packages/tools"
+  },
+  "portable": {
+    "pure": "plain JS over the vendored core — always on",
+    "wasm": "needs a wasm codec under vendor/{draco,meshopt}/ — on only when the .wasm files exist (hooks left, files absent)",
+    "native": "needs a native/npm dependency (sharp, ktx-software toktx, mikktspace, ndarray-pixels) — unavailable in the zero-dep desk"
+  },
+  "ops": [
+    { "op": "dedup", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#dedup", "upstream": "https://gltf-transform.dev/modules/functions/functions/dedup", "enabled": true },
+    { "op": "prune", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#prune", "upstream": "https://gltf-transform.dev/modules/functions/functions/prune", "enabled": true },
+    { "op": "weld", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#weld", "upstream": "https://gltf-transform.dev/modules/functions/functions/weld", "enabled": true },
+    { "op": "unweld", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#unweld", "upstream": "https://gltf-transform.dev/modules/functions/functions/unweld", "enabled": true },
+    { "op": "quantize", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#quantize", "upstream": "https://gltf-transform.dev/modules/functions/functions/quantize", "enabled": true },
+    { "op": "dequantize", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#dequantize", "upstream": "https://gltf-transform.dev/modules/functions/functions/dequantize", "enabled": true },
+    { "op": "center", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#center", "upstream": "https://gltf-transform.dev/modules/functions/functions/center", "enabled": true },
+    { "op": "flatten", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#flatten", "upstream": "https://gltf-transform.dev/modules/functions/functions/flatten", "enabled": true },
+    { "op": "join", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#join", "upstream": "https://gltf-transform.dev/modules/functions/functions/join", "enabled": true },
+    { "op": "joinPrimitives", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#joinPrimitives", "upstream": "https://gltf-transform.dev/modules/functions/functions/joinPrimitives", "enabled": true },
+    { "op": "instance", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#instance", "upstream": "https://gltf-transform.dev/modules/functions/functions/instance", "enabled": true },
+    { "op": "resample", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#resample", "upstream": "https://gltf-transform.dev/modules/functions/functions/resample", "enabled": true },
+    { "op": "sparse", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#sparse", "upstream": "https://gltf-transform.dev/modules/functions/functions/sparse", "enabled": true },
+    { "op": "unlit", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#unlit", "upstream": "https://gltf-transform.dev/modules/functions/functions/unlit", "enabled": true },
+    { "op": "normals", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#normals", "upstream": "https://gltf-transform.dev/modules/functions/functions/normals", "enabled": true },
+    { "op": "partition", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#partition", "upstream": "https://gltf-transform.dev/modules/functions/functions/partition", "enabled": true },
+    { "op": "unpartition", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#unpartition", "upstream": "https://gltf-transform.dev/modules/functions/functions/unpartition", "enabled": true },
+    { "op": "metalRough", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#metalRough", "upstream": "https://gltf-transform.dev/modules/functions/functions/metalRough", "enabled": true, "note": "textured spec-gloss conversion reaches the ndarray-pixels shim and reports unavailable; untextured materials convert" },
+    { "op": "vertexColorSpace", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#vertexColorSpace", "upstream": "https://gltf-transform.dev/modules/functions/functions/vertexColorSpace", "enabled": true },
+    { "op": "sequence", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#sequence", "upstream": "https://gltf-transform.dev/modules/functions/functions/sequence", "enabled": true },
+    { "op": "clearNodeParent", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#clearNodeParent", "upstream": "https://gltf-transform.dev/modules/functions/functions/clearNodeParent", "enabled": true },
+    { "op": "clearNodeTransform", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#clearNodeTransform", "upstream": "https://gltf-transform.dev/modules/functions/functions/clearNodeTransform", "enabled": true },
+    { "op": "sortPrimitiveWeights", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#sortPrimitiveWeights", "upstream": "https://gltf-transform.dev/modules/functions/functions/sortPrimitiveWeights", "enabled": true },
+    { "op": "listTextureSlots", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#listTextureSlots", "upstream": "https://gltf-transform.dev/modules/functions/functions/listTextureSlots", "enabled": true, "kind": "query" },
+    { "op": "listTextureChannels", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#listTextureChannels", "upstream": "https://gltf-transform.dev/modules/functions/functions/listTextureChannels", "enabled": true, "kind": "query" },
+    { "op": "listTextureInfo", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#listTextureInfo", "upstream": "https://gltf-transform.dev/modules/functions/functions/listTextureInfo", "enabled": true, "kind": "query" },
+    { "op": "inspect", "portable": "pure", "fn": "vendor/gltf-transform/functions/index.js#inspect", "upstream": "https://gltf-transform.dev/modules/functions/functions/inspect", "enabled": true, "kind": "query" },
+    { "op": "draco", "portable": "wasm", "fn": "vendor/gltf-transform/functions/src/draco.js#draco", "upstream": "https://gltf-transform.dev/modules/functions/functions/draco", "enabled": false, "needs": "vendor/draco/draco_encoder.wasm + draco_decoder.wasm (draco3dgltf)" },
+    { "op": "meshopt", "portable": "wasm", "fn": "vendor/gltf-transform/functions/src/meshopt.js#meshopt", "upstream": "https://gltf-transform.dev/modules/functions/functions/meshopt", "enabled": false, "needs": "vendor/meshopt/meshopt_encoder.wasm + meshopt_decoder.wasm (meshoptimizer)" },
+    { "op": "reorder", "portable": "wasm", "fn": "vendor/gltf-transform/functions/src/reorder.js#reorder", "upstream": "https://gltf-transform.dev/modules/functions/functions/reorder", "enabled": false, "needs": "vendor/meshopt/meshopt_encoder.wasm (meshoptimizer)" },
+    { "op": "simplify", "portable": "wasm", "fn": "vendor/gltf-transform/functions/src/simplify.js#simplify", "upstream": "https://gltf-transform.dev/modules/functions/functions/simplify", "enabled": false, "needs": "vendor/meshopt/meshopt_simplifier.wasm (meshoptimizer)" },
+    { "op": "textureCompress", "portable": "native", "fn": "vendor/gltf-transform/functions/src/texture-compress.js#textureCompress", "upstream": "https://gltf-transform.dev/modules/functions/functions/textureCompress", "enabled": false, "needs": "sharp" },
+    { "op": "textureResize", "portable": "native", "fn": "vendor/gltf-transform/functions/src/texture-resize.js#textureResize", "upstream": "https://gltf-transform.dev/modules/functions/functions/textureResize", "enabled": false, "needs": "ndarray + ndarray-pixels + ndarray-lanczos" },
+    { "op": "tangents", "portable": "native", "fn": "vendor/gltf-transform/functions/src/tangents.js#tangents", "upstream": "https://gltf-transform.dev/modules/functions/functions/tangents", "enabled": false, "needs": "mikktspace" },
+    { "op": "toktx", "portable": "native", "fn": "archive/awe/packages/tools/src/texture/toktx.ts (catalogued, not ported)", "upstream": "https://github.com/oncyberio/awe/blob/main/packages/tools/src/texture/toktx.ts", "enabled": false, "needs": "ktx-software toktx binary (KTX2/basisu)" },
+    { "op": "ktx", "portable": "native", "fn": "archive/awe/packages/tools/src/texture/texture-compress.ts (catalogued, not ported)", "upstream": "https://github.com/oncyberio/awe/blob/main/packages/tools/src/texture/texture-compress.ts", "enabled": false, "needs": "ktx-software + sharp" }
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="edit/grid.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-transform</kind>
+  <github sha="542ea46485324264361de19353cb8acd053530ee" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVTransform: pivot gizmo · snap · drag proxy · command stack (clean-room over awe engine-edit + three/addons TransformControls).</how>
+    <why>The transform tools are a client lane; no upstream React or GSAP.</why>
+  </migration>
+</doc>

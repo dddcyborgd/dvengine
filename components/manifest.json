@@ -1,0 +1,229 @@
+{
+  "$schema": "dddcyborgd/components.v1",
+  "generatedBy": "scripts/library.mjs (seeded by the awe port)",
+  "count": 37,
+  "components": [
+    {
+      "type": "audio",
+      "file": "audio/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "avatar",
+      "file": "avatar/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "background",
+      "file": "background/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "batch",
+      "file": "batch/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "bird",
+      "file": "bird/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "camera",
+      "file": "camera/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "cloud",
+      "file": "cloud/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "destination",
+      "file": "destination/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "dialog",
+      "file": "dialog/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "dust",
+      "file": "dust/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "envmap",
+      "file": "envmap/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "fog",
+      "file": "fog/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "godray",
+      "file": "godray/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "grass",
+      "file": "grass/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "group",
+      "file": "group/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "iframe",
+      "file": "iframe/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "image",
+      "file": "image/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "impact",
+      "file": "impact/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "instancedmesh",
+      "file": "instancedmesh/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "interaction",
+      "file": "interaction/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "lighting",
+      "file": "lighting/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "mesh",
+      "file": "mesh/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "model",
+      "file": "model/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "navmesh",
+      "file": "navmesh/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "object",
+      "file": "object/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "particles",
+      "file": "particles/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "postprocessing",
+      "file": "postprocessing/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "quarks",
+      "file": "quarks/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "rain",
+      "file": "rain/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "reflector",
+      "file": "reflector/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "spline",
+      "file": "spline/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "terrain",
+      "file": "terrain/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "text",
+      "file": "text/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "video",
+      "file": "video/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "vrmanims",
+      "file": "vrmanims/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "water",
+      "file": "water/index.js",
+      "upstream": "awe",
+      "lazy": true
+    },
+    {
+      "type": "wave",
+      "file": "wave/index.js",
+      "upstream": "awe",
+      "lazy": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="legacy/awe-runtime/components/lighting.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>legacy-reflection</kind>
+  <github sha="9be6dce93c5300b9f9dee0f8d52185082f06c8db" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="frozen">
+    <how>The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.</how>
+    <why>Legacy mode is a reflection of the oncyber work, kept pristine.</why>
+  </migration>
+</doc>

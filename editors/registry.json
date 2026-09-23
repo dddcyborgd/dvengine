@@ -1,0 +1,4511 @@
+{
+  "$schema": "dddcyborgd/editors.v1",
+  "generatedBy": "scripts/gen-editors.mjs (rows derived from the props.<key> reads in components/<type>/index.js)",
+  "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine-edit/src/editors",
+  "count": 45,
+  "editors": {
+    "aivatar": {
+      "type": "aivatar",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "facePreset",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Face Preset",
+          "group": "look"
+        },
+        {
+          "key": "tint",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Tint",
+          "group": "look"
+        },
+        {
+          "key": "dims",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Dims",
+          "group": "props",
+          "json": true
+        },
+        {
+          "key": "say",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Say",
+          "group": "props",
+          "json": true
+        },
+        {
+          "key": "seed",
+          "kind": "int",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 1,
+          "label": "Seed",
+          "group": "props"
+        },
+        {
+          "key": "yaw",
+          "kind": "number",
+          "min": -3.1416,
+          "max": 3.1416,
+          "step": 0.01,
+          "options": [],
+          "default": 0,
+          "label": "Yaw",
+          "group": "props"
+        }
+      ]
+    },
+    "audio": {
+      "type": "audio",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/audio",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 2.5,
+            "z": -4
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16756684,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "freq",
+          "kind": "number",
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "options": [],
+          "default": 2.5,
+          "label": "Freq",
+          "group": "props"
+        },
+        {
+          "key": "range",
+          "kind": "number",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "options": [],
+          "default": 6,
+          "label": "Range",
+          "group": "props"
+        }
+      ]
+    },
+    "avatar": {
+      "type": "avatar",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/avatar",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": -3,
+            "y": 0,
+            "z": 2
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5032432,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 7.2,
+          "step": 0.1,
+          "options": [],
+          "default": 1.8,
+          "label": "Height",
+          "group": "look"
+        }
+      ]
+    },
+    "background": {
+      "type": "background",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/background",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 658968,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "bottom",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 329485,
+          "label": "Bottom",
+          "group": "props"
+        },
+        {
+          "key": "top",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 1450042,
+          "label": "Top",
+          "group": "props"
+        }
+      ]
+    },
+    "batch": {
+      "type": "batch",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/batch",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16739029,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "spread",
+          "kind": "number",
+          "min": 0,
+          "max": 56,
+          "step": 1,
+          "options": [],
+          "default": 14,
+          "label": "Spread",
+          "group": "look"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 800,
+          "step": 1,
+          "options": [],
+          "default": 200,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "bird": {
+      "type": "bird",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/bird",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2830136,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "options": [],
+          "default": 8,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 2,
+          "step": 0.01,
+          "options": [],
+          "default": 0.5,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 96,
+          "step": 1,
+          "options": [],
+          "default": 24,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "camera": {
+      "type": "camera",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/camera",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16765286,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 24,
+          "step": 1,
+          "options": [],
+          "default": 6,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 64,
+          "step": 1,
+          "options": [],
+          "default": 16,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 0.48,
+          "step": 0.01,
+          "options": [],
+          "default": 0.12,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "drive",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Drive",
+          "group": "props"
+        },
+        {
+          "key": "target",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 1.5,
+            "z": 0
+          },
+          "label": "Target",
+          "group": "props"
+        }
+      ]
+    },
+    "cloud": {
+      "type": "cloud",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/cloud",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 56,
+          "step": 1,
+          "options": [],
+          "default": 14,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "spread",
+          "kind": "number",
+          "min": 0,
+          "max": 104,
+          "step": 1,
+          "options": [],
+          "default": 26,
+          "label": "Spread",
+          "group": "look"
+        },
+        {
+          "key": "drift",
+          "kind": "number",
+          "min": 0,
+          "max": 1.6,
+          "step": 0.01,
+          "options": [],
+          "default": 0.4,
+          "label": "Drift",
+          "group": "motion"
+        },
+        {
+          "key": "puffs",
+          "kind": "int",
+          "min": 0,
+          "max": 112,
+          "step": 1,
+          "options": [],
+          "default": 28,
+          "label": "Puffs",
+          "group": "props"
+        }
+      ]
+    },
+    "destination": {
+      "type": "destination",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/destination",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 6,
+            "y": 0.05,
+            "z": -4
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 8073207,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 4,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 960,
+          "step": 1,
+          "options": [],
+          "default": 240,
+          "label": "Count",
+          "group": "props"
+        },
+        {
+          "key": "label",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Label",
+          "group": "props"
+        }
+      ]
+    },
+    "dialog": {
+      "type": "dialog",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/dialog",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 4,
+            "z": 3
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "bg",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Bg",
+          "group": "look"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "width",
+          "kind": "number",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "options": [],
+          "default": 5,
+          "label": "Width",
+          "group": "look"
+        },
+        {
+          "key": "text",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "Welcome to DeltaVerse.",
+          "label": "Text",
+          "group": "props"
+        }
+      ]
+    },
+    "dust": {
+      "type": "dust",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/dust",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "area",
+          "kind": "number",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Area",
+          "group": "look"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 14207395,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 0.24,
+          "step": 0.01,
+          "options": [],
+          "default": 0.06,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 3200,
+          "step": 1,
+          "options": [],
+          "default": 800,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "envmap": {
+      "type": "envmap",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/envmap",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "intensity",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 1,
+          "label": "Intensity",
+          "group": "look"
+        },
+        {
+          "key": "background",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": false,
+          "label": "Background",
+          "group": "props"
+        },
+        {
+          "key": "bottom",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 1054758,
+          "label": "Bottom",
+          "group": "props"
+        },
+        {
+          "key": "top",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 7310256,
+          "label": "Top",
+          "group": "props"
+        }
+      ]
+    },
+    "fog": {
+      "type": "fog",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/fog",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 658968,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "density",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.012,
+          "label": "Density",
+          "group": "props"
+        },
+        {
+          "key": "far",
+          "kind": "number",
+          "min": 0,
+          "max": 240,
+          "step": 1,
+          "options": [],
+          "default": 60,
+          "label": "Far",
+          "group": "props"
+        },
+        {
+          "key": "near",
+          "kind": "number",
+          "min": 0,
+          "max": 32,
+          "step": 1,
+          "options": [],
+          "default": 8,
+          "label": "Near",
+          "group": "props"
+        }
+      ]
+    },
+    "godray": {
+      "type": "godray",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/godray",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16773312,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "opacity",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.14,
+          "label": "Opacity",
+          "group": "look"
+        },
+        {
+          "key": "length",
+          "kind": "number",
+          "min": 0,
+          "max": 72,
+          "step": 1,
+          "options": [],
+          "default": 18,
+          "label": "Length",
+          "group": "props"
+        },
+        {
+          "key": "origin",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 16,
+            "z": -6
+          },
+          "label": "Origin",
+          "group": "props"
+        },
+        {
+          "key": "rays",
+          "kind": "int",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "options": [],
+          "default": 5,
+          "label": "Rays",
+          "group": "props"
+        }
+      ]
+    },
+    "grass": {
+      "type": "grass",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/grass",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5025616,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 96,
+          "step": 1,
+          "options": [],
+          "default": 24,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "windStrength",
+          "kind": "number",
+          "min": 0,
+          "max": 1.4,
+          "step": 0.01,
+          "options": [],
+          "default": 0.35,
+          "label": "Wind Strength",
+          "group": "motion"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 16000,
+          "step": 1,
+          "options": [],
+          "default": 4000,
+          "label": "Count",
+          "group": "props"
+        },
+        {
+          "key": "ground",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Ground",
+          "group": "props"
+        }
+      ]
+    },
+    "group": {
+      "type": "group",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/group",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": -6,
+            "y": 2.5,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 9133302,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 6.4,
+          "step": 0.1,
+          "options": [],
+          "default": 1.6,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "spin",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Spin",
+          "group": "motion"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "options": [],
+          "default": 5,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "iframe": {
+      "type": "iframe",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/iframe",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": -6,
+            "y": 4,
+            "z": -2
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 14,
+          "step": 0.1,
+          "options": [],
+          "default": 3.6,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "width",
+          "kind": "number",
+          "min": 0,
+          "max": 26,
+          "step": 0.1,
+          "options": [],
+          "default": 6.4,
+          "label": "Width",
+          "group": "look"
+        },
+        {
+          "key": "title",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Title",
+          "group": "props"
+        }
+      ]
+    },
+    "image": {
+      "type": "image",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/image",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 4,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "width",
+          "kind": "number",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 4,
+          "label": "Width",
+          "group": "look"
+        },
+        {
+          "key": "billboard",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": false,
+          "label": "Billboard",
+          "group": "motion"
+        },
+        {
+          "key": "text",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "IMAGE",
+          "label": "Text",
+          "group": "props"
+        }
+      ]
+    },
+    "impact": {
+      "type": "impact",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/impact",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16734780,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 0.56,
+          "step": 0.01,
+          "options": [],
+          "default": 0.14,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "period",
+          "kind": "number",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "options": [],
+          "default": 3,
+          "label": "Period",
+          "group": "motion"
+        },
+        {
+          "key": "sparks",
+          "kind": "int",
+          "min": 0,
+          "max": 320,
+          "step": 1,
+          "options": [],
+          "default": 80,
+          "label": "Sparks",
+          "group": "props"
+        }
+      ]
+    },
+    "instancedmesh": {
+      "type": "instancedmesh",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/instancedmesh",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5099745,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "shape",
+          "kind": "enum",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [
+            "sphere"
+          ],
+          "default": "sphere",
+          "label": "Shape",
+          "group": "look"
+        },
+        {
+          "key": "animate",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Animate",
+          "group": "motion"
+        },
+        {
+          "key": "cols",
+          "kind": "int",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Cols",
+          "group": "props"
+        },
+        {
+          "key": "gap",
+          "kind": "number",
+          "min": 0,
+          "max": 4.4,
+          "step": 0.1,
+          "options": [],
+          "default": 1.1,
+          "label": "Gap",
+          "group": "props"
+        },
+        {
+          "key": "rows",
+          "kind": "int",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Rows",
+          "group": "props"
+        }
+      ]
+    },
+    "interaction": {
+      "type": "interaction",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/interaction",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 2,
+            "z": 5
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 448160,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "hoverColor",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16765286,
+          "label": "Hover Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 4.8,
+          "step": 0.1,
+          "options": [],
+          "default": 1.2,
+          "label": "Size",
+          "group": "look"
+        }
+      ]
+    },
+    "lighting": {
+      "type": "lighting",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/lighting",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "ambientColor",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 4213340,
+          "label": "Ambient Color",
+          "group": "look"
+        },
+        {
+          "key": "ambientIntensity",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.6,
+          "label": "Ambient Intensity",
+          "group": "look"
+        },
+        {
+          "key": "intensity",
+          "kind": "number",
+          "min": 0,
+          "max": 5.6,
+          "step": 0.1,
+          "options": [],
+          "default": 1.4,
+          "label": "Intensity",
+          "group": "look"
+        },
+        {
+          "key": "sunColor",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16773846,
+          "label": "Sun Color",
+          "group": "look"
+        },
+        {
+          "key": "animate",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Animate",
+          "group": "motion"
+        },
+        {
+          "key": "hemisphere",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Hemisphere",
+          "group": "props"
+        },
+        {
+          "key": "sunPosition",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 8,
+            "y": 14,
+            "z": 6
+          },
+          "label": "Sun Position",
+          "group": "props"
+        }
+      ]
+    },
+    "mesh": {
+      "type": "mesh",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/mesh",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 1.6,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5099745,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "metalness",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.2,
+          "label": "Metalness",
+          "group": "look"
+        },
+        {
+          "key": "roughness",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.45,
+          "label": "Roughness",
+          "group": "look"
+        },
+        {
+          "key": "shape",
+          "kind": "enum",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [
+            "box",
+            "sphere",
+            "torus",
+            "cylinder"
+          ],
+          "default": "box",
+          "label": "Shape",
+          "group": "look"
+        },
+        {
+          "key": "spin",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Spin",
+          "group": "motion"
+        }
+      ]
+    },
+    "model": {
+      "type": "model",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/model",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 5,
+            "y": 2.2,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16754470,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "spin",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Spin",
+          "group": "motion"
+        },
+        {
+          "key": "url",
+          "kind": "asset",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Url",
+          "group": "props"
+        }
+      ]
+    },
+    "navmesh": {
+      "type": "navmesh",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/navmesh",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0.02,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 3835647,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "pathColor",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16711790,
+          "label": "Path Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 72,
+          "step": 1,
+          "options": [],
+          "default": 18,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "cells",
+          "kind": "number",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Cells",
+          "group": "props"
+        }
+      ]
+    },
+    "object": {
+      "type": "object",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/object",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16765286,
+          "label": "Color",
+          "group": "look"
+        }
+      ]
+    },
+    "participant": {
+      "type": "participant",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 4
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 100,
+          "step": 0.1,
+          "options": [],
+          "default": null,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "tint",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5032432,
+          "label": "Tint",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 8.8,
+          "step": 0.1,
+          "options": [],
+          "default": 2.2,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "run",
+          "kind": "int",
+          "min": 0,
+          "max": 18,
+          "step": 1,
+          "options": [],
+          "default": 4.4,
+          "label": "Run",
+          "group": "props"
+        },
+        {
+          "key": "seed",
+          "kind": "int",
+          "min": 0,
+          "max": 44,
+          "step": 1,
+          "options": [],
+          "default": 11,
+          "label": "Seed",
+          "group": "props"
+        }
+      ]
+    },
+    "particles": {
+      "type": "particles",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/particles",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "area",
+          "kind": "number",
+          "min": 0,
+          "max": 56,
+          "step": 1,
+          "options": [],
+          "default": 14,
+          "label": "Area",
+          "group": "look"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 10480127,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 0.48,
+          "step": 0.01,
+          "options": [],
+          "default": 0.12,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 4,
+          "step": 0.1,
+          "options": [],
+          "default": 1,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 4800,
+          "step": 1,
+          "options": [],
+          "default": 1200,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "piece": {
+      "type": "piece",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "frameColor",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 1711915,
+          "label": "Frame Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 6.8,
+          "step": 0.1,
+          "options": [],
+          "default": 1.7,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "nft",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Nft",
+          "group": "props",
+          "json": true
+        }
+      ]
+    },
+    "portal": {
+      "type": "portal",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2282478,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "options": [],
+          "default": 2.6,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "label",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Label",
+          "group": "props"
+        },
+        {
+          "key": "locked",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": false,
+          "label": "Locked",
+          "group": "props"
+        },
+        {
+          "key": "minRole",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Min Role",
+          "group": "props"
+        },
+        {
+          "key": "r",
+          "kind": "number",
+          "min": 0,
+          "max": 6.4,
+          "step": 0.1,
+          "options": [],
+          "default": 1.6,
+          "label": "R",
+          "group": "props"
+        },
+        {
+          "key": "seed",
+          "kind": "int",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 3,
+          "label": "Seed",
+          "group": "props"
+        },
+        {
+          "key": "to",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "?",
+          "label": "To",
+          "group": "props"
+        }
+      ]
+    },
+    "postprocessing": {
+      "type": "postprocessing",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/postprocessing",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "tint",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2068,
+          "label": "Tint",
+          "group": "look"
+        },
+        {
+          "key": "grain",
+          "kind": "number",
+          "min": 0,
+          "max": 0.32,
+          "step": 0.01,
+          "options": [],
+          "default": 0.08,
+          "label": "Grain",
+          "group": "props"
+        },
+        {
+          "key": "vignette",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.6,
+          "label": "Vignette",
+          "group": "props"
+        }
+      ]
+    },
+    "quarks": {
+      "type": "quarks",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/quarks",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16761434,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 0.72,
+          "step": 0.01,
+          "options": [],
+          "default": 0.18,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "spread",
+          "kind": "number",
+          "min": 0,
+          "max": 8,
+          "step": 1,
+          "options": [],
+          "default": 2,
+          "label": "Spread",
+          "group": "look"
+        },
+        {
+          "key": "life",
+          "kind": "number",
+          "min": 0,
+          "max": 6.4,
+          "step": 0.1,
+          "options": [],
+          "default": 1.6,
+          "label": "Life",
+          "group": "props"
+        },
+        {
+          "key": "rate",
+          "kind": "int",
+          "min": 0,
+          "max": 800,
+          "step": 1,
+          "options": [],
+          "default": 200,
+          "label": "Rate",
+          "group": "props"
+        }
+      ]
+    },
+    "rain": {
+      "type": "rain",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/rain",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "area",
+          "kind": "number",
+          "min": 0,
+          "max": 80,
+          "step": 1,
+          "options": [],
+          "default": 20,
+          "label": "Area",
+          "group": "look"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 11455462,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 0.28,
+          "step": 0.01,
+          "options": [],
+          "default": 0.07,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "count",
+          "kind": "int",
+          "min": 0,
+          "max": 8000,
+          "step": 1,
+          "options": [],
+          "default": 2000,
+          "label": "Count",
+          "group": "props"
+        }
+      ]
+    },
+    "reflector": {
+      "type": "reflector",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/reflector",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0.01,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 10468058,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "opacity",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 0.55,
+          "label": "Opacity",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 240,
+          "step": 1,
+          "options": [],
+          "default": 60,
+          "label": "Size",
+          "group": "look"
+        }
+      ]
+    },
+    "remote-participant": {
+      "type": "remote-participant",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "avatar",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {},
+          "label": "Avatar",
+          "group": "props",
+          "json": true
+        }
+      ]
+    },
+    "spline": {
+      "type": "spline",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/spline",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 8050687,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 0.32,
+          "step": 0.01,
+          "options": [],
+          "default": 0.08,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 0.8,
+          "step": 0.01,
+          "options": [],
+          "default": 0.2,
+          "label": "Speed",
+          "group": "motion"
+        },
+        {
+          "key": "points",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Points",
+          "group": "props",
+          "json": true
+        },
+        {
+          "key": "segments",
+          "kind": "int",
+          "min": 0,
+          "max": 800,
+          "step": 1,
+          "options": [],
+          "default": 200,
+          "label": "Segments",
+          "group": "props"
+        }
+      ]
+    },
+    "substrate": {
+      "type": "substrate",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 100,
+          "step": 0.1,
+          "options": [],
+          "default": null,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "opacity",
+          "kind": "number",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "options": [],
+          "default": 1,
+          "label": "Opacity",
+          "group": "look"
+        },
+        {
+          "key": "preset",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "gradient",
+          "label": "Preset",
+          "group": "look"
+        },
+        {
+          "key": "radius",
+          "kind": "number",
+          "min": 0,
+          "max": 100,
+          "step": 0.1,
+          "options": [],
+          "default": null,
+          "label": "Radius",
+          "group": "look"
+        },
+        {
+          "key": "shape",
+          "kind": "enum",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [
+            "sky",
+            "floor",
+            "ring"
+          ],
+          "default": "sky",
+          "label": "Shape",
+          "group": "look"
+        },
+        {
+          "key": "width",
+          "kind": "number",
+          "min": 0,
+          "max": 100,
+          "step": 0.1,
+          "options": [],
+          "default": null,
+          "label": "Width",
+          "group": "look"
+        },
+        {
+          "key": "fps",
+          "kind": "number",
+          "min": 0,
+          "max": 96,
+          "step": 1,
+          "options": [],
+          "default": 24,
+          "label": "Fps",
+          "group": "props"
+        },
+        {
+          "key": "seed",
+          "kind": "number",
+          "min": 0,
+          "max": 100,
+          "step": 0.1,
+          "options": [],
+          "default": null,
+          "label": "Seed",
+          "group": "props"
+        }
+      ]
+    },
+    "terrain": {
+      "type": "terrain",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/terrain",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 12,
+          "step": 1,
+          "options": [],
+          "default": 3,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 160,
+          "step": 1,
+          "options": [],
+          "default": 40,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "flat",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": false,
+          "label": "Flat",
+          "group": "props"
+        },
+        {
+          "key": "high",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 15262934,
+          "label": "High",
+          "group": "props"
+        },
+        {
+          "key": "low",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2179111,
+          "label": "Low",
+          "group": "props"
+        },
+        {
+          "key": "mid",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 7043898,
+          "label": "Mid",
+          "group": "props"
+        },
+        {
+          "key": "segments",
+          "kind": "int",
+          "min": 0,
+          "max": 384,
+          "step": 1,
+          "options": [],
+          "default": 96,
+          "label": "Segments",
+          "group": "props"
+        }
+      ]
+    },
+    "text": {
+      "type": "text",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/text",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 5,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "bg",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Bg",
+          "group": "look"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 4,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "billboard",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Billboard",
+          "group": "motion"
+        },
+        {
+          "key": "face",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": true,
+          "label": "Face",
+          "group": "props"
+        },
+        {
+          "key": "text",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "DeltaVerse",
+          "label": "Text",
+          "group": "props"
+        }
+      ]
+    },
+    "thot-memory": {
+      "type": "thot-memory",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 2.2,
+            "z": -6
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 8.8,
+          "step": 0.1,
+          "options": [],
+          "default": 2.2,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "depth",
+          "kind": "number",
+          "min": 0,
+          "max": 16,
+          "step": 1,
+          "options": [],
+          "default": 4,
+          "label": "Depth",
+          "group": "props"
+        },
+        {
+          "key": "fps",
+          "kind": "number",
+          "min": 0,
+          "max": 48,
+          "step": 1,
+          "options": [],
+          "default": 12,
+          "label": "Fps",
+          "group": "props"
+        },
+        {
+          "key": "label",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Label",
+          "group": "props"
+        },
+        {
+          "key": "nodes",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Nodes",
+          "group": "props",
+          "json": true
+        },
+        {
+          "key": "root",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "0x0",
+          "label": "Root",
+          "group": "props"
+        }
+      ]
+    },
+    "video": {
+      "type": "video",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/video",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 5099745,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "height",
+          "kind": "number",
+          "min": 0,
+          "max": 14,
+          "step": 0.1,
+          "options": [],
+          "default": 3.6,
+          "label": "Height",
+          "group": "look"
+        },
+        {
+          "key": "width",
+          "kind": "number",
+          "min": 0,
+          "max": 26,
+          "step": 0.1,
+          "options": [],
+          "default": 6.4,
+          "label": "Width",
+          "group": "look"
+        }
+      ]
+    },
+    "vrmanims": {
+      "type": "vrmanims",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/vrmanims",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 3,
+            "y": 0,
+            "z": 2
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 16196997,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "speed",
+          "kind": "number",
+          "min": 0,
+          "max": 4,
+          "step": 0.1,
+          "options": [],
+          "default": 1,
+          "label": "Speed",
+          "group": "motion"
+        }
+      ]
+    },
+    "water": {
+      "type": "water",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/water",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0.05,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 2792948,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 80,
+          "step": 1,
+          "options": [],
+          "default": 20,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "deep",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 402490,
+          "label": "Deep",
+          "group": "props"
+        },
+        {
+          "key": "segments",
+          "kind": "int",
+          "min": 0,
+          "max": 384,
+          "step": 1,
+          "options": [],
+          "default": 96,
+          "label": "Segments",
+          "group": "props"
+        }
+      ]
+    },
+    "wave": {
+      "type": "wave",
+      "upstream": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/wave",
+      "native": false,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0.05,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "color",
+          "kind": "color",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": 3856068,
+          "label": "Color",
+          "group": "look"
+        },
+        {
+          "key": "size",
+          "kind": "number",
+          "min": 0,
+          "max": 160,
+          "step": 1,
+          "options": [],
+          "default": 40,
+          "label": "Size",
+          "group": "look"
+        },
+        {
+          "key": "amplitude",
+          "kind": "number",
+          "min": 0,
+          "max": 6,
+          "step": 0.1,
+          "options": [],
+          "default": 1.5,
+          "label": "Amplitude",
+          "group": "props"
+        },
+        {
+          "key": "segments",
+          "kind": "int",
+          "min": 0,
+          "max": 480,
+          "step": 1,
+          "options": [],
+          "default": 120,
+          "label": "Segments",
+          "group": "props"
+        }
+      ]
+    },
+    "zone": {
+      "type": "zone",
+      "upstream": "DeltaVerse-native",
+      "native": true,
+      "rows": [
+        {
+          "key": "position",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Position",
+          "group": "transform"
+        },
+        {
+          "key": "rotation",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "label": "Rotation",
+          "group": "transform"
+        },
+        {
+          "key": "scale",
+          "kind": "vec3",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "label": "Scale",
+          "group": "transform"
+        },
+        {
+          "key": "bounds",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": null,
+          "label": "Bounds",
+          "group": "props"
+        },
+        {
+          "key": "locked",
+          "kind": "bool",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": false,
+          "label": "Locked",
+          "group": "props"
+        },
+        {
+          "key": "minRole",
+          "kind": "string",
+          "min": null,
+          "max": null,
+          "step": null,
+          "options": [],
+          "default": "",
+          "label": "Min Role",
+          "group": "props"
+        }
+      ]
+    }
+  }
+}

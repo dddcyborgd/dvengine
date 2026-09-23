@@ -1,0 +1,696 @@
+{
+  "$schema": "dddcyborgd/components.v1",
+  "generatedBy": "scripts/library.mjs",
+  "count": 45,
+  "components": [
+    {
+      "type": "aivatar",
+      "file": "aivatar/index.js",
+      "lines": 273,
+      "props": [
+        "dims",
+        "facePreset",
+        "id",
+        "name",
+        "pick",
+        "position",
+        "say",
+        "seed",
+        "tint",
+        "type",
+        "yaw"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "audio",
+      "file": "audio/index.js",
+      "lines": 77,
+      "props": [
+        "color",
+        "freq",
+        "position",
+        "range"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/audio"
+    },
+    {
+      "type": "avatar",
+      "file": "avatar/index.js",
+      "lines": 78,
+      "props": [
+        "color",
+        "height",
+        "position"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/avatar"
+    },
+    {
+      "type": "background",
+      "file": "background/index.js",
+      "lines": 61,
+      "props": [
+        "bottom",
+        "color",
+        "top",
+        "type"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/background"
+    },
+    {
+      "type": "batch",
+      "file": "batch/index.js",
+      "lines": 97,
+      "props": [
+        "color",
+        "count",
+        "position",
+        "spread"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/batch"
+    },
+    {
+      "type": "bird",
+      "file": "bird/index.js",
+      "lines": 67,
+      "props": [
+        "color",
+        "count",
+        "radius",
+        "speed"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/bird"
+    },
+    {
+      "type": "camera",
+      "file": "camera/index.js",
+      "lines": 73,
+      "props": [
+        "color",
+        "drive",
+        "height",
+        "radius",
+        "speed",
+        "target"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/camera"
+    },
+    {
+      "type": "cloud",
+      "file": "cloud/index.js",
+      "lines": 61,
+      "props": [
+        "color",
+        "drift",
+        "height",
+        "puffs",
+        "spread"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/cloud"
+    },
+    {
+      "type": "destination",
+      "file": "destination/index.js",
+      "lines": 94,
+      "props": [
+        "color",
+        "count",
+        "height",
+        "label",
+        "position"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/destination"
+    },
+    {
+      "type": "dialog",
+      "file": "dialog/index.js",
+      "lines": 76,
+      "props": [
+        "bg",
+        "color",
+        "position",
+        "text",
+        "width"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/dialog"
+    },
+    {
+      "type": "dust",
+      "file": "dust/index.js",
+      "lines": 67,
+      "props": [
+        "area",
+        "color",
+        "count",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/dust"
+    },
+    {
+      "type": "envmap",
+      "file": "envmap/index.js",
+      "lines": 67,
+      "props": [
+        "background",
+        "bottom",
+        "intensity",
+        "position",
+        "top"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/envmap"
+    },
+    {
+      "type": "fog",
+      "file": "fog/index.js",
+      "lines": 34,
+      "props": [
+        "color",
+        "density",
+        "far",
+        "near",
+        "type"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/fog"
+    },
+    {
+      "type": "godray",
+      "file": "godray/index.js",
+      "lines": 53,
+      "props": [
+        "color",
+        "length",
+        "opacity",
+        "origin",
+        "rays"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/godray"
+    },
+    {
+      "type": "grass",
+      "file": "grass/index.js",
+      "lines": 87,
+      "props": [
+        "color",
+        "count",
+        "ground",
+        "size",
+        "windStrength"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/grass"
+    },
+    {
+      "type": "group",
+      "file": "group/index.js",
+      "lines": 56,
+      "props": [
+        "color",
+        "count",
+        "position",
+        "radius",
+        "spin"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/group"
+    },
+    {
+      "type": "iframe",
+      "file": "iframe/index.js",
+      "lines": 81,
+      "props": [
+        "color",
+        "height",
+        "position",
+        "title",
+        "width"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/iframe"
+    },
+    {
+      "type": "image",
+      "file": "image/index.js",
+      "lines": 58,
+      "props": [
+        "billboard",
+        "color",
+        "height",
+        "position",
+        "text",
+        "width"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/image"
+    },
+    {
+      "type": "impact",
+      "file": "impact/index.js",
+      "lines": 83,
+      "props": [
+        "color",
+        "period",
+        "size",
+        "sparks"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/impact"
+    },
+    {
+      "type": "instancedmesh",
+      "file": "instancedmesh/index.js",
+      "lines": 73,
+      "props": [
+        "animate",
+        "color",
+        "cols",
+        "gap",
+        "rows",
+        "shape"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/instancedmesh"
+    },
+    {
+      "type": "interaction",
+      "file": "interaction/index.js",
+      "lines": 86,
+      "props": [
+        "color",
+        "hoverColor",
+        "position",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/interaction"
+    },
+    {
+      "type": "lighting",
+      "file": "lighting/index.js",
+      "lines": 63,
+      "props": [
+        "ambientColor",
+        "ambientIntensity",
+        "animate",
+        "hemisphere",
+        "intensity",
+        "sunColor",
+        "sunPosition"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/lighting"
+    },
+    {
+      "type": "mesh",
+      "file": "mesh/index.js",
+      "lines": 54,
+      "props": [
+        "color",
+        "metalness",
+        "position",
+        "roughness",
+        "shape",
+        "spin"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/mesh"
+    },
+    {
+      "type": "model",
+      "file": "model/index.js",
+      "lines": 63,
+      "props": [
+        "color",
+        "position",
+        "scale",
+        "spin",
+        "url"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/model"
+    },
+    {
+      "type": "navmesh",
+      "file": "navmesh/index.js",
+      "lines": 97,
+      "props": [
+        "cells",
+        "color",
+        "pathColor",
+        "position",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/navmesh"
+    },
+    {
+      "type": "object",
+      "file": "object/index.js",
+      "lines": 51,
+      "props": [
+        "color",
+        "position",
+        "rotation",
+        "scale"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/object"
+    },
+    {
+      "type": "participant",
+      "file": "participant/index.js",
+      "lines": 79,
+      "props": [
+        "height",
+        "position",
+        "run",
+        "seed",
+        "speed",
+        "tint"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "particles",
+      "file": "particles/index.js",
+      "lines": 64,
+      "props": [
+        "area",
+        "color",
+        "count",
+        "size",
+        "speed"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/particles"
+    },
+    {
+      "type": "piece",
+      "file": "piece/index.js",
+      "lines": 74,
+      "props": [
+        "frameColor",
+        "nft",
+        "position",
+        "rotation",
+        "size"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "portal",
+      "file": "portal/index.js",
+      "lines": 85,
+      "props": [
+        "color",
+        "height",
+        "id",
+        "label",
+        "locked",
+        "minRole",
+        "position",
+        "r",
+        "seed",
+        "to"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "postprocessing",
+      "file": "postprocessing/index.js",
+      "lines": 73,
+      "props": [
+        "grain",
+        "tint",
+        "vignette"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/postprocessing"
+    },
+    {
+      "type": "quarks",
+      "file": "quarks/index.js",
+      "lines": 80,
+      "props": [
+        "color",
+        "life",
+        "rate",
+        "size",
+        "spread"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/quarks"
+    },
+    {
+      "type": "rain",
+      "file": "rain/index.js",
+      "lines": 62,
+      "props": [
+        "area",
+        "color",
+        "count",
+        "size",
+        "speed"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/rain"
+    },
+    {
+      "type": "reflector",
+      "file": "reflector/index.js",
+      "lines": 63,
+      "props": [
+        "color",
+        "opacity",
+        "position",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/reflector"
+    },
+    {
+      "type": "remote-participant",
+      "file": "remote-participant/index.js",
+      "lines": 61,
+      "props": [
+        "avatar",
+        "name",
+        "position",
+        "sessionId"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "spline",
+      "file": "spline/index.js",
+      "lines": 73,
+      "props": [
+        "color",
+        "points",
+        "radius",
+        "segments",
+        "speed"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/spline"
+    },
+    {
+      "type": "substrate",
+      "file": "substrate/index.js",
+      "lines": 81,
+      "props": [
+        "fps",
+        "height",
+        "opacity",
+        "position",
+        "preset",
+        "radius",
+        "seed",
+        "shape",
+        "width"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "terrain",
+      "file": "terrain/index.js",
+      "lines": 70,
+      "props": [
+        "flat",
+        "height",
+        "high",
+        "low",
+        "mid",
+        "position",
+        "segments",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/terrain"
+    },
+    {
+      "type": "text",
+      "file": "text/index.js",
+      "lines": 59,
+      "props": [
+        "bg",
+        "billboard",
+        "color",
+        "face",
+        "position",
+        "size",
+        "text"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/text"
+    },
+    {
+      "type": "thot-memory",
+      "file": "thot-memory/index.js",
+      "lines": 81,
+      "props": [
+        "depth",
+        "fps",
+        "label",
+        "nodes",
+        "position",
+        "root",
+        "rotation",
+        "size"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    },
+    {
+      "type": "video",
+      "file": "video/index.js",
+      "lines": 72,
+      "props": [
+        "color",
+        "height",
+        "position",
+        "width"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/video"
+    },
+    {
+      "type": "vrmanims",
+      "file": "vrmanims/index.js",
+      "lines": 87,
+      "props": [
+        "color",
+        "position",
+        "speed"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/vrmanims"
+    },
+    {
+      "type": "water",
+      "file": "water/index.js",
+      "lines": 59,
+      "props": [
+        "color",
+        "deep",
+        "position",
+        "segments",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/water"
+    },
+    {
+      "type": "wave",
+      "file": "wave/index.js",
+      "lines": 61,
+      "props": [
+        "amplitude",
+        "color",
+        "position",
+        "segments",
+        "size"
+      ],
+      "upstream": "awe",
+      "lazy": true,
+      "link": "https://github.com/oncyberio/awe/tree/main/packages/engine/src/space/components/wave"
+    },
+    {
+      "type": "zone",
+      "file": "zone/index.js",
+      "lines": 49,
+      "props": [
+        "bounds",
+        "id",
+        "locked",
+        "minRole",
+        "name",
+        "visible"
+      ],
+      "upstream": "deltaverse-native",
+      "lazy": true,
+      "link": "https://github.com/dddcyborgd/dvengine"
+    }
+  ]
+}

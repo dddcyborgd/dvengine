@@ -1,0 +1,60 @@
+{
+  "id": "my-game",
+  "components": {
+    "vrm-anims": {
+      "id": "vrm-anims",
+      "name": "VRM Animations",
+      "type": "vrm-anims",
+      "url": "https://cyber.mypinata.cloud/ipfs/QmSxBEzzgwqjmtTRBc6ywcJ2fDYE2ckNRTsKmA9JNETfgp?filename=1725904909-Ny3MlG6hsAlirYgsRqYO-vrm-anims-default.json",
+      "anims": {}
+    },
+    "lighting": {
+      "id": "lighting",
+      "name": "Lighting",
+      "type": "lighting",
+      "enabled": true,
+      "intensity": 1
+    },
+    "background": {
+      "id": "background",
+      "name": "Background",
+      "type": "background",
+      "options": {
+        "type": "color",
+        "color": "#87ceeb"
+      }
+    },
+    "terrain": {
+      "id": "terrain",
+      "name": "Ground",
+      "type": "terrain",
+      "shape": "plane",
+      "scale": { "x": 100, "y": 1, "z": 100 },
+      "collider": {
+        "enabled": true,
+        "rigidbodyType": "FIXED",
+        "type": "MESH"
+      }
+    },
+    "Player": {
+      "id": "Player",
+      "name": "Player",
+      "type": "avatar",
+      "url": "https://cdn.oncyber.xyz/engine-assets/vrms/sunshine.glb",
+      "position": { "x": 0, "y": 0, "z": 0 },
+      "rotation": { "x": 0, "y": 0, "z": 0 },
+      "scale": { "x": 1, "y": 1, "z": 1 },
+      "animation": "IDLE",
+      "useCpuAnimation": true,
+      "script": {
+        "_isPlayer": true,
+        "identifier": "player"
+      },
+      "collider": {
+        "enabled": true,
+        "rigidbodyType": "PLAYER",
+        "colliderType": "CAPSULE"
+      }
+    }
+  }
+}

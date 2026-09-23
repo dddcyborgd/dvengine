@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="engine/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-core</kind>
+  <github sha="cf0da1996e278ef0f065e8fc5fa2be925ba24491" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVEngine core: Space · register · lazy · DVScene format · legacy loader.</how>
+    <why>Extends the awe component contract 1:1 so the 37 ports move without edits.</why>
+  </migration>
+</doc>

@@ -1,0 +1,23 @@
+[
+  { "match": "^archive/awe/packages/engine-edit/src/transformer/", "verdict": "ported", "portedTo": "edit/index.js (TransformProxy · DragHandler)" },
+  { "match": "^archive/awe/packages/engine-edit/src/controls/pivot-controls/snap", "verdict": "ported", "portedTo": "edit/snap.js (+ test/snap.test.mjs)" },
+  { "match": "^archive/awe/packages/engine-edit/src/controls/pivot-controls/", "verdict": "ported", "portedTo": "edit/pivot/*.js" },
+  { "match": "^archive/awe/packages/engine-edit/src/controls/", "verdict": "partial", "portedTo": "edit/index.js over three/addons TransformControls" },
+  { "match": "^archive/awe/packages/engine-edit/src/editors/", "verdict": "ported", "portedTo": "editors/<type>/index.js (schemas)" },
+  { "match": "^archive/awe/packages/engine-edit/src/(commands|state)/", "verdict": "ported", "portedTo": "edit/commands.js · edit/history.js" },
+  { "match": "^archive/awe/packages/engine-edit/src/(grid|capture)/", "verdict": "ported", "portedTo": "edit/grid.js · edit/capture.js" },
+  { "match": "^archive/awe/packages/engine-edit/", "verdict": "catalogued", "portedTo": "" },
+  { "match": "^archive/awe/packages/tools/src/(gltf|inspect|scene|vrm)/", "verdict": "ported", "portedTo": "transform/desk.mjs" },
+  { "match": "^archive/awe/packages/tools/src/texture/", "verdict": "catalogued", "portedTo": "transform/gates.mjs (native: off)" },
+  { "match": "^archive/awe/packages/tools/src/space/", "verdict": "partial", "portedTo": "cyborgd core (headless run-space)" },
+  { "match": "^archive/awe/packages/tools/", "verdict": "catalogued", "portedTo": "" },
+  { "match": "^archive/awe/packages/studio/src/services/editor/", "verdict": "ported", "portedTo": "edit/commands.js · edit/history.js · studio/" },
+  { "match": "^archive/awe/packages/studio/src/dApp/", "verdict": "partial", "portedTo": "verse/holdings.js (read-only, no OpenSea key)" },
+  { "match": "^archive/awe/packages/studio/", "verdict": "catalogued", "portedTo": "studio/ (framework-free re-imagination)" },
+  { "match": "^archive/awe/examples/(multiplayer|auth-multiplayer)/(shared|src/multiplayer)/", "verdict": "ported", "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs" },
+  { "match": "^archive/awe/examples/starter/", "verdict": "ported", "portedTo": "legacy/static-scene.json · engine/legacy.js" },
+  { "match": "^archive/awe/\\.claude/skills/", "verdict": "reference", "portedTo": "skills/cyborgd (the DeltaVerse skill)" },
+  { "match": "^archive/awe/", "verdict": "reference", "portedTo": "" },
+  { "match": "^archive/gltftransform/packages/(core|extensions|functions)/src/", "verdict": "ported", "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs" },
+  { "match": "^archive/gltftransform/", "verdict": "reference", "portedTo": "" }
+]

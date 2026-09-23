@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="editors/vrmanims/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-editor-schema</kind>
+  <github sha="4c279450e706f9ec242d028dda7816d59f17ef60" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>Inspector schema for one component type (from the awe *-data.ts shape).</how>
+    <why>Schema drives DVStudio without a framework.</why>
+  </migration>
+</doc>

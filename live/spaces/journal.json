@@ -1,0 +1,157 @@
+{
+  "$schema": "https://deltaverse.pythai.net/schema/cyborg-space.v1.json",
+  "format": "cyborg-space/1",
+  "id": "journal",
+  "name": "The Journal",
+  "concept": "chamber",
+  "description": "A member's reading room: the pieces that were written down.",
+  "creatorId": "bankon.eth",
+  "editors": [
+    "bankon.eth"
+  ],
+  "room": {
+    "roomId": 0,
+    "contract": null,
+    "chain": null
+  },
+  "token": {
+    "standard": "ERC-721",
+    "type": "iNFT",
+    "compatible": [
+      "ERC-7857",
+      "ERC-6551",
+      "ERC-5192"
+    ],
+    "chain": null,
+    "soulbound": false,
+    "tba": true
+  },
+  "agent": {
+    "inft": null,
+    "thotRoot": null
+  },
+  "skin": "quantum-foam",
+  "theme": "default-dark",
+  "traits": [
+    {
+      "k": "gate",
+      "v": "member"
+    }
+  ],
+  "nfts": [
+    {
+      "id": "thot-001",
+      "title": "First Thought",
+      "artist": "mindX",
+      "type": "THOT",
+      "seed": 7
+    },
+    {
+      "id": "inft-alice",
+      "title": "A.L.I.C.E.",
+      "artist": "R. S. Wallace",
+      "type": "iNFT",
+      "seed": 1999
+    },
+    {
+      "id": "dnft-aurora",
+      "title": "Aurora Veil",
+      "artist": "nGn",
+      "type": "dNFT",
+      "seed": 42
+    },
+    {
+      "id": "anft-weaver",
+      "title": "The Weaver",
+      "artist": "DeltaVerse",
+      "type": "aNFT",
+      "seed": 314
+    }
+  ],
+  "zones": [
+    {
+      "id": "journal",
+      "name": "The Journal",
+      "minRole": "member",
+      "bounds": {
+        "c": [
+          0,
+          0,
+          0
+        ],
+        "r": 8
+      },
+      "portalTo": "agora"
+    }
+  ],
+  "agents": [
+    {
+      "zone": "journal",
+      "id": "scribe",
+      "type": "aNFT",
+      "name": "The Scribe",
+      "seed": 314,
+      "tint": "#ffd166",
+      "say": [
+        "Every entry is a hash. Every hash is a memory."
+      ]
+    }
+  ],
+  "components": {
+    "lighting": {
+      "id": "lighting",
+      "name": "Lighting",
+      "type": "lighting",
+      "data": {
+        "intensity": 1.2,
+        "ambientIntensity": 0.55,
+        "animate": false,
+        "sunPosition": {
+          "x": 6,
+          "y": 14,
+          "z": 8
+        }
+      }
+    },
+    "background": {
+      "id": "background",
+      "name": "Background",
+      "type": "background",
+      "data": {
+        "type": "gradient",
+        "top": "#070912",
+        "bottom": "#12172a"
+      }
+    },
+    "fog": {
+      "id": "fog",
+      "name": "Fog",
+      "type": "fog",
+      "data": {
+        "type": "exp2",
+        "color": "#070912",
+        "density": 0.012
+      }
+    },
+    "title": {
+      "id": "title",
+      "name": "Title",
+      "type": "text",
+      "data": {
+        "text": "THE JOURNAL",
+        "color": "#ffd166",
+        "size": 5
+      },
+      "position": {
+        "x": 0,
+        "y": 5.5,
+        "z": -7
+      }
+    }
+  },
+  "params": {},
+  "image": "",
+  "animation_url": "",
+  "legacy": null,
+  "createdAt": 1758500000000
+}

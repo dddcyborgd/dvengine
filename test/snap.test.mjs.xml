@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="test/snap.test.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>test</kind>
+  <github sha="757ba55c9bf66740f4b48595199709a7c3bdd4c0" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>node --test.</how>
+    <why>No test framework dependency.</why>
+  </migration>
+</doc>

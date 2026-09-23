@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dvengine — Studio</title>
+<meta name="description" content="The dvengine studio: hierarchy · canvas with transform tools · schema-driven inspector · history · scene JSON · assets · wallet — framework-free, three.js r182 shared from ../vendor/three.">
+<link rel="stylesheet" href="./studio.css">
+<script type="importmap">{ "imports": { "three": "../vendor/three/build/three.module.min.js", "three/addons/": "../vendor/three/addons/" } }</script>
+</head>
+<body>
+<div id="studio">
+  <header id="top"><span class="brand">dvengine</span><span class="dim">studio · cyborg-space/1</span></header>
+  <aside id="left"><h3>Hierarchy <span class="dim" id="hcount"></span></h3><div id="hierarchy"></div></aside>
+  <main id="centre"><canvas id="cv" tabindex="0"></canvas><div id="hint">G move · R rotate · S scale · X delete · D duplicate · Ctrl+Z/Y undo/redo · F frame · shift-click multi-select</div><div id="toast"></div></main>
+  <aside id="right"><h3>Inspector <span class="dim" id="itype"></span></h3><div id="inspector"></div><h3>Assets</h3><div id="assets"></div></aside>
+  <footer id="bottom">
+    <section><h3>History <span><button class="mini" id="undo">undo</button> <button class="mini" id="redo">redo</button></span></h3><div id="history"></div></section>
+    <section><h3>Scene JSON <span id="jstate" class="dim"></span></h3><div id="scenejson"></div></section>
+  </footer>
+</div>
+
+<!-- engine · scene document · legacy loader -->
+<script src="../engine/index.js"></script>
+<script src="../engine/scene.js"></script>
+<script src="../engine/legacy.js"></script>
+<!-- edit lane: snap → commands → history → grid → capture → pivot → DVTransform -->
+<script src="../edit/snap.js"></script>
+<script src="../edit/commands.js"></script>
+<script src="../edit/history.js"></script>
+<script src="../edit/grid.js"></script>
+<script src="../edit/capture.js"></script>
+<script src="../edit/pivot/axis-arrow.js"></script>
+<script src="../edit/pivot/axis-rotator.js"></script>
+<script src="../edit/pivot/plane-slider.js"></script>
+<script src="../edit/pivot/corner-scaler.js"></script>
+<script src="../edit/pivot/box-slider.js"></script>
+<script src="../edit/pivot/index.js"></script>
+<script src="../edit/index.js"></script>
+<!-- editors registry (per-type schemas load lazily from ../editors/<type>/index.js) -->
+<script src="../editors/index.js"></script>
+<!-- the aivatar's arm reads the arcball maths at use time -->
+<script src="../verse/arcball.math.js"></script>
+<!-- panels + the studio -->
+<script src="./panels/toolbar.js"></script>
+<script src="./panels/hierarchy.js"></script>
+<script src="./panels/inspector.js"></script>
+<script src="./panels/history.js"></script>
+<script src="./panels/scene-json.js"></script>
+<script src="./panels/assets.js"></script>
+<script src="./panels/wallet.js"></script>
+<script src="./studio.js"></script>
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { TransformControls } from 'three/addons/controls/TransformControls.js';
+  window.THREE = THREE; window.OrbitControls = OrbitControls; window.TransformControls = TransformControls;
+  DVStudio.mount({
+    canvas: document.getElementById('cv'),
+    els: { top: 'top', hierarchy: 'hierarchy', hcount: 'hcount', inspector: 'inspector', itype: 'itype', assets: 'assets', history: 'history', undo: 'undo', redo: 'redo', scenejson: 'scenejson', jstate: 'jstate', toast: 'toast' },
+    componentBase: '../components/', editorBase: '../editors/', cyborgd: localStorage.getItem('dv.cyborgd') || 'http://127.0.0.1:8790'
+  });
+</script>
+</body>
+</html>

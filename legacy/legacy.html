@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dvengine — Legacy reflection</title>
+<meta name="description" content="The faithful reflection of the oncyberio awe starter scene: AweRuntime + its ported components + static-scene.json, nothing refined.">
+<style>
+  html, body { margin:0; height:100%; background:#070912; color:#eef2ff; font:13px/1.4 ui-monospace, monospace; overflow:hidden; }
+  #cv { position:fixed; inset:0; width:100%; height:100%; display:block; }
+  #bar { position:fixed; left:12px; top:12px; right:12px; display:flex; gap:12px; flex-wrap:wrap; background:rgba(7,9,18,.8); border:1px solid rgba(139,92,246,.45); border-radius:10px; padding:8px 12px; }
+  a { color:#22d3ee; } .dim { color:#9aa4b2; }
+</style>
+<script type="importmap">{ "imports": { "three": "../vendor/three/build/three.module.min.js", "three/addons/": "../vendor/three/addons/" } }</script>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<div id="bar">
+  <strong>legacy</strong><span class="dim">awe static-scene.json · AweRuntime · the reflection, unrefined</span>
+  <span id="st" class="dim">loading…</span>
+  <span>upstream: <a href="https://github.com/oncyberio/engine">oncyberio/engine</a> · <a href="https://github.com/oncyberio/awe">oncyberio/awe</a> (MIT)</span>
+  <span class="dim">refinement lives in <a href="../index.html">../index.html (verse)</a> · the editor in <a href="../studio/studio.html">../studio/studio.html</a></span>
+</div>
+<script src="./awe-runtime/runtime.js"></script>
+<script src="./awe-runtime/components/audio.js"></script>
+<script src="./awe-runtime/components/avatar.js"></script>
+<script src="./awe-runtime/components/background.js"></script>
+<script src="./awe-runtime/components/batch.js"></script>
+<script src="./awe-runtime/components/bird.js"></script>
+<script src="./awe-runtime/components/camera.js"></script>
+<script src="./awe-runtime/components/cloud.js"></script>
+<script src="./awe-runtime/components/destination.js"></script>
+<script src="./awe-runtime/components/dialog.js"></script>
+<script src="./awe-runtime/components/dust.js"></script>
+<script src="./awe-runtime/components/envmap.js"></script>
+<script src="./awe-runtime/components/fog.js"></script>
+<script src="./awe-runtime/components/godray.js"></script>
+<script src="./awe-runtime/components/grass.js"></script>
+<script src="./awe-runtime/components/group.js"></script>
+<script src="./awe-runtime/components/iframe.js"></script>
+<script src="./awe-runtime/components/image.js"></script>
+<script src="./awe-runtime/components/impact.js"></script>
+<script src="./awe-runtime/components/instancedmesh.js"></script>
+<script src="./awe-runtime/components/interaction.js"></script>
+<script src="./awe-runtime/components/lighting.js"></script>
+<script src="./awe-runtime/components/mesh.js"></script>
+<script src="./awe-runtime/components/model.js"></script>
+<script src="./awe-runtime/components/navmesh.js"></script>
+<script src="./awe-runtime/components/object.js"></script>
+<script src="./awe-runtime/components/particles.js"></script>
+<script src="./awe-runtime/components/postprocessing.js"></script>
+<script src="./awe-runtime/components/quarks.js"></script>
+<script src="./awe-runtime/components/rain.js"></script>
+<script src="./awe-runtime/components/reflector.js"></script>
+<script src="./awe-runtime/components/spline.js"></script>
+<script src="./awe-runtime/components/terrain.js"></script>
+<script src="./awe-runtime/components/text.js"></script>
+<script src="./awe-runtime/components/video.js"></script>
+<script src="./awe-runtime/components/vrmanims.js"></script>
+<script src="./awe-runtime/components/water.js"></script>
+<script src="./awe-runtime/components/wave.js"></script>
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  window.THREE = THREE; window.OrbitControls = OrbitControls;
+  // the 30-line loader: iterate the awe SceneData components, add each by type, skip what has no port
+  const st = document.getElementById('st');
+  const space = AweRuntime.Space(document.getElementById('cv'), { controls: true });
+  const res = await fetch('./static-scene.json');
+  const scene = await res.json();
+  const comps = scene.components || {};
+  let mounted = 0, skipped = [];
+  for (const id of Object.keys(comps)) {
+    const c = comps[id];
+    const type = String(c.type || '').replace(/-/g, '');        // vrm-anims → vrmanims (the port's folder name)
+    const props = Object.assign({}, c.data || {}, c);
+    delete props.data;
+    try { space.add(type, props); mounted++; }
+    catch (e) { skipped.push(id + ' (' + c.type + ')'); }
+  }
+  space.start();
+  st.textContent = 'mounted ' + mounted + ' · skipped ' + skipped.length + (skipped.length ? ' — ' + skipped.join(', ') : '');
+</script>
+</body>
+</html>

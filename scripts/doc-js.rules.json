@@ -1,0 +1,19 @@
+{
+  "repo": "dddcyborgd/dvengine",
+  "upstream": "https://github.com/dddcyborgd/dvengine",
+  "default": { "lane": "prototype", "kind": "module", "target": "stays-js", "status": "prototype", "how": "Zero-dependency UMD (window.DV* + module.exports); reads window.THREE at use time.", "why": "The .js lane is the participant-facing prototype lane; keys, signatures and value never enter it." },
+  "rules": [
+    { "match": "^engine/", "lane": "prototype", "kind": "dvengine-core", "target": "stays-js", "status": "live", "how": "DVEngine core: Space · register · lazy · DVScene format · legacy loader.", "why": "Extends the awe component contract 1:1 so the 37 ports move without edits." },
+    { "match": "^components/", "lane": "prototype", "kind": "dvengine-component", "target": "stays-js", "status": "live", "how": "Folder-is-module component: registers itself with DVEngine at load; init(ctx) → update(dt,t) → dispose().", "why": "Every world object is a component with one lifecycle (the awe design, kept)." },
+    { "match": "^edit/", "lane": "prototype", "kind": "dvengine-transform", "target": "stays-js", "status": "live", "how": "DVTransform: pivot gizmo · snap · drag proxy · command stack (clean-room over awe engine-edit + three/addons TransformControls).", "why": "The transform tools are a client lane; no upstream React or GSAP." },
+    { "match": "^editors/", "lane": "prototype", "kind": "dvengine-editor-schema", "target": "stays-js", "status": "live", "how": "Inspector schema for one component type (from the awe *-data.ts shape).", "why": "Schema drives DVStudio without a framework." },
+    { "match": "^net/", "lane": "prototype", "kind": "dvengine-net", "target": "ts", "status": "prototype", "how": "DVNet: cyborg/1 WebSocket client · snapshot interpolation · transform sync.", "why": "Carries the login333 claim → promote to .ts when it carries signatures." },
+    { "match": "^xr/", "lane": "prototype", "kind": "dvengine-xr", "target": "stays-js", "status": "live", "how": "DVXR: WebGPU/WebXR probes and teleport (from nGn/cycle.html + interaction/gallery-room.html).", "why": "Capability cards instead of blank frames." },
+    { "match": "^verse/", "lane": "prototype", "kind": "dvengine-verse", "target": "stays-js", "status": "live", "how": "DVVerse: substrates as sky/floor/portals · rungs → themes · senses · holdings → pieces · iNFT NPCs · THOT memory.", "why": "The DeltaVerse-native experience layer over the engine." },
+    { "match": "^transform/", "lane": "node", "kind": "asset-desk", "target": "stays-mjs", "status": "live", "how": "Node asset desk over vendored gltf-transform; gate table reports pure-JS / wasm / native honestly.", "why": "Optimisation is offline tooling, never shipped to the client." },
+    { "match": "^studio/", "lane": "prototype", "kind": "dvengine-studio", "target": "stays-js", "status": "live", "how": "DVStudio: framework-free editor panels over DVScene + DVTransform.", "why": "The awe studio was React/Next; the concepts were kept, the framework was not." },
+    { "match": "^legacy/", "lane": "prototype", "kind": "legacy-reflection", "target": "stays-js", "status": "frozen", "how": "The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.", "why": "Legacy mode is a reflection of the oncyber work, kept pristine." },
+    { "match": "^scripts/", "lane": "node", "kind": "tooling", "target": "stays-mjs", "status": "live", "how": "Repo tooling (fetch/catalogue/build/sidecars).", "why": "Generators are re-runnable and --check-able." },
+    { "match": "^test/", "lane": "node", "kind": "test", "target": "stays-mjs", "status": "live", "how": "node --test.", "why": "No test framework dependency." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "dddcyborgd/sources.v1",
+  "generatedBy": "scripts/fetch-upstream.mjs",
+  "sources": [
+    {
+      "repo": "oncyberio/awe",
+      "sha": "04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+      "ref": "main",
+      "license": "MIT",
+      "upstream": "https://github.com/oncyberio/awe/tree/04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+      "tarballSha256": "0a7ca38f84cdd29dbf616b7c35cc66e01a9999995e1367f9219f5e9078af074c",
+      "fetchedAt": "2026-09-23T00:43:15.731Z",
+      "paths": [
+        "LICENSE",
+        "README.md",
+        "packages/engine/package.json",
+        "packages/engine-edit",
+        "packages/tools/src",
+        "packages/tools/package.json",
+        "packages/tools/AGENT.md",
+        "packages/studio/package.json",
+        "packages/studio/src/dApp",
+        "packages/studio/src/services",
+        "packages/studio/src/server",
+        "packages/studio/src/types",
+        "examples/starter/public/data/static-scene.json",
+        "examples/multiplayer/package.json",
+        "examples/multiplayer/shared",
+        "examples/multiplayer/src/multiplayer",
+        "examples/multiplayer/src/lib",
+        "examples/auth-multiplayer/package.json",
+        "examples/auth-multiplayer/shared",
+        ".claude/skills"
+      ],
+      "skip": [
+        "\\.(glb|gltf|fbx|png|jpg|jpeg|webp|mp4|mp3|wav|ktx2)$",
+        "/node_modules/"
+      ],
+      "files": 284,
+      "note": "engine-edit (transform tools) · tools (asset pipeline) · studio concepts · multiplayer client examples · the AI scene-editing skills"
+    },
+    {
+      "repo": "oncyberio/gltftransform",
+      "sha": "1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+      "ref": "master",
+      "license": "MIT",
+      "upstream": "https://github.com/oncyberio/gltftransform/tree/1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+      "tarballSha256": "5a71a570962a6b3eead6cfffc959df94497e61d506fa026cff2cc27df3af8618",
+      "fetchedAt": "2026-09-23T00:43:17.016Z",
+      "paths": [
+        "LICENSE",
+        "README.md",
+        "package.json",
+        "docs/CONCEPTS.md",
+        "docs/EXTENSIONS.md",
+        "docs/CREDITS.md",
+        "packages/core/src",
+        "packages/core/package.json",
+        "packages/extensions/src",
+        "packages/extensions/package.json",
+        "packages/functions/src",
+        "packages/functions/package.json",
+        "packages/cli/src/transforms",
+        "packages/cli/package.json"
+      ],
+      "skip": [
+        "/node_modules/"
+      ],
+      "files": 174,
+      "note": "fork of donmccurdy/glTF-Transform 3.2.0 — core · extensions · functions (the transform quarry); cli catalogued by listing only"
+    }
+  ]
+}

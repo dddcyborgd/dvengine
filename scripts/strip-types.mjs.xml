@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="scripts/strip-types.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>tooling</kind>
+  <github sha="79e6c368a8345228ad27b38705b74756c707860b" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>Repo tooling (fetch/catalogue/build/sidecars).</how>
+    <why>Generators are re-runnable and --check-able.</why>
+  </migration>
+</doc>

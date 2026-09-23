@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="net/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-net</kind>
+  <github sha="88a0a9ad77778a3da0793442217efcd84bbafcea" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="ts" status="prototype">
+    <how>DVNet: cyborg/1 WebSocket client · snapshot interpolation · transform sync.</how>
+    <why>Carries the login333 claim → promote to .ts when it carries signatures.</why>
+  </migration>
+</doc>

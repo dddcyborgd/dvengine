@@ -1,0 +1,15 @@
+[
+  { "repo": "oncyberio/awe", "sha": "04a07c8d75c114d8ea217d0870eeef2c6a65635a", "ref": "main", "license": "MIT",
+    "note": "engine-edit (transform tools) · tools (asset pipeline) · studio concepts · multiplayer client examples · the AI scene-editing skills",
+    "paths": ["LICENSE", "README.md", "packages/engine/package.json", "packages/engine-edit", "packages/tools/src", "packages/tools/package.json", "packages/tools/AGENT.md",
+              "packages/studio/package.json", "packages/studio/src/dApp", "packages/studio/src/services", "packages/studio/src/server", "packages/studio/src/types",
+              "examples/starter/public/data/static-scene.json", "examples/multiplayer/package.json", "examples/multiplayer/shared", "examples/multiplayer/src/multiplayer", "examples/multiplayer/src/lib",
+              "examples/auth-multiplayer/package.json", "examples/auth-multiplayer/shared", ".claude/skills"],
+    "skip": ["\\.(glb|gltf|fbx|png|jpg|jpeg|webp|mp4|mp3|wav|ktx2)$", "/node_modules/"] },
+  { "repo": "oncyberio/gltftransform", "sha": "1026a2f74e32e134a4a46df4f1cbe8e43872edcc", "ref": "master", "license": "MIT",
+    "note": "fork of donmccurdy/glTF-Transform 3.2.0 — core · extensions · functions (the transform quarry); cli catalogued by listing only",
+    "paths": ["LICENSE", "README.md", "package.json", "docs/CONCEPTS.md", "docs/EXTENSIONS.md", "docs/CREDITS.md",
+              "packages/core/src", "packages/core/package.json", "packages/extensions/src", "packages/extensions/package.json", "packages/functions/src", "packages/functions/package.json",
+              "packages/cli/src/transforms", "packages/cli/package.json"],
+    "skip": ["/node_modules/"] }
+]

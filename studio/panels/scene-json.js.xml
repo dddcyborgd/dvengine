@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="studio/panels/scene-json.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-studio</kind>
+  <github sha="03fc3e5a3977be1c73bb2251a81f26be8de46357" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVStudio: framework-free editor panels over DVScene + DVTransform.</how>
+    <why>The awe studio was React/Next; the concepts were kept, the framework was not.</why>
+  </migration>
+</doc>

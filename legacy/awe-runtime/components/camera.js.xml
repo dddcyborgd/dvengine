@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="legacy/awe-runtime/components/camera.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>legacy-reflection</kind>
+  <github sha="a7a2f8a5d93d668d2ff6b3f80fd552c5f38f0c83" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="frozen">
+    <how>The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.</how>
+    <why>Legacy mode is a reflection of the oncyber work, kept pristine.</why>
+  </migration>
+</doc>

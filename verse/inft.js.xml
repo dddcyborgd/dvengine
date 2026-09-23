@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="verse/inft.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-verse</kind>
+  <github sha="0eaa444c0ac94682e3dd6a473feb4cfebb8b4432" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVVerse: substrates as sky/floor/portals · rungs → themes · senses · holdings → pieces · iNFT NPCs · THOT memory.</how>
+    <why>The DeltaVerse-native experience layer over the engine.</why>
+  </migration>
+</doc>

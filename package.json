@@ -1,0 +1,22 @@
+{
+  "name": "@dddcyborgd/dvengine",
+  "version": "0.0.1-alpha",
+  "private": true,
+  "description": "dvengine \u2014 the DeltaVerse 3D participant engine (three.js), refined from the oncyberio awe engine (MIT). Zero runtime dependencies; window.THREE is read at use time.",
+  "license": "MIT",
+  "repository": "github:dddcyborgd/dvengine",
+  "scripts": {
+    "fetch:upstream": "node scripts/fetch-upstream.mjs",
+    "fetch:upstream:check": "node scripts/fetch-upstream.mjs --check",
+    "lib": "node scripts/library.mjs",
+    "lib:check": "node scripts/library.mjs --check",
+    "doc:js": "node scripts/doc-js.mjs",
+    "doc:js:check": "node scripts/doc-js.mjs --check",
+    "vendor:three": "node scripts/vendor-three.mjs",
+    "gen:editors": "node scripts/gen-editors.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-syntax.mjs",
+    "test": "node --test test/*.test.mjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}

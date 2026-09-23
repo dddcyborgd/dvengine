@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="editors/remote-participant/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-editor-schema</kind>
+  <github sha="1d3adb96fe9fdfcce24feec73fb74addbdf11ca0" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>Inspector schema for one component type (from the awe *-data.ts shape).</how>
+    <why>Schema drives DVStudio without a framework.</why>
+  </migration>
+</doc>

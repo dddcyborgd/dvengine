@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="components/iframe/index.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-component</kind>
+  <github sha="b1bc785671e476d71b6ee04420fe714ebba1d772" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>Folder-is-module component: registers itself with DVEngine at load; init(ctx) → update(dt,t) → dispose().</how>
+    <why>Every world object is a component with one lifecycle (the awe design, kept).</why>
+  </migration>
+</doc>

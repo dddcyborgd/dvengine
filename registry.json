@@ -1,0 +1,4553 @@
+{
+  "$schema": "dddcyborgd/dvengine-registry.v1",
+  "name": "@dddcyborgd/dvengine",
+  "version": "0.0.1-alpha",
+  "generatedBy": "scripts/library.mjs",
+  "home": "https://github.com/dddcyborgd/dvengine",
+  "upstream": {
+    "org": "https://github.com/oncyberio",
+    "product": "https://oncyber.io",
+    "docs": "https://docs.oncyber.io"
+  },
+  "lanes": [
+    {
+      "lane": "engine",
+      "files": 3,
+      "lines": 569,
+      "globals": [
+        "DVEngine",
+        "DVLegacyScene",
+        "DVScene"
+      ]
+    },
+    {
+      "lane": "components",
+      "files": 47,
+      "lines": 4290,
+      "globals": [
+        "DVAivatar",
+        "DVParticipant",
+        "DVPiece",
+        "DVPortal",
+        "DVThotMemory",
+        "DVZone"
+      ]
+    },
+    {
+      "lane": "edit",
+      "files": 12,
+      "lines": 1378,
+      "globals": [
+        "DVCapture",
+        "DVCommands",
+        "DVGrid",
+        "DVHistory",
+        "DVTransform",
+        "DVPivot",
+        "DVSnap"
+      ]
+    },
+    {
+      "lane": "editors",
+      "files": 47,
+      "lines": 9379,
+      "globals": [
+        "DVEditors"
+      ]
+    },
+    {
+      "lane": "net",
+      "files": 4,
+      "lines": 570,
+      "globals": [
+        "DVHost",
+        "DVNet",
+        "DVPeer"
+      ]
+    },
+    {
+      "lane": "xr",
+      "files": 2,
+      "lines": 108,
+      "globals": [
+        "DVXR"
+      ]
+    },
+    {
+      "lane": "verse",
+      "files": 10,
+      "lines": 756,
+      "globals": [
+        "DVArcballMath",
+        "DVVerse"
+      ]
+    },
+    {
+      "lane": "legacy",
+      "files": 41,
+      "lines": 3451,
+      "globals": [
+        "AweRuntime"
+      ]
+    },
+    {
+      "lane": "studio",
+      "files": 10,
+      "lines": 416,
+      "globals": [
+        "DVStudioPanels",
+        "DVStudio"
+      ]
+    },
+    {
+      "lane": "transform",
+      "files": 3,
+      "lines": 368,
+      "globals": []
+    },
+    {
+      "lane": "scripts",
+      "files": 11,
+      "lines": 697,
+      "globals": []
+    },
+    {
+      "lane": "test",
+      "files": 9,
+      "lines": 687,
+      "globals": []
+    }
+  ],
+  "components": 45,
+  "archive": [
+    {
+      "repo": "oncyberio/awe",
+      "sha": "04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+      "license": "MIT",
+      "upstream": "https://github.com/oncyberio/awe/tree/04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+      "files": 284,
+      "lines": 51623,
+      "tally": {
+        "reference": 45,
+        "ported": 135,
+        "catalogued": 87,
+        "partial": 17
+      }
+    },
+    {
+      "repo": "oncyberio/gltftransform",
+      "sha": "1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+      "license": "MIT",
+      "upstream": "https://github.com/oncyberio/gltftransform/tree/1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+      "files": 174,
+      "lines": 21907,
+      "tally": {
+        "reference": 15,
+        "ported": 159
+      }
+    }
+  ],
+  "detail": {
+    "lanes": [
+      {
+        "lane": "engine",
+        "files": 3,
+        "lines": 569,
+        "globals": [
+          "DVEngine",
+          "DVLegacyScene",
+          "DVScene"
+        ],
+        "entries": [
+          {
+            "path": "engine/index.js",
+            "lines": 354,
+            "bytes": 16048,
+            "globals": [
+              "DVEngine"
+            ],
+            "banner": "dvengine — DVEngine (engine/index.js) · the DeltaVerse 3D participant engine core"
+          },
+          {
+            "path": "engine/legacy.js",
+            "lines": 23,
+            "bytes": 1337,
+            "globals": [
+              "DVLegacyScene"
+            ],
+            "banner": "dvengine — DVLegacyScene (engine/legacy.js) · legacy mode loader"
+          },
+          {
+            "path": "engine/scene.js",
+            "lines": 192,
+            "bytes": 13669,
+            "globals": [
+              "DVScene"
+            ],
+            "banner": "dvengine — DVScene (engine/scene.js) · the cyborg-space/1 scene document"
+          }
+        ]
+      },
+      {
+        "lane": "components",
+        "files": 47,
+        "lines": 4290,
+        "globals": [
+          "DVAivatar",
+          "DVParticipant",
+          "DVPiece",
+          "DVPortal",
+          "DVThotMemory",
+          "DVZone"
+        ],
+        "entries": [
+          {
+            "path": "components/aivatar/index.js",
+            "lines": 273,
+            "bytes": 23465,
+            "globals": [
+              "DVAivatar"
+            ],
+            "banner": "dvengine — component aivatar + DVAivatar (components/aivatar/index.js) · THE cyborg AI avatar: primitive humanoid, substrate face, breath · walk · turn · gestur"
+          },
+          {
+            "path": "components/audio/index.js",
+            "lines": 77,
+            "bytes": 3831,
+            "globals": [],
+            "banner": "dvengine component — audio (components/audio/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/avatar/index.js",
+            "lines": 78,
+            "bytes": 3119,
+            "globals": [],
+            "banner": "dvengine component — avatar (components/avatar/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/background/index.js",
+            "lines": 61,
+            "bytes": 2637,
+            "globals": [],
+            "banner": "dvengine component — background (components/background/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/batch/index.js",
+            "lines": 97,
+            "bytes": 3677,
+            "globals": [],
+            "banner": "dvengine component — batch (components/batch/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/bird/index.js",
+            "lines": 67,
+            "bytes": 2811,
+            "globals": [],
+            "banner": "dvengine component — bird (components/bird/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/camera/index.js",
+            "lines": 73,
+            "bytes": 3313,
+            "globals": [],
+            "banner": "dvengine component — camera (components/camera/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/cloud/index.js",
+            "lines": 61,
+            "bytes": 2588,
+            "globals": [],
+            "banner": "dvengine component — cloud (components/cloud/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/destination/index.js",
+            "lines": 94,
+            "bytes": 3767,
+            "globals": [],
+            "banner": "dvengine component — destination (components/destination/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/dialog/index.js",
+            "lines": 76,
+            "bytes": 3385,
+            "globals": [],
+            "banner": "dvengine component — dialog (components/dialog/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/dust/index.js",
+            "lines": 67,
+            "bytes": 2985,
+            "globals": [],
+            "banner": "dvengine component — dust (components/dust/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/envmap/index.js",
+            "lines": 67,
+            "bytes": 3225,
+            "globals": [],
+            "banner": "dvengine component — envmap (components/envmap/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/fog/index.js",
+            "lines": 34,
+            "bytes": 1393,
+            "globals": [],
+            "banner": "dvengine component — fog (components/fog/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/godray/index.js",
+            "lines": 53,
+            "bytes": 2120,
+            "globals": [],
+            "banner": "dvengine component — godray (components/godray/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/grass/index.js",
+            "lines": 87,
+            "bytes": 3712,
+            "globals": [],
+            "banner": "dvengine component — grass (components/grass/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/group/index.js",
+            "lines": 56,
+            "bytes": 2344,
+            "globals": [],
+            "banner": "dvengine component — group (components/group/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/iframe/index.js",
+            "lines": 81,
+            "bytes": 3573,
+            "globals": [],
+            "banner": "dvengine component — iframe (components/iframe/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/image/index.js",
+            "lines": 58,
+            "bytes": 2661,
+            "globals": [],
+            "banner": "dvengine component — image (components/image/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/impact/index.js",
+            "lines": 83,
+            "bytes": 3422,
+            "globals": [],
+            "banner": "dvengine component — impact (components/impact/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/instancedmesh/index.js",
+            "lines": 73,
+            "bytes": 3087,
+            "globals": [],
+            "banner": "dvengine component — instancedmesh (components/instancedmesh/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/interaction/index.js",
+            "lines": 86,
+            "bytes": 3993,
+            "globals": [],
+            "banner": "dvengine component — interaction (components/interaction/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/lighting/index.js",
+            "lines": 63,
+            "bytes": 2543,
+            "globals": [],
+            "banner": "dvengine component — lighting (components/lighting/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/manifest.json",
+            "lines": 230,
+            "bytes": 4398,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "components/mesh/index.js",
+            "lines": 54,
+            "bytes": 2213,
+            "globals": [],
+            "banner": "dvengine component — mesh (components/mesh/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/model/index.js",
+            "lines": 63,
+            "bytes": 2662,
+            "globals": [],
+            "banner": "dvengine component — model (components/model/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/navmesh/index.js",
+            "lines": 97,
+            "bytes": 4123,
+            "globals": [],
+            "banner": "dvengine component — navmesh (components/navmesh/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/object/index.js",
+            "lines": 51,
+            "bytes": 2040,
+            "globals": [],
+            "banner": "dvengine component — object (components/object/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/participant/index.js",
+            "lines": 79,
+            "bytes": 6581,
+            "globals": [
+              "DVParticipant"
+            ],
+            "banner": "dvengine — component participant (components/participant/index.js) · the local avatar: WASD/arrows + pointer, or the DVParticipantInput ladder when present; pos"
+          },
+          {
+            "path": "components/particles/index.js",
+            "lines": 64,
+            "bytes": 2813,
+            "globals": [],
+            "banner": "dvengine component — particles (components/particles/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/piece/index.js",
+            "lines": 74,
+            "bytes": 5206,
+            "globals": [
+              "DVPiece"
+            ],
+            "banner": "dvengine — component piece (components/piece/index.js) · an NFT on the wall: frame + art plane, procedural art from the seed or the token image, focus glow · (c"
+          },
+          {
+            "path": "components/portal/index.js",
+            "lines": 85,
+            "bytes": 6264,
+            "globals": [
+              "DVPortal"
+            ],
+            "banner": "dvengine — component portal (components/portal/index.js) · a ring + light column + substrate face; step within reach and the space emits dv:portal · (c) 2026 BA"
+          },
+          {
+            "path": "components/postprocessing/index.js",
+            "lines": 73,
+            "bytes": 3361,
+            "globals": [],
+            "banner": "dvengine component — postprocessing (components/postprocessing/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/quarks/index.js",
+            "lines": 80,
+            "bytes": 3331,
+            "globals": [],
+            "banner": "dvengine component — quarks (components/quarks/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/rain/index.js",
+            "lines": 62,
+            "bytes": 2402,
+            "globals": [],
+            "banner": "dvengine component — rain (components/rain/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/reflector/index.js",
+            "lines": 63,
+            "bytes": 2712,
+            "globals": [],
+            "banner": "dvengine component — reflector (components/reflector/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/registry.json",
+            "lines": 697,
+            "bytes": 15955,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "components/remote-participant/index.js",
+            "lines": 61,
+            "bytes": 4960,
+            "globals": [],
+            "banner": "dvengine — component remote-participant (components/remote-participant/index.js) · a peer's avatar fed by DVNet.TransformSync, with a name label and their txt ·"
+          },
+          {
+            "path": "components/spline/index.js",
+            "lines": 73,
+            "bytes": 2798,
+            "globals": [],
+            "banner": "dvengine component — spline (components/spline/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/substrate/index.js",
+            "lines": 81,
+            "bytes": 5720,
+            "globals": [],
+            "banner": "dvengine — component substrate (components/substrate/index.js) · a DeltaVerse nGn substrate as a live CanvasTexture on a sky, floor, panel or ring · (c) 2026 BA"
+          },
+          {
+            "path": "components/terrain/index.js",
+            "lines": 70,
+            "bytes": 3005,
+            "globals": [],
+            "banner": "dvengine component — terrain (components/terrain/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/text/index.js",
+            "lines": 59,
+            "bytes": 2602,
+            "globals": [],
+            "banner": "dvengine component — text (components/text/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/thot-memory/index.js",
+            "lines": 81,
+            "bytes": 5830,
+            "globals": [
+              "DVThotMemory"
+            ],
+            "banner": "dvengine — component thot-memory (components/thot-memory/index.js) · the agent's THOT memory tree on a panel: DVMerkleCanopy when present, a procedural tree oth"
+          },
+          {
+            "path": "components/video/index.js",
+            "lines": 72,
+            "bytes": 3075,
+            "globals": [],
+            "banner": "dvengine component — video (components/video/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/vrmanims/index.js",
+            "lines": 87,
+            "bytes": 3737,
+            "globals": [],
+            "banner": "dvengine component — vrmanims (components/vrmanims/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/water/index.js",
+            "lines": 59,
+            "bytes": 2795,
+            "globals": [],
+            "banner": "dvengine component — water (components/water/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/wave/index.js",
+            "lines": 61,
+            "bytes": 2906,
+            "globals": [],
+            "banner": "dvengine component — wave (components/wave/index.js) · folder-is-module · awe port"
+          },
+          {
+            "path": "components/zone/index.js",
+            "lines": 49,
+            "bytes": 2704,
+            "globals": [
+              "DVZone"
+            ],
+            "banner": "dvengine — component zone (components/zone/index.js) · an invisible spherical volume from doc.zones[]; tracks the local participant and emits dv:zone · (c) 2026"
+          }
+        ]
+      },
+      {
+        "lane": "edit",
+        "files": 12,
+        "lines": 1378,
+        "globals": [
+          "DVCapture",
+          "DVCommands",
+          "DVGrid",
+          "DVHistory",
+          "DVTransform",
+          "DVPivot",
+          "DVSnap"
+        ],
+        "entries": [
+          {
+            "path": "edit/capture.js",
+            "lines": 44,
+            "bytes": 3293,
+            "globals": [
+              "DVCapture"
+            ],
+            "banner": "dvengine — DVCapture (edit/capture.js) · captureThumbnail(space, {w,h}) → dataURL: an offscreen render at the requested size with every gizmo hidden · (c) 2026 "
+          },
+          {
+            "path": "edit/commands.js",
+            "lines": 182,
+            "bytes": 15669,
+            "globals": [
+              "DVCommands"
+            ],
+            "banner": "dvengine — DVCommands (edit/commands.js) · document-editing commands (add · remove · duplicate · group · ungroup · update · transform · reparent) that edit spac"
+          },
+          {
+            "path": "edit/grid.js",
+            "lines": 45,
+            "bytes": 3479,
+            "globals": [
+              "DVGrid"
+            ],
+            "banner": "dvengine — DVGrid (edit/grid.js) · the editor grid + axes (XZ / XY / YZ modes) rendered as gizmo objects the selector ignores · (c) 2026 BANKON / PYTHAI · dddcy"
+          },
+          {
+            "path": "edit/history.js",
+            "lines": 97,
+            "bytes": 6461,
+            "globals": [
+              "DVHistory"
+            ],
+            "banner": "dvengine — DVHistory (edit/history.js) · undo/redo stack with a 200-entry cap and auto-batching of rapid same-key commands inside 300 ms · (c) 2026 BANKON / PYT"
+          },
+          {
+            "path": "edit/index.js",
+            "lines": 261,
+            "bytes": 20089,
+            "globals": [
+              "DVTransform"
+            ],
+            "banner": "dvengine — DVTransform (edit/index.js) · the transform-tools editor over a DVEngine Space: raycast selection (shift multi-select), a gizmo (three/addons Transfo"
+          },
+          {
+            "path": "edit/pivot/axis-arrow.js",
+            "lines": 78,
+            "bytes": 5425,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.AxisArrow (edit/pivot/axis-arrow.js) · single-axis translate (and per-axis scale in scale mode) handle of the own gizmo · (c) 2026 BANKON / P"
+          },
+          {
+            "path": "edit/pivot/axis-rotator.js",
+            "lines": 74,
+            "bytes": 5043,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.AxisRotator (edit/pivot/axis-rotator.js) · single-axis rotation ring of the own gizmo (angle from the plane intersection, optional angle snap"
+          },
+          {
+            "path": "edit/pivot/box-slider.js",
+            "lines": 51,
+            "bytes": 3578,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.BoxSlider (edit/pivot/box-slider.js) · the invisible bbox handle: grab the object itself and slide it on the ground plane (or the camera plan"
+          },
+          {
+            "path": "edit/pivot/corner-scaler.js",
+            "lines": 61,
+            "bytes": 4021,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.CornerScaler (edit/pivot/corner-scaler.js) · one of 8 bbox-corner handles: uniform scale about the object's centre (opposite corner anchored "
+          },
+          {
+            "path": "edit/pivot/index.js",
+            "lines": 198,
+            "bytes": 18520,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.Controls (edit/pivot/index.js) · the own transform gizmo: 3 axis arrows · 3 plane sliders · 3 rotators · 8 corner scalers · a box slider, wit"
+          },
+          {
+            "path": "edit/pivot/plane-slider.js",
+            "lines": 52,
+            "bytes": 3802,
+            "globals": [
+              "DVPivot"
+            ],
+            "banner": "dvengine — DVPivot.PlaneSlider (edit/pivot/plane-slider.js) · two-axis translate quad of the own gizmo (drag within the axis plane) · (c) 2026 BANKON / PYTHAI ·"
+          },
+          {
+            "path": "edit/snap.js",
+            "lines": 235,
+            "bytes": 16251,
+            "globals": [
+              "DVSnap"
+            ],
+            "banner": "dvengine — DVSnap (edit/snap.js) · snapping maths: snap2d (artwork alignment + spacing), snap3d (bbox face-contact / edge alignment), snapAngle, snapGrid, snapT"
+          }
+        ]
+      },
+      {
+        "lane": "editors",
+        "files": 47,
+        "lines": 9379,
+        "globals": [
+          "DVEditors"
+        ],
+        "entries": [
+          {
+            "path": "editors/aivatar/index.js",
+            "lines": 127,
+            "bytes": 2919,
+            "globals": [],
+            "banner": "dvengine — editor aivatar (editors/aivatar/index.js) · inspector schema for components/aivatar · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI"
+          },
+          {
+            "path": "editors/audio/index.js",
+            "lines": 92,
+            "bytes": 2276,
+            "globals": [],
+            "banner": "dvengine — editor audio (editors/audio/index.js) · inspector schema for components/audio · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/avatar/index.js",
+            "lines": 81,
+            "bytes": 2064,
+            "globals": [],
+            "banner": "dvengine — editor avatar (editors/avatar/index.js) · inspector schema for components/avatar · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/background/index.js",
+            "lines": 92,
+            "bytes": 2322,
+            "globals": [],
+            "banner": "dvengine — editor background (editors/background/index.js) · inspector schema for components/background · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON"
+          },
+          {
+            "path": "editors/batch/index.js",
+            "lines": 92,
+            "bytes": 2273,
+            "globals": [],
+            "banner": "dvengine — editor batch (editors/batch/index.js) · inspector schema for components/batch · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/bird/index.js",
+            "lines": 103,
+            "bytes": 2487,
+            "globals": [],
+            "banner": "dvengine — editor bird (editors/bird/index.js) · inspector schema for components/bird · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/camera/index.js",
+            "lines": 129,
+            "bytes": 3028,
+            "globals": [],
+            "banner": "dvengine — editor camera (editors/camera/index.js) · inspector schema for components/camera · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/cloud/index.js",
+            "lines": 114,
+            "bytes": 2716,
+            "globals": [],
+            "banner": "dvengine — editor cloud (editors/cloud/index.js) · inspector schema for components/cloud · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/destination/index.js",
+            "lines": 103,
+            "bytes": 2539,
+            "globals": [],
+            "banner": "dvengine — editor destination (editors/destination/index.js) · inspector schema for components/destination · GENERATED by scripts/gen-editors.mjs · (c) 2026 BAN"
+          },
+          {
+            "path": "editors/dialog/index.js",
+            "lines": 103,
+            "bytes": 2523,
+            "globals": [],
+            "banner": "dvengine — editor dialog (editors/dialog/index.js) · inspector schema for components/dialog · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/dust/index.js",
+            "lines": 103,
+            "bytes": 2488,
+            "globals": [],
+            "banner": "dvengine — editor dust (editors/dust/index.js) · inspector schema for components/dust · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/envmap/index.js",
+            "lines": 103,
+            "bytes": 2536,
+            "globals": [],
+            "banner": "dvengine — editor envmap (editors/envmap/index.js) · inspector schema for components/envmap · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/fog/index.js",
+            "lines": 103,
+            "bytes": 2482,
+            "globals": [],
+            "banner": "dvengine — editor fog (editors/fog/index.js) · inspector schema for components/fog · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyborg"
+          },
+          {
+            "path": "editors/godray/index.js",
+            "lines": 118,
+            "bytes": 2794,
+            "globals": [],
+            "banner": "dvengine — editor godray (editors/godray/index.js) · inspector schema for components/godray · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/grass/index.js",
+            "lines": 114,
+            "bytes": 2743,
+            "globals": [],
+            "banner": "dvengine — editor grass (editors/grass/index.js) · inspector schema for components/grass · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/group/index.js",
+            "lines": 103,
+            "bytes": 2503,
+            "globals": [],
+            "banner": "dvengine — editor group (editors/group/index.js) · inspector schema for components/group · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/iframe/index.js",
+            "lines": 103,
+            "bytes": 2511,
+            "globals": [],
+            "banner": "dvengine — editor iframe (editors/iframe/index.js) · inspector schema for components/iframe · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/image/index.js",
+            "lines": 114,
+            "bytes": 2736,
+            "globals": [],
+            "banner": "dvengine — editor image (editors/image/index.js) · inspector schema for components/image · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/impact/index.js",
+            "lines": 103,
+            "bytes": 2505,
+            "globals": [],
+            "banner": "dvengine — editor impact (editors/impact/index.js) · inspector schema for components/impact · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/index.js",
+            "lines": 49,
+            "bytes": 4439,
+            "globals": [
+              "DVEditors"
+            ],
+            "banner": "dvengine — DVEditors (editors/index.js) · the schema registry the studio inspector is driven by: one row list per component type, registered by editors/<type>/i"
+          },
+          {
+            "path": "editors/instancedmesh/index.js",
+            "lines": 127,
+            "bytes": 3022,
+            "globals": [],
+            "banner": "dvengine — editor instancedmesh (editors/instancedmesh/index.js) · inspector schema for components/instancedmesh · GENERATED by scripts/gen-editors.mjs · (c) 20"
+          },
+          {
+            "path": "editors/interaction/index.js",
+            "lines": 92,
+            "bytes": 2331,
+            "globals": [],
+            "banner": "dvengine — editor interaction (editors/interaction/index.js) · inspector schema for components/interaction · GENERATED by scripts/gen-editors.mjs · (c) 2026 BAN"
+          },
+          {
+            "path": "editors/lighting/index.js",
+            "lines": 140,
+            "bytes": 3353,
+            "globals": [],
+            "banner": "dvengine — editor lighting (editors/lighting/index.js) · inspector schema for components/lighting · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYT"
+          },
+          {
+            "path": "editors/mesh/index.js",
+            "lines": 119,
+            "bytes": 2830,
+            "globals": [],
+            "banner": "dvengine — editor mesh (editors/mesh/index.js) · inspector schema for components/mesh · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/model/index.js",
+            "lines": 92,
+            "bytes": 2285,
+            "globals": [],
+            "banner": "dvengine — editor model (editors/model/index.js) · inspector schema for components/model · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/navmesh/index.js",
+            "lines": 103,
+            "bytes": 2525,
+            "globals": [],
+            "banner": "dvengine — editor navmesh (editors/navmesh/index.js) · inspector schema for components/navmesh · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI"
+          },
+          {
+            "path": "editors/object/index.js",
+            "lines": 70,
+            "bytes": 1839,
+            "globals": [],
+            "banner": "dvengine — editor object (editors/object/index.js) · inspector schema for components/object · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/participant/index.js",
+            "lines": 114,
+            "bytes": 2642,
+            "globals": [],
+            "banner": "dvengine — editor participant (editors/participant/index.js) · inspector schema for components/participant · GENERATED by scripts/gen-editors.mjs · (c) 2026 BAN"
+          },
+          {
+            "path": "editors/particles/index.js",
+            "lines": 114,
+            "bytes": 2740,
+            "globals": [],
+            "banner": "dvengine — editor particles (editors/particles/index.js) · inspector schema for components/particles · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / "
+          },
+          {
+            "path": "editors/piece/index.js",
+            "lines": 93,
+            "bytes": 2214,
+            "globals": [],
+            "banner": "dvengine — editor piece (editors/piece/index.js) · inspector schema for components/piece · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/portal/index.js",
+            "lines": 147,
+            "bytes": 3308,
+            "globals": [],
+            "banner": "dvengine — editor portal (editors/portal/index.js) · inspector schema for components/portal · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/postprocessing/index.js",
+            "lines": 92,
+            "bytes": 2337,
+            "globals": [],
+            "banner": "dvengine — editor postprocessing (editors/postprocessing/index.js) · inspector schema for components/postprocessing · GENERATED by scripts/gen-editors.mjs · (c)"
+          },
+          {
+            "path": "editors/quarks/index.js",
+            "lines": 114,
+            "bytes": 2721,
+            "globals": [],
+            "banner": "dvengine — editor quarks (editors/quarks/index.js) · inspector schema for components/quarks · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/rain/index.js",
+            "lines": 114,
+            "bytes": 2710,
+            "globals": [],
+            "banner": "dvengine — editor rain (editors/rain/index.js) · inspector schema for components/rain · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/reflector/index.js",
+            "lines": 92,
+            "bytes": 2305,
+            "globals": [],
+            "banner": "dvengine — editor reflector (editors/reflector/index.js) · inspector schema for components/reflector · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / "
+          },
+          {
+            "path": "editors/registry.json",
+            "lines": 4512,
+            "bytes": 101650,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "editors/remote-participant/index.js",
+            "lines": 71,
+            "bytes": 1820,
+            "globals": [],
+            "banner": "dvengine — editor remote-participant (editors/remote-participant/index.js) · inspector schema for components/remote-participant · GENERATED by scripts/gen-edito"
+          },
+          {
+            "path": "editors/spline/index.js",
+            "lines": 115,
+            "bytes": 2771,
+            "globals": [],
+            "banner": "dvengine — editor spline (editors/spline/index.js) · inspector schema for components/spline · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · "
+          },
+          {
+            "path": "editors/substrate/index.js",
+            "lines": 151,
+            "bytes": 3389,
+            "globals": [],
+            "banner": "dvengine — editor substrate (editors/substrate/index.js) · inspector schema for components/substrate · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / "
+          },
+          {
+            "path": "editors/terrain/index.js",
+            "lines": 136,
+            "bytes": 3189,
+            "globals": [],
+            "banner": "dvengine — editor terrain (editors/terrain/index.js) · inspector schema for components/terrain · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI"
+          },
+          {
+            "path": "editors/text/index.js",
+            "lines": 125,
+            "bytes": 2960,
+            "globals": [],
+            "banner": "dvengine — editor text (editors/text/index.js) · inspector schema for components/text · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/thot-memory/index.js",
+            "lines": 126,
+            "bytes": 2901,
+            "globals": [],
+            "banner": "dvengine — editor thot-memory (editors/thot-memory/index.js) · inspector schema for components/thot-memory · GENERATED by scripts/gen-editors.mjs · (c) 2026 BAN"
+          },
+          {
+            "path": "editors/video/index.js",
+            "lines": 92,
+            "bytes": 2278,
+            "globals": [],
+            "banner": "dvengine — editor video (editors/video/index.js) · inspector schema for components/video · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/vrmanims/index.js",
+            "lines": 81,
+            "bytes": 2072,
+            "globals": [],
+            "banner": "dvengine — editor vrmanims (editors/vrmanims/index.js) · inspector schema for components/vrmanims · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYT"
+          },
+          {
+            "path": "editors/water/index.js",
+            "lines": 103,
+            "bytes": 2505,
+            "globals": [],
+            "banner": "dvengine — editor water (editors/water/index.js) · inspector schema for components/water · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · ddd"
+          },
+          {
+            "path": "editors/wave/index.js",
+            "lines": 103,
+            "bytes": 2502,
+            "globals": [],
+            "banner": "dvengine — editor wave (editors/wave/index.js) · inspector schema for components/wave · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          },
+          {
+            "path": "editors/zone/index.js",
+            "lines": 92,
+            "bytes": 2194,
+            "globals": [],
+            "banner": "dvengine — editor zone (editors/zone/index.js) · inspector schema for components/zone · GENERATED by scripts/gen-editors.mjs · (c) 2026 BANKON / PYTHAI · dddcyb"
+          }
+        ]
+      },
+      {
+        "lane": "net",
+        "files": 4,
+        "lines": 570,
+        "globals": [
+          "DVHost",
+          "DVNet",
+          "DVPeer"
+        ],
+        "entries": [
+          {
+            "path": "net/host.js",
+            "lines": 99,
+            "bytes": 6841,
+            "globals": [
+              "DVHost"
+            ],
+            "banner": "dvengine — DVHost (net/host.js) · the triad's host role: run the daemon's isomorphic core locally, serve peers, mirror the anchor · (c) 2026 BANKON / PYTHAI · d"
+          },
+          {
+            "path": "net/index.js",
+            "lines": 209,
+            "bytes": 11906,
+            "globals": [
+              "DVNet"
+            ],
+            "banner": "dvengine — DVNet (net/index.js) · the cyborg/1 client: one WebSocket to the anchor, 20 Hz state, reconnect, repoint, the triad · (c) 2026 BANKON / PYTHAI · dddc"
+          },
+          {
+            "path": "net/interp.js",
+            "lines": 154,
+            "bytes": 9161,
+            "globals": [
+              "DVNet"
+            ],
+            "banner": "dvengine — DVNet.SnapshotBuffer + DVNet.TransformSync (net/interp.js) · snapshot interpolation for remote transforms · (c) 2026 BANKON / PYTHAI · dddcyborgd · M"
+          },
+          {
+            "path": "net/peer.js",
+            "lines": 108,
+            "bytes": 7773,
+            "globals": [
+              "DVPeer"
+            ],
+            "banner": "dvengine — DVPeer (net/peer.js) · RTCPeerConnection + one reliable DataChannel \"cyborg/1\" per peer, signalled through the anchor · (c) 2026 BANKON / PYTHAI · dd"
+          }
+        ]
+      },
+      {
+        "lane": "xr",
+        "files": 2,
+        "lines": 108,
+        "globals": [
+          "DVXR"
+        ],
+        "entries": [
+          {
+            "path": "xr/probe.js",
+            "lines": 31,
+            "bytes": 1798,
+            "globals": [
+              "DVXR"
+            ],
+            "banner": "dvengine — DVXR.probe (xr/probe.js) · capability probe: WebGPU adapter · immersive-vr · immersive-ar · (c) 2026 BANKON / PYTHAI · dddcyborgd · MIT */"
+          },
+          {
+            "path": "xr/teleport.js",
+            "lines": 77,
+            "bytes": 4862,
+            "globals": [
+              "DVXR"
+            ],
+            "banner": "dvengine — DVXR.teleport / DVXR.button (xr/teleport.js) · controller rays + floor marker + trigger teleport of the dolly; VRButton when present · (c) 2026 BANKO"
+          }
+        ]
+      },
+      {
+        "lane": "verse",
+        "files": 10,
+        "lines": 756,
+        "globals": [
+          "DVArcballMath",
+          "DVVerse"
+        ],
+        "entries": [
+          {
+            "path": "verse/arcball.math.js",
+            "lines": 87,
+            "bytes": 5489,
+            "globals": [
+              "DVArcballMath"
+            ],
+            "banner": "dvengine — DVArcballMath (verse/arcball.math.js) · the ArcballControls trackball-surface projection, pure, for the aivatar arm and the focus camera · (c) 2026 B"
+          },
+          {
+            "path": "verse/camera.js",
+            "lines": 66,
+            "bytes": 5099,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.camera (verse/camera.js) · the third-person rig, and the ArcballControls focus mode around an aivatar · (c) 2026 BANKON / PYTHAI · dddcyborgd"
+          },
+          {
+            "path": "verse/holdings.js",
+            "lines": 72,
+            "bytes": 6635,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.holdings (verse/holdings.js) · the first wallet-NFT reader: read-only ERC-721 enumeration via window.ethers, tokenURI resolution, doc.nfts fa"
+          },
+          {
+            "path": "verse/index.js",
+            "lines": 175,
+            "bytes": 14930,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse (verse/index.js) · enter a cyborg space: document → world → participant → net → senses → journey; the refined DeltaVerse mode · (c) 2026 BANK"
+          },
+          {
+            "path": "verse/inft.js",
+            "lines": 53,
+            "bytes": 5469,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.inftAgent (verse/inft.js) · read an iNFT_7857 agent (getAgentId · dimensions64 · getPayload · thotRootOf · ownerOf · tokenURI) via ethers, or"
+          },
+          {
+            "path": "verse/journey.js",
+            "lines": 36,
+            "bytes": 2474,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.journey (verse/journey.js) · the 8 stages of the DeltaVerse journey mapped to zones; the director's stage teleports the participant · (c) 202"
+          },
+          {
+            "path": "verse/rung.js",
+            "lines": 78,
+            "bytes": 5915,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.rung (verse/rung.js) · the login333 claim → rung/rank (decoded, NOT verified — the anchor verifies), the ladder, the role theme, the veil · ("
+          },
+          {
+            "path": "verse/senses.js",
+            "lines": 72,
+            "bytes": 5408,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.senses (verse/senses.js) · the participant's senses in the verse: head yaw → camera, gestures → the net + the nearest aivatar, voice peak → r"
+          },
+          {
+            "path": "verse/thot.js",
+            "lines": 40,
+            "bytes": 3611,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.thot (verse/thot.js) · THOT memories via ethers when configured (tokenOfRoot → memories → parentRootHash chain) → [{hash,parent}], a pseudo t"
+          },
+          {
+            "path": "verse/world.js",
+            "lines": 77,
+            "bytes": 7315,
+            "globals": [
+              "DVVerse"
+            ],
+            "banner": "dvengine — DVVerse.world (verse/world.js) · the world from a cyborg-space/1 document: skydome, floor, zones, portals, the pieces ring, aivatars, the THOT memory"
+          }
+        ]
+      },
+      {
+        "lane": "legacy",
+        "files": 41,
+        "lines": 3451,
+        "globals": [
+          "AweRuntime"
+        ],
+        "entries": [
+          {
+            "path": "legacy/awe-runtime/components/audio.js",
+            "lines": 77,
+            "bytes": 3695,
+            "globals": [],
+            "banner": "awe runtime component — audio"
+          },
+          {
+            "path": "legacy/awe-runtime/components/avatar.js",
+            "lines": 78,
+            "bytes": 2982,
+            "globals": [],
+            "banner": "awe runtime component — avatar"
+          },
+          {
+            "path": "legacy/awe-runtime/components/background.js",
+            "lines": 61,
+            "bytes": 2496,
+            "globals": [],
+            "banner": "awe runtime component — background"
+          },
+          {
+            "path": "legacy/awe-runtime/components/batch.js",
+            "lines": 97,
+            "bytes": 3541,
+            "globals": [],
+            "banner": "awe runtime component — batch"
+          },
+          {
+            "path": "legacy/awe-runtime/components/bird.js",
+            "lines": 67,
+            "bytes": 2676,
+            "globals": [],
+            "banner": "awe runtime component — bird"
+          },
+          {
+            "path": "legacy/awe-runtime/components/camera.js",
+            "lines": 73,
+            "bytes": 3176,
+            "globals": [],
+            "banner": "awe runtime component — camera"
+          },
+          {
+            "path": "legacy/awe-runtime/components/cloud.js",
+            "lines": 61,
+            "bytes": 2452,
+            "globals": [],
+            "banner": "awe runtime component — cloud"
+          },
+          {
+            "path": "legacy/awe-runtime/components/destination.js",
+            "lines": 94,
+            "bytes": 3625,
+            "globals": [],
+            "banner": "awe runtime component — destination"
+          },
+          {
+            "path": "legacy/awe-runtime/components/dialog.js",
+            "lines": 76,
+            "bytes": 3248,
+            "globals": [],
+            "banner": "awe runtime component — dialog"
+          },
+          {
+            "path": "legacy/awe-runtime/components/dust.js",
+            "lines": 67,
+            "bytes": 2850,
+            "globals": [],
+            "banner": "awe runtime component — dust"
+          },
+          {
+            "path": "legacy/awe-runtime/components/envmap.js",
+            "lines": 67,
+            "bytes": 3088,
+            "globals": [],
+            "banner": "awe runtime component — envmap"
+          },
+          {
+            "path": "legacy/awe-runtime/components/fog.js",
+            "lines": 34,
+            "bytes": 1259,
+            "globals": [],
+            "banner": "awe runtime component — fog"
+          },
+          {
+            "path": "legacy/awe-runtime/components/godray.js",
+            "lines": 53,
+            "bytes": 1983,
+            "globals": [],
+            "banner": "awe runtime component — godray"
+          },
+          {
+            "path": "legacy/awe-runtime/components/grass.js",
+            "lines": 87,
+            "bytes": 3576,
+            "globals": [],
+            "banner": "awe runtime component — grass"
+          },
+          {
+            "path": "legacy/awe-runtime/components/group.js",
+            "lines": 56,
+            "bytes": 2208,
+            "globals": [],
+            "banner": "awe runtime component — group"
+          },
+          {
+            "path": "legacy/awe-runtime/components/iframe.js",
+            "lines": 81,
+            "bytes": 3436,
+            "globals": [],
+            "banner": "awe runtime component — iframe"
+          },
+          {
+            "path": "legacy/awe-runtime/components/image.js",
+            "lines": 58,
+            "bytes": 2525,
+            "globals": [],
+            "banner": "awe runtime component — image"
+          },
+          {
+            "path": "legacy/awe-runtime/components/impact.js",
+            "lines": 83,
+            "bytes": 3285,
+            "globals": [],
+            "banner": "awe runtime component — impact"
+          },
+          {
+            "path": "legacy/awe-runtime/components/instancedmesh.js",
+            "lines": 73,
+            "bytes": 2943,
+            "globals": [],
+            "banner": "awe runtime component — instancedmesh"
+          },
+          {
+            "path": "legacy/awe-runtime/components/interaction.js",
+            "lines": 86,
+            "bytes": 3851,
+            "globals": [],
+            "banner": "awe runtime component — interaction"
+          },
+          {
+            "path": "legacy/awe-runtime/components/lighting.js",
+            "lines": 63,
+            "bytes": 2404,
+            "globals": [],
+            "banner": "awe runtime component — lighting"
+          },
+          {
+            "path": "legacy/awe-runtime/components/manifest.json",
+            "lines": 154,
+            "bytes": 2405,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "legacy/awe-runtime/components/mesh.js",
+            "lines": 54,
+            "bytes": 2078,
+            "globals": [],
+            "banner": "awe runtime component — mesh"
+          },
+          {
+            "path": "legacy/awe-runtime/components/model.js",
+            "lines": 63,
+            "bytes": 2526,
+            "globals": [],
+            "banner": "awe runtime component — model"
+          },
+          {
+            "path": "legacy/awe-runtime/components/navmesh.js",
+            "lines": 97,
+            "bytes": 3985,
+            "globals": [],
+            "banner": "awe runtime component — navmesh"
+          },
+          {
+            "path": "legacy/awe-runtime/components/object.js",
+            "lines": 51,
+            "bytes": 1903,
+            "globals": [],
+            "banner": "awe runtime component — object"
+          },
+          {
+            "path": "legacy/awe-runtime/components/particles.js",
+            "lines": 64,
+            "bytes": 2673,
+            "globals": [],
+            "banner": "awe runtime component — particles"
+          },
+          {
+            "path": "legacy/awe-runtime/components/postprocessing.js",
+            "lines": 73,
+            "bytes": 3218,
+            "globals": [],
+            "banner": "awe runtime component — postprocessing"
+          },
+          {
+            "path": "legacy/awe-runtime/components/quarks.js",
+            "lines": 80,
+            "bytes": 3194,
+            "globals": [],
+            "banner": "awe runtime component — quarks"
+          },
+          {
+            "path": "legacy/awe-runtime/components/rain.js",
+            "lines": 62,
+            "bytes": 2267,
+            "globals": [],
+            "banner": "awe runtime component — rain"
+          },
+          {
+            "path": "legacy/awe-runtime/components/reflector.js",
+            "lines": 63,
+            "bytes": 2572,
+            "globals": [],
+            "banner": "awe runtime component — reflector"
+          },
+          {
+            "path": "legacy/awe-runtime/components/spline.js",
+            "lines": 73,
+            "bytes": 2661,
+            "globals": [],
+            "banner": "awe runtime component — spline"
+          },
+          {
+            "path": "legacy/awe-runtime/components/terrain.js",
+            "lines": 70,
+            "bytes": 2867,
+            "globals": [],
+            "banner": "awe runtime component — terrain"
+          },
+          {
+            "path": "legacy/awe-runtime/components/text.js",
+            "lines": 59,
+            "bytes": 2467,
+            "globals": [],
+            "banner": "awe runtime component — text"
+          },
+          {
+            "path": "legacy/awe-runtime/components/video.js",
+            "lines": 72,
+            "bytes": 2939,
+            "globals": [],
+            "banner": "awe runtime component — video"
+          },
+          {
+            "path": "legacy/awe-runtime/components/vrmanims.js",
+            "lines": 87,
+            "bytes": 3598,
+            "globals": [],
+            "banner": "awe runtime component — vrmanims"
+          },
+          {
+            "path": "legacy/awe-runtime/components/water.js",
+            "lines": 59,
+            "bytes": 2659,
+            "globals": [],
+            "banner": "awe runtime component — water"
+          },
+          {
+            "path": "legacy/awe-runtime/components/wave.js",
+            "lines": 61,
+            "bytes": 2771,
+            "globals": [],
+            "banner": "awe runtime component — wave"
+          },
+          {
+            "path": "legacy/awe-runtime/runtime.js",
+            "lines": 238,
+            "bytes": 9586,
+            "globals": [
+              "AweRuntime"
+            ],
+            "banner": "DeltaVerse — AweRuntime (oncyber/awe/runtime/runtime.js)"
+          },
+          {
+            "path": "legacy/legacy.html",
+            "lines": 86,
+            "bytes": 4901,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "legacy/static-scene.json",
+            "lines": 393,
+            "bytes": 11160,
+            "globals": [],
+            "banner": ""
+          }
+        ]
+      },
+      {
+        "lane": "studio",
+        "files": 10,
+        "lines": 416,
+        "globals": [
+          "DVStudioPanels",
+          "DVStudio"
+        ],
+        "entries": [
+          {
+            "path": "studio/panels/assets.js",
+            "lines": 25,
+            "bytes": 2844,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio assets (studio/panels/assets.js) · every asset url the document references, drop a .glb/.vrm/image onto the canvas to add a model/image (objec"
+          },
+          {
+            "path": "studio/panels/hierarchy.js",
+            "lines": 37,
+            "bytes": 3488,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio hierarchy (studio/panels/hierarchy.js) · the tree by parentId; click selects through DVTransform (shift = additive); right-click → duplicate ·"
+          },
+          {
+            "path": "studio/panels/history.js",
+            "lines": 17,
+            "bytes": 1499,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio history (studio/panels/history.js) · the DVHistory entries with undo/redo · (c) 2026 BANKON / PYTHAI · dddcyborgd · MIT · upstream © oncyberio"
+          },
+          {
+            "path": "studio/panels/inspector.js",
+            "lines": 37,
+            "bytes": 5568,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio inspector (studio/panels/inspector.js) · schema-driven from DVEditors; every edit is a DVCommands.update through history (undo works) · (c) 20"
+          },
+          {
+            "path": "studio/panels/scene-json.js",
+            "lines": 25,
+            "bytes": 2890,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio scene JSON drawer (studio/panels/scene-json.js) · live serialize + DVScene.validate · copy · download · apply pasted JSON · open file · legacy"
+          },
+          {
+            "path": "studio/panels/toolbar.js",
+            "lines": 36,
+            "bytes": 3887,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio toolbar (studio/panels/toolbar.js) · modes G/R/S · snap + grid · add component (lazy) · load · save (download / POST cyborgd) · capture thumbn"
+          },
+          {
+            "path": "studio/panels/wallet.js",
+            "lines": 19,
+            "bytes": 1976,
+            "globals": [
+              "DVStudioPanels"
+            ],
+            "banner": "dvengine — studio wallet bar (studio/panels/wallet.js) · READ-ONLY: eth_requestAccounts + address + chainId; nothing is ever signed here · (c) 2026 BANKON / PYT"
+          },
+          {
+            "path": "studio/studio.css",
+            "lines": 55,
+            "bytes": 6464,
+            "globals": [],
+            "banner": "dvengine — studio.css · the studio skin: --dv-* palette (from DeltaVerse pages/deltaverse.css), dark, minimal · (c) 2026 BANKON / PYTHAI · dddcyborgd · MIT */"
+          },
+          {
+            "path": "studio/studio.html",
+            "lines": 66,
+            "bytes": 3788,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "studio/studio.js",
+            "lines": 99,
+            "bytes": 10835,
+            "globals": [
+              "DVStudioPanels",
+              "DVStudio"
+            ],
+            "banner": "dvengine — DVStudio (studio/studio.js) · the framework-free studio shell: one Space + DVTransform, seven panels, shortcuts, load/save/capture · (c) 2026 BANKON "
+          }
+        ]
+      },
+      {
+        "lane": "transform",
+        "files": 3,
+        "lines": 368,
+        "globals": [],
+        "entries": [
+          {
+            "path": "transform/desk.mjs",
+            "lines": 246,
+            "bytes": 19758,
+            "globals": [],
+            "banner": "dvengine — transform desk (transform/desk.mjs) · the Node asset desk over the vendored glTF-Transform: optimize · inspect · validate · bake · vrm · gates — zero"
+          },
+          {
+            "path": "transform/gates.mjs",
+            "lines": 68,
+            "bytes": 3832,
+            "globals": [],
+            "banner": "dvengine — transform gates (transform/gates.mjs) · which glTF-Transform ops the zero-dep desk can run: pure ⇒ on · wasm ⇒ on only when vendor/{draco,meshopt}/*."
+          },
+          {
+            "path": "transform/registry.json",
+            "lines": 54,
+            "bytes": 9063,
+            "globals": [],
+            "banner": ""
+          }
+        ]
+      },
+      {
+        "lane": "scripts",
+        "files": 11,
+        "lines": 697,
+        "globals": [],
+        "entries": [
+          {
+            "path": "scripts/build.mjs",
+            "lines": 37,
+            "bytes": 3209,
+            "globals": [],
+            "banner": "build.mjs — emit dist/ for consumers (DeltaVerse gathers it): one concatenated UMD bundle per lane, no minifier,"
+          },
+          {
+            "path": "scripts/check-syntax.mjs",
+            "lines": 23,
+            "bytes": 1250,
+            "globals": [],
+            "banner": "dvengine — check-syntax (scripts/check-syntax.mjs) · `node --check` every .js/.mjs outside archive/ vendor/ dist/ node_modules/ .git/ and exit non-zero on the f"
+          },
+          {
+            "path": "scripts/doc-js.mjs",
+            "lines": 53,
+            "bytes": 3397,
+            "globals": [],
+            "banner": "doc-js.mjs — the .js.xml sidecar generator (port of DeltaVerse scripts/doc-js-layer.mjs, repo-agnostic)."
+          },
+          {
+            "path": "scripts/doc-js.rules.json",
+            "lines": 20,
+            "bytes": 3733,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "scripts/fetch-upstream.mjs",
+            "lines": 97,
+            "bytes": 5249,
+            "globals": [],
+            "banner": "fetch-upstream.mjs — vendor upstream sources by pinned commit, one tarball per repo (rate-limit kind)."
+          },
+          {
+            "path": "scripts/gen-editors.mjs",
+            "lines": 79,
+            "bytes": 8448,
+            "globals": [],
+            "banner": "dvengine — gen-editors (scripts/gen-editors.mjs) · derive editors/<type>/index.js + editors/registry.json from the props.<key> reads in each components/<type>/i"
+          },
+          {
+            "path": "scripts/library.mjs",
+            "lines": 91,
+            "bytes": 8198,
+            "globals": [],
+            "banner": "library.mjs — the dvengine catalogue generator (mirror of DeltaVerse scripts/oncyber-awe.mjs)."
+          },
+          {
+            "path": "scripts/ports.json",
+            "lines": 24,
+            "bytes": 2780,
+            "globals": [],
+            "banner": ".js\" },"
+          },
+          {
+            "path": "scripts/serve.mjs",
+            "lines": 20,
+            "bytes": 2063,
+            "globals": [],
+            "banner": "dvengine — serve (scripts/serve.mjs) · zero-dependency static server for the repo root on :8801 (PORT env overrides) with MIME for .js/.mjs/.json/.glb/.wasm/.ht"
+          },
+          {
+            "path": "scripts/strip-types.mjs",
+            "lines": 235,
+            "bytes": 14393,
+            "globals": [],
+            "banner": "dvengine — strip-types (scripts/strip-types.mjs) · transpile the vendored glTF-Transform fork (TypeScript) into zero-dependency ESM under vendor/gltf-transform/"
+          },
+          {
+            "path": "scripts/vendor-three.mjs",
+            "lines": 18,
+            "bytes": 1629,
+            "globals": [],
+            "banner": "dvengine — vendor-three (scripts/vendor-three.mjs) · copy $DELTAVERSE/vendor/three (default /home/hacker/DeltaVerse/vendor/three) → vendor/three/ and print the "
+          }
+        ]
+      },
+      {
+        "lane": "test",
+        "files": 9,
+        "lines": 687,
+        "globals": [],
+        "entries": [
+          {
+            "path": "test/aivatar.test.mjs",
+            "lines": 61,
+            "bytes": 3670,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/arcball.test.mjs",
+            "lines": 51,
+            "bytes": 3289,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/desk.test.mjs",
+            "lines": 142,
+            "bytes": 8951,
+            "globals": [],
+            "banner": "dvengine — desk tests (test/desk.test.mjs) · programmatic glTF → temp .glb → optimize/inspect/validate/gates through transform/desk.mjs · (c) 2026 BANKON / PYTH"
+          },
+          {
+            "path": "test/editors.test.mjs",
+            "lines": 50,
+            "bytes": 3689,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/holdings.test.mjs",
+            "lines": 55,
+            "bytes": 4403,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/interp.test.mjs",
+            "lines": 84,
+            "bytes": 5143,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/rung.test.mjs",
+            "lines": 48,
+            "bytes": 3331,
+            "globals": [],
+            "banner": ""
+          },
+          {
+            "path": "test/snap.test.mjs",
+            "lines": 132,
+            "bytes": 8060,
+            "globals": [],
+            "banner": "dvengine — snap tests (test/snap.test.mjs) · every case of awe engine-edit/test/snap-3d.test.ts ported against edit/snap.js (plain boxes, no three, no vitest) +"
+          },
+          {
+            "path": "test/world.test.mjs",
+            "lines": 64,
+            "bytes": 3633,
+            "globals": [],
+            "banner": ""
+          }
+        ]
+      }
+    ],
+    "archive": [
+      {
+        "repo": "oncyberio/awe",
+        "sha": "04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+        "license": "MIT",
+        "upstream": "https://github.com/oncyberio/awe/tree/04a07c8d75c114d8ea217d0870eeef2c6a65635a",
+        "files": 284,
+        "lines": 51623,
+        "tally": {
+          "reference": 45,
+          "ported": 135,
+          "catalogued": 87,
+          "partial": 17
+        },
+        "entries": [
+          {
+            "path": "archive/awe/.claude/skills/engine/SKILL.md",
+            "lines": 74,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-avatar-from-library.md",
+            "lines": 25,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-custom-avatar.md",
+            "lines": 62,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-custom-media.md",
+            "lines": 79,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-custom-model.md",
+            "lines": 62,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-custom-vrm-anim.md",
+            "lines": 100,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/adding-model-from-library.md",
+            "lines": 27,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/assets-guide.md",
+            "lines": 44,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/engine-guide.md",
+            "lines": 609,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/collision-handling.md",
+            "lines": 60,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/game-script-template.md",
+            "lines": 81,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/input-system.md",
+            "lines": 57,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/interaction-lookat.md",
+            "lines": 36,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/npc-animation.md",
+            "lines": 78,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/physics-config.md",
+            "lines": 73,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/spawn-collectibles.md",
+            "lines": 47,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/engine/references/examples/static-scene-minimal.json",
+            "lines": 61,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/SKILL.md",
+            "lines": 312,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/references/collection-exploration.md",
+            "lines": 49,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/references/combat-survival.md",
+            "lines": 51,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/references/platformer-runner.md",
+            "lines": 49,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/references/puzzle-physics.md",
+            "lines": 49,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/game-prd/references/ralph-json.md",
+            "lines": 66,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/quarks-vfx-creator/SKILL.md",
+            "lines": 287,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/quarks-vfx-creator/references/vfx-guide.md",
+            "lines": 1075,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/run-space/SKILL.md",
+            "lines": 67,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/LICENSE.txt",
+            "lines": 202,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/SKILL.md",
+            "lines": 357,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/references/output-patterns.md",
+            "lines": 83,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/references/workflows.md",
+            "lines": 28,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/scripts/__pycache__/quick_validate.cpython-313.pyc",
+            "lines": 24,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/scripts/init_skill.py",
+            "lines": 304,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/scripts/package_skill.py",
+            "lines": 111,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/skill-creator/scripts/quick_validate.py",
+            "lines": 95,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/.claude/skills/tailwind-design-system",
+            "lines": 0,
+            "verdict": "reference",
+            "portedTo": "skills/cyborgd (the DeltaVerse skill)"
+          },
+          {
+            "path": "archive/awe/LICENSE",
+            "lines": 22,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/README.md",
+            "lines": 99,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/package.json",
+            "lines": 35,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/clone-plain-object.ts",
+            "lines": 4,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/game-state.ts",
+            "lines": 18,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/messages.ts",
+            "lines": 107,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/mover-host.ts",
+            "lines": 103,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/client/local-command-source.ts",
+            "lines": 135,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/client/predicted-controller.ts",
+            "lines": 318,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/client/presentation-controller.ts",
+            "lines": 128,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/client/reconciliation.ts",
+            "lines": 252,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/index.ts",
+            "lines": 115,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/net-platformer-options.ts",
+            "lines": 130,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/net-platformer.ts",
+            "lines": 267,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/server/authoritative-controller.ts",
+            "lines": 160,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/server/input-queue.ts",
+            "lines": 113,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/shared/animation-state.ts",
+            "lines": 259,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/shared/command-frame.ts",
+            "lines": 46,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/shared/command-source.ts",
+            "lines": 10,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/shared/sim-state.ts",
+            "lines": 65,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer/shared/sim-step.ts",
+            "lines": 279,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/net-platformer-options.ts",
+            "lines": 40,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/network-constants.ts",
+            "lines": 15,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/presentation-driver.ts",
+            "lines": 11,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/auth-multiplayer/shared/snapshot-interpolation.ts",
+            "lines": 76,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/package.json",
+            "lines": 35,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/shared/game-state.ts",
+            "lines": 16,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/shared/messages.ts",
+            "lines": 24,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/shared/network-constants.ts",
+            "lines": 12,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/shared/snapshot-interpolation.ts",
+            "lines": 76,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/lib/constants.ts",
+            "lines": 2,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/lib/deferred.ts",
+            "lines": 16,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/lib/game-script.ts",
+            "lines": 401,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/lib/game-store.ts",
+            "lines": 20,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/lib/utils.ts",
+            "lines": 62,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/multiplayer/client.ts",
+            "lines": 16,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/multiplayer/component-replica.ts",
+            "lines": 320,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/multiplayer/players-replica.ts",
+            "lines": 73,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/multiplayer/src/multiplayer/transform-sync.ts",
+            "lines": 261,
+            "verdict": "ported",
+            "portedTo": "net/interp.js · net/index.js · cyborgd core/sim.mjs"
+          },
+          {
+            "path": "archive/awe/examples/starter/public/data/static-scene.json",
+            "lines": 393,
+            "verdict": "ported",
+            "portedTo": "legacy/static-scene.json · engine/legacy.js"
+          },
+          {
+            "path": "archive/awe/packages/engine/package.json",
+            "lines": 61,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/engine-edit-guide.md",
+            "lines": 1331,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/package.json",
+            "lines": 38,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/@types/globals.d.ts",
+            "lines": 1,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/capture/index.ts",
+            "lines": 15,
+            "verdict": "ported",
+            "portedTo": "edit/grid.js · edit/capture.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/commands/index.ts",
+            "lines": 286,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/data.ts",
+            "lines": 73,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/formats.ts",
+            "lines": 13,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/gui-types.ts",
+            "lines": 564,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/lens/abstract.ts",
+            "lines": 46,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/lens/data-wrapper-lens.ts",
+            "lines": 97,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/lens/lens.ts",
+            "lines": 43,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/lens/path-lens.ts",
+            "lines": 111,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/preset.ts",
+            "lines": 37,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/spawn-selection-mesh.ts",
+            "lines": 144,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/store.ts",
+            "lines": 41,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/types.ts",
+            "lines": 6,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui/audio-opts-ui.ts",
+            "lines": 43,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui/collider-ui.ts",
+            "lines": 315,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui/scripting-folder-ui.ts",
+            "lines": 28,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui/texture-ui.ts",
+            "lines": 125,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui/transform-ui.ts",
+            "lines": 116,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/component-editor/ui-editor.ts",
+            "lines": 914,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/components-registry/index.ts",
+            "lines": 64,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/map-controls.js",
+            "lines": 106,
+            "verdict": "partial",
+            "portedTo": "edit/index.js over three/addons TransformControls"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/orbit-controls.js",
+            "lines": 1367,
+            "verdict": "partial",
+            "portedTo": "edit/index.js over three/addons TransformControls"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/axis-arrow.js",
+            "lines": 300,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/axis-rotator.js",
+            "lines": 604,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/box-slider.js",
+            "lines": 505,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/constants.js",
+            "lines": 18,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/corner-scaler.js",
+            "lines": 741,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/index.js",
+            "lines": 1322,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/label.js",
+            "lines": 234,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/line.js",
+            "lines": 77,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/mesh-line.js",
+            "lines": 713,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/plane-slider.js",
+            "lines": 301,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/shared.js",
+            "lines": 91,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/snap-2d.ts",
+            "lines": 717,
+            "verdict": "ported",
+            "portedTo": "edit/snap.js (+ test/snap.test.mjs)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/snap-3d.ts",
+            "lines": 382,
+            "verdict": "ported",
+            "portedTo": "edit/snap.js (+ test/snap.test.mjs)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/abstract.js",
+            "lines": 262,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/arrow.js",
+            "lines": 141,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/center.js",
+            "lines": 26,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/circle-selector.js",
+            "lines": 144,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/jsons/arrow.json",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/jsons/center.json",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/jsons/drag.json",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/jsons/rotation.json",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/jsons/scale.json",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/rotator-arrow.js",
+            "lines": 63,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/shaders/frag.glsl.ts",
+            "lines": 46,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/pivot-controls/temp/shaders/vert.glsl.ts",
+            "lines": 17,
+            "verdict": "ported",
+            "portedTo": "edit/pivot/*.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/snap-controls-2d.ts",
+            "lines": 1540,
+            "verdict": "partial",
+            "portedTo": "edit/index.js over three/addons TransformControls"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/controls/transform-controls.js",
+            "lines": 1569,
+            "verdict": "partial",
+            "portedTo": "edit/index.js over three/addons TransformControls"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/cursor-handler/index.ts",
+            "lines": 78,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/dnd/drag-component.ts",
+            "lines": 521,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/dnd/drag-preview-3d.ts",
+            "lines": 71,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/dnd/index.ts",
+            "lines": 60,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/dnd/utils.ts",
+            "lines": 52,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editor-events.ts",
+            "lines": 41,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/audio/editor.ts",
+            "lines": 123,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/avatar/editor.ts",
+            "lines": 229,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/background/editor.ts",
+            "lines": 298,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/batch/editor.ts",
+            "lines": 332,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/bird/editor.ts",
+            "lines": 58,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/camera/editor.ts",
+            "lines": 526,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/cloud/editor.ts",
+            "lines": 58,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/destination/editor.ts",
+            "lines": 230,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/editor-registry.ts",
+            "lines": 43,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/envmap/editor.ts",
+            "lines": 256,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/fog/editor.ts",
+            "lines": 95,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/godray/editor.ts",
+            "lines": 58,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/grass/editor.ts",
+            "lines": 86,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/group/editor.ts",
+            "lines": 74,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/group/group-selection-mesh.ts",
+            "lines": 159,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/iframe/editor.ts",
+            "lines": 106,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/image/editor.ts",
+            "lines": 108,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/index.ts",
+            "lines": 68,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/legacy.ts",
+            "lines": 22,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/lighting/editor.ts",
+            "lines": 155,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/mesh/editor.ts",
+            "lines": 348,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/model/editor.ts",
+            "lines": 208,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/navmesh/data.ts",
+            "lines": 44,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/navmesh/editor.ts",
+            "lines": 139,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/object/editor.ts",
+            "lines": 26,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/particles/editor.ts",
+            "lines": 206,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/postprocessing/editor.ts",
+            "lines": 237,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/quarks/editor.ts",
+            "lines": 83,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/reflector/editor.ts",
+            "lines": 286,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/spline/editor.ts",
+            "lines": 338,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/terrain/editor.ts",
+            "lines": 466,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/text/editor.ts",
+            "lines": 197,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/video/editor.ts",
+            "lines": 138,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/vrmanims/editor.ts",
+            "lines": 815,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/water/editor.ts",
+            "lines": 47,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/editors/wave/editor.ts",
+            "lines": 89,
+            "verdict": "ported",
+            "portedTo": "editors/<type>/index.js (schemas)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/grid/index.ts",
+            "lines": 404,
+            "verdict": "ported",
+            "portedTo": "edit/grid.js · edit/capture.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/grid/material/cube-edges.js",
+            "lines": 29,
+            "verdict": "ported",
+            "portedTo": "edit/grid.js · edit/capture.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/grid/material/shaders/cube-edges.frag.ts",
+            "lines": 36,
+            "verdict": "ported",
+            "portedTo": "edit/grid.js · edit/capture.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/grid/material/shaders/cube-edges.vert.ts",
+            "lines": 8,
+            "verdict": "ported",
+            "portedTo": "edit/grid.js · edit/capture.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/index.ts",
+            "lines": 247,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/navigation/constants.ts",
+            "lines": 1,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/navigation/index.ts",
+            "lines": 193,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/navigation/perspective.ts",
+            "lines": 717,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/navigation/types.ts",
+            "lines": 17,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/selection/index.ts",
+            "lines": 48,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/selection/selector.ts",
+            "lines": 593,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/components.ts",
+            "lines": 29,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/factories.ts",
+            "lines": 39,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/index.ts",
+            "lines": 26,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/selection.ts",
+            "lines": 26,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/tools.ts",
+            "lines": 34,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/state/transform.ts",
+            "lines": 47,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/tools/drawer/index.ts",
+            "lines": 793,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/transformer/drag-handler.ts",
+            "lines": 137,
+            "verdict": "ported",
+            "portedTo": "edit/index.js (TransformProxy · DragHandler)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/transformer/group-transform-proxy.ts",
+            "lines": 134,
+            "verdict": "ported",
+            "portedTo": "edit/index.js (TransformProxy · DragHandler)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/transformer/index.ts",
+            "lines": 376,
+            "verdict": "ported",
+            "portedTo": "edit/index.js (TransformProxy · DragHandler)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/transformer/transform-proxy.ts",
+            "lines": 233,
+            "verdict": "ported",
+            "portedTo": "edit/index.js (TransformProxy · DragHandler)"
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/types.ts",
+            "lines": 50,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/camera-controls.ts",
+            "lines": 3341,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/constants.ts",
+            "lines": 3,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/event-dispatcher.ts",
+            "lines": 107,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/index.ts",
+            "lines": 3,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/types.ts",
+            "lines": 128,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/utils/extract-client-coord-from-event.ts",
+            "lines": 19,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/utils/math-utils.ts",
+            "lines": 175,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/camera-controls/utils/not-supported-in-orthographic-camera.ts",
+            "lines": 19,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/drag-preview.ts",
+            "lines": 18,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/mouse-raycast.ts",
+            "lines": 503,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/observable.ts",
+            "lines": 92,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/selection-handle.ts",
+            "lines": 63,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/snap-box.js",
+            "lines": 218,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/src/utils/three.ts",
+            "lines": 156,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/test/snap-3d.test.ts",
+            "lines": 224,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/test/support/engine-internal.ts",
+            "lines": 4,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/tsconfig.json",
+            "lines": 30,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/engine-edit/vitest.config.ts",
+            "lines": 21,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/studio/package.json",
+            "lines": 55,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/index.ts",
+            "lines": 2,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/nfts/index.ts",
+            "lines": 2,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/nfts/providers/opensea.ts",
+            "lines": 399,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/nfts/types.ts",
+            "lines": 263,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/utils/get-asset-media-info.ts",
+            "lines": 393,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/utils/url.ts",
+            "lines": 180,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/wallets/evm-adapter.ts",
+            "lines": 116,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/wallets/index.ts",
+            "lines": 90,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/dApp/wallets/types.ts",
+            "lines": 69,
+            "verdict": "partial",
+            "portedTo": "verse/holdings.js (read-only, no OpenSea key)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/server/avatar-service.ts",
+            "lines": 112,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/server/game-service.ts",
+            "lines": 96,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/server/scene-watch-service.ts",
+            "lines": 136,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/server/user-uploads-service.ts",
+            "lines": 256,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/server/working-folder-service.ts",
+            "lines": 19,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/client-avatar-service.ts",
+            "lines": 20,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/client-game-service.ts",
+            "lines": 8,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/client-user-uploads-service.ts",
+            "lines": 23,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/abstract-command.ts",
+            "lines": 233,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/add-component-batch.ts",
+            "lines": 74,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/add-component.ts",
+            "lines": 129,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/auto-batch-command.ts",
+            "lines": 87,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/change-lock-command.ts",
+            "lines": 88,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/change-parent.ts",
+            "lines": 283,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/command-map.ts",
+            "lines": 52,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/create-group.ts",
+            "lines": 169,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/delete-components.ts",
+            "lines": 99,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/delete-super-command.ts",
+            "lines": 89,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/duplicate-components.ts",
+            "lines": 93,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/replace-component.ts",
+            "lines": 168,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/types.ts",
+            "lines": 8,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/ungroup-components.ts",
+            "lines": 141,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/update-component-command.ts",
+            "lines": 96,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/update-components.ts",
+            "lines": 80,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/commands/utils.ts",
+            "lines": 144,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/index.ts",
+            "lines": 1305,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/editor/undo.ts",
+            "lines": 6,
+            "verdict": "ported",
+            "portedTo": "edit/commands.js · edit/history.js · studio/"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/undo-manager.ts",
+            "lines": 131,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/uploader/index.ts",
+            "lines": 1,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/uploader/local-uploader.ts",
+            "lines": 144,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/uploader/remote-uploader.ts",
+            "lines": 185,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/services/uploader/utils.ts",
+            "lines": 106,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/types/game-data.ts",
+            "lines": 87,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/types/optimized-files.ts",
+            "lines": 7,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/studio/src/types/user-upload.ts",
+            "lines": 32,
+            "verdict": "catalogued",
+            "portedTo": "studio/ (framework-free re-imagination)"
+          },
+          {
+            "path": "archive/awe/packages/tools/AGENT.md",
+            "lines": 83,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/package.json",
+            "lines": 42,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/bake/bake-animation.ts",
+            "lines": 126,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/cli.ts",
+            "lines": 400,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/file-utils/index.ts",
+            "lines": 46,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/gltf/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/gltf/optimize-gltf.ts",
+            "lines": 197,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/index.ts",
+            "lines": 55,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/inspect/inspect-gltf.ts",
+            "lines": 181,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/optimize-service.ts",
+            "lines": 390,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/scene/types.ts",
+            "lines": 43,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/scene/validate-scene.ts",
+            "lines": 133,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/space/define-space-program.ts",
+            "lines": 9,
+            "verdict": "partial",
+            "portedTo": "cyborgd core (headless run-space)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/space/index.ts",
+            "lines": 5,
+            "verdict": "partial",
+            "portedTo": "cyborgd core (headless run-space)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/space/run-space.ts",
+            "lines": 254,
+            "verdict": "partial",
+            "portedTo": "cyborgd core (headless run-space)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/space/types.ts",
+            "lines": 28,
+            "verdict": "partial",
+            "portedTo": "cyborgd core (headless run-space)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/texture/basisu.d.ts",
+            "lines": 4,
+            "verdict": "catalogued",
+            "portedTo": "transform/gates.mjs (native: off)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/texture/index.ts",
+            "lines": 6,
+            "verdict": "catalogued",
+            "portedTo": "transform/gates.mjs (native: off)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/texture/texture-compress.ts",
+            "lines": 272,
+            "verdict": "catalogued",
+            "portedTo": "transform/gates.mjs (native: off)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/texture/texture-resize.ts",
+            "lines": 154,
+            "verdict": "catalogued",
+            "portedTo": "transform/gates.mjs (native: off)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/texture/toktx.ts",
+            "lines": 264,
+            "verdict": "catalogued",
+            "portedTo": "transform/gates.mjs (native: off)"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/types.ts",
+            "lines": 32,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/upload/upload-asset.ts",
+            "lines": 88,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/utils/index.ts",
+            "lines": 8,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/utils/mime-utils.ts",
+            "lines": 109,
+            "verdict": "catalogued",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/awe/packages/tools/src/vrm/index.ts",
+            "lines": 9,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/vrm/vrm-extensions.ts",
+            "lines": 227,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          },
+          {
+            "path": "archive/awe/packages/tools/src/vrm/vrm-processing.ts",
+            "lines": 143,
+            "verdict": "ported",
+            "portedTo": "transform/desk.mjs"
+          }
+        ]
+      },
+      {
+        "repo": "oncyberio/gltftransform",
+        "sha": "1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+        "license": "MIT",
+        "upstream": "https://github.com/oncyberio/gltftransform/tree/1026a2f74e32e134a4a46df4f1cbe8e43872edcc",
+        "files": 174,
+        "lines": 21907,
+        "tally": {
+          "reference": 15,
+          "ported": 159
+        },
+        "entries": [
+          {
+            "path": "archive/gltftransform/LICENSE",
+            "lines": 22,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/README.md",
+            "lines": 152,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/docs/CONCEPTS.md",
+            "lines": 97,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/docs/CREDITS.md",
+            "lines": 8,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/docs/EXTENSIONS.md",
+            "lines": 211,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/package.json",
+            "lines": 69,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/package.json",
+            "lines": 69,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/src/transforms/index.ts",
+            "lines": 5,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/src/transforms/ktxfix.ts",
+            "lines": 51,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/src/transforms/merge.ts",
+            "lines": 104,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/src/transforms/toktx.ts",
+            "lines": 402,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/cli/src/transforms/xmp.ts",
+            "lines": 403,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/core/package.json",
+            "lines": 56,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/constants.ts",
+            "lines": 163,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/core.ts",
+            "lines": 65,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/document.ts",
+            "lines": 326,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/extension.ts",
+            "lines": 197,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/deno-io.ts",
+            "lines": 72,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/index.ts",
+            "lines": 9,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/node-io.ts",
+            "lines": 178,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/platform-io.ts",
+            "lines": 326,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/reader-context.ts",
+            "lines": 71,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/reader.ts",
+            "lines": 646,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/web-io.ts",
+            "lines": 69,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/writer-context.ts",
+            "lines": 269,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/io/writer.ts",
+            "lines": 896,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/json-document.ts",
+            "lines": 44,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/accessor.ts",
+            "lines": 501,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/animation-channel.ts",
+            "lines": 123,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/animation-sampler.ts",
+            "lines": 126,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/animation.ts",
+            "lines": 88,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/buffer.ts",
+            "lines": 98,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/camera.ts",
+            "lines": 186,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/extensible-property.ts",
+            "lines": 43,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/extension-property.ts",
+            "lines": 34,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/index.ts",
+            "lines": 20,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/material.ts",
+            "lines": 445,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/mesh.ts",
+            "lines": 87,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/node.ts",
+            "lines": 298,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/primitive-target.ts",
+            "lines": 64,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/primitive.ts",
+            "lines": 208,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/property.ts",
+            "lines": 302,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/root.ts",
+            "lines": 262,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/scene.ts",
+            "lines": 69,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/skin.ts",
+            "lines": 89,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/texture-info.ts",
+            "lines": 155,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/properties/texture.ts",
+            "lines": 100,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/types/gltf.ts",
+            "lines": 672,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/buffer-utils.ts",
+            "lines": 134,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/color-utils.ts",
+            "lines": 75,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/file-utils.ts",
+            "lines": 38,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/get-bounds.ts",
+            "lines": 76,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/http-utils.ts",
+            "lines": 73,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/image-utils.ts",
+            "lines": 181,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/index.ts",
+            "lines": 12,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/is-plain-object.ts",
+            "lines": 27,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/logger.ts",
+            "lines": 71,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/math-utils.ts",
+            "lines": 177,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/property-utils.ts",
+            "lines": 120,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/ref-utils.ts",
+            "lines": 11,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/core/src/utils/uuid.ts",
+            "lines": 36,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/package.json",
+            "lines": 49,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/constants.ts",
+            "lines": 23,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-mesh-gpu-instancing/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-mesh-gpu-instancing/instanced-mesh.ts",
+            "lines": 61,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-mesh-gpu-instancing/mesh-gpu-instancing.ts",
+            "lines": 155,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-meshopt-compression/constants.ts",
+            "lines": 48,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-meshopt-compression/decoder.ts",
+            "lines": 18,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-meshopt-compression/encoder.ts",
+            "lines": 193,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-meshopt-compression/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-meshopt-compression/meshopt-compression.ts",
+            "lines": 425,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-texture-avif/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-texture-avif/texture-avif.ts",
+            "lines": 172,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-texture-webp/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/ext-texture-webp/texture-webp.ts",
+            "lines": 157,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/extensions.ts",
+            "lines": 77,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-draco-mesh-compression/decoder.ts",
+            "lines": 102,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-draco-mesh-compression/draco-mesh-compression.ts",
+            "lines": 461,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-draco-mesh-compression/encoder.ts",
+            "lines": 200,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-draco-mesh-compression/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-lights-punctual/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-lights-punctual/light.ts",
+            "lines": 176,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-lights-punctual/lights-punctual.ts",
+            "lines": 152,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-anisotropy/anisotropy.ts",
+            "lines": 104,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-anisotropy/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-anisotropy/materials-anisotropy.ts",
+            "lines": 133,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-clearcoat/clearcoat.ts",
+            "lines": 166,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-clearcoat/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-clearcoat/materials-clearcoat.ts",
+            "lines": 155,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-emissive-strength/emissive-strength.ts",
+            "lines": 44,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-emissive-strength/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-emissive-strength/materials-emissive-strength.ts",
+            "lines": 106,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-ior/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-ior/ior.ts",
+            "lines": 43,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-ior/materials-ior.ts",
+            "lines": 96,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-iridescence/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-iridescence/iridescence.ts",
+            "lines": 151,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-iridescence/materials-iridescence.ts",
+            "lines": 158,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-pbr-specular-glossiness/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-pbr-specular-glossiness/materials-pbr-specular-glossiness.ts",
+            "lines": 142,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-pbr-specular-glossiness/pbr-specular-glossiness.ts",
+            "lines": 152,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-sheen/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-sheen/materials-sheen.ts",
+            "lines": 140,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-sheen/sheen.ts",
+            "lines": 136,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-specular/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-specular/materials-specular.ts",
+            "lines": 140,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-specular/specular.ts",
+            "lines": 137,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-transmission/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-transmission/materials-transmission.ts",
+            "lines": 120,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-transmission/transmission.ts",
+            "lines": 82,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-unlit/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-unlit/materials-unlit.ts",
+            "lines": 85,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-unlit/unlit.ts",
+            "lines": 22,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-variants/index.ts",
+            "lines": 5,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-variants/mapping-list.ts",
+            "lines": 45,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-variants/mapping.ts",
+            "lines": 56,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-variants/materials-variants.ts",
+            "lines": 211,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-variants/variant.ts",
+            "lines": 21,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-volume/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-volume/materials-volume.ts",
+            "lines": 156,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-materials-volume/volume.ts",
+            "lines": 150,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-mesh-quantization/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-mesh-quantization/mesh-quantization.ts",
+            "lines": 61,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-texture-basisu/index.ts",
+            "lines": 2,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-texture-basisu/texture-basisu.ts",
+            "lines": 177,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-texture-transform/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-texture-transform/texture-transform.ts",
+            "lines": 98,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-texture-transform/transform.ts",
+            "lines": 66,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-xmp-json-ld/index.ts",
+            "lines": 3,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-xmp-json-ld/packet.ts",
+            "lines": 183,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/extensions/src/khr-xmp-json-ld/xmp.ts",
+            "lines": 222,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/package.json",
+            "lines": 57,
+            "verdict": "reference",
+            "portedTo": ""
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/center.ts",
+            "lines": 73,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/clean-primitive.ts",
+            "lines": 33,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/clear-node-parent.ts",
+            "lines": 42,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/clear-node-transform.ts",
+            "lines": 53,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/dedup.ts",
+            "lines": 346,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/dequantize.ts",
+            "lines": 66,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/draco.ts",
+            "lines": 60,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/flatten.ts",
+            "lines": 96,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/get-node-scene.ts",
+            "lines": 8,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/index.ts",
+            "lines": 92,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/inspect.ts",
+            "lines": 320,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/instance.ts",
+            "lines": 168,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/join-primitives.ts",
+            "lines": 134,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/join.ts",
+            "lines": 245,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/list-node-scenes.ts",
+            "lines": 35,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/list-texture-channels.ts",
+            "lines": 70,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/list-texture-info.ts",
+            "lines": 35,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/list-texture-slots.ts",
+            "lines": 23,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/meshopt.ts",
+            "lines": 76,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/metal-rough.ts",
+            "lines": 128,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/normals.ts",
+            "lines": 95,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/partition.ts",
+            "lines": 123,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/prune.ts",
+            "lines": 276,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/quantize.ts",
+            "lines": 499,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/reorder.ts",
+            "lines": 134,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/resample.ts",
+            "lines": 162,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/sequence.ts",
+            "lines": 87,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/simplify.ts",
+            "lines": 176,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/sort-primitive-weights.ts",
+            "lines": 210,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/sparse.ts",
+            "lines": 77,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/tangents.ts",
+            "lines": 162,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/texture-compress.ts",
+            "lines": 282,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/texture-resize.ts",
+            "lines": 120,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/transform-mesh.ts",
+            "lines": 78,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/transform-primitive.ts",
+            "lines": 138,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/types/.gitkeep",
+            "lines": 1,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/unlit.ts",
+            "lines": 15,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/unpartition.ts",
+            "lines": 47,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/unweld.ts",
+            "lines": 91,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/utils.ts",
+            "lines": 238,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/vertex-color-space.ts",
+            "lines": 83,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          },
+          {
+            "path": "archive/gltftransform/packages/functions/src/weld.ts",
+            "lines": 383,
+            "verdict": "ported",
+            "portedTo": "vendor/gltf-transform/* (ESM) → transform/desk.mjs"
+          }
+        ]
+      }
+    ]
+  }
+}

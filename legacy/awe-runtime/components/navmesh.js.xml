@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="legacy/awe-runtime/components/navmesh.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>legacy-reflection</kind>
+  <github sha="0dcefd6a9c30638cfee127cb6bda380f71195d8c" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="frozen">
+    <how>The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.</how>
+    <why>Legacy mode is a reflection of the oncyber work, kept pristine.</why>
+  </migration>
+</doc>

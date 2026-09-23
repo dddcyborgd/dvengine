@@ -1,0 +1,153 @@
+{
+  "count": 37,
+  "components": [
+    {
+      "file": "audio.js",
+      "type": "audio"
+    },
+    {
+      "file": "avatar.js",
+      "type": "avatar"
+    },
+    {
+      "file": "background.js",
+      "type": "background"
+    },
+    {
+      "file": "batch.js",
+      "type": "batch"
+    },
+    {
+      "file": "bird.js",
+      "type": "bird"
+    },
+    {
+      "file": "camera.js",
+      "type": "camera"
+    },
+    {
+      "file": "cloud.js",
+      "type": "cloud"
+    },
+    {
+      "file": "destination.js",
+      "type": "destination"
+    },
+    {
+      "file": "dialog.js",
+      "type": "dialog"
+    },
+    {
+      "file": "dust.js",
+      "type": "dust"
+    },
+    {
+      "file": "envmap.js",
+      "type": "envmap"
+    },
+    {
+      "file": "fog.js",
+      "type": "fog"
+    },
+    {
+      "file": "godray.js",
+      "type": "godray"
+    },
+    {
+      "file": "grass.js",
+      "type": "grass"
+    },
+    {
+      "file": "group.js",
+      "type": "group"
+    },
+    {
+      "file": "iframe.js",
+      "type": "iframe"
+    },
+    {
+      "file": "image.js",
+      "type": "image"
+    },
+    {
+      "file": "impact.js",
+      "type": "impact"
+    },
+    {
+      "file": "instancedmesh.js",
+      "type": "instancedmesh"
+    },
+    {
+      "file": "interaction.js",
+      "type": "interaction"
+    },
+    {
+      "file": "lighting.js",
+      "type": "lighting"
+    },
+    {
+      "file": "mesh.js",
+      "type": "mesh"
+    },
+    {
+      "file": "model.js",
+      "type": "model"
+    },
+    {
+      "file": "navmesh.js",
+      "type": "navmesh"
+    },
+    {
+      "file": "object.js",
+      "type": "object"
+    },
+    {
+      "file": "particles.js",
+      "type": "particles"
+    },
+    {
+      "file": "postprocessing.js",
+      "type": "postprocessing"
+    },
+    {
+      "file": "quarks.js",
+      "type": "quarks"
+    },
+    {
+      "file": "rain.js",
+      "type": "rain"
+    },
+    {
+      "file": "reflector.js",
+      "type": "reflector"
+    },
+    {
+      "file": "spline.js",
+      "type": "spline"
+    },
+    {
+      "file": "terrain.js",
+      "type": "terrain"
+    },
+    {
+      "file": "text.js",
+      "type": "text"
+    },
+    {
+      "file": "video.js",
+      "type": "video"
+    },
+    {
+      "file": "vrmanims.js",
+      "type": "vrmanims"
+    },
+    {
+      "file": "water.js",
+      "type": "water"
+    },
+    {
+      "file": "wave.js",
+      "type": "wave"
+    }
+  ]
+}

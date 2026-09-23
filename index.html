@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dvengine — Legacy · Verse</title>
+<meta name="description" content="dvengine demo: the awe legacy reflection and the DeltaVerse verse — a cyborg space with zones, portals, the pieces ring, and the aivatars.">
+<style>
+  :root { --bg:#070912; --ink:#eef2ff; --dim:#9aa4b2; --primary:#8b5cf6; --accent:#22d3ee; --gold:#f5c451; --agent:#ff7ac8; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:14px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; overflow:hidden; }
+  #cv { position:fixed; inset:0; width:100%; height:100%; display:block; }
+  #hud { position:fixed; left:12px; top:12px; display:flex; flex-direction:column; gap:8px; max-width:min(92vw, 420px); z-index:5; }
+  .card { background:rgba(7,9,18,.82); border:1px solid rgba(139,92,246,.45); border-radius:10px; padding:10px 12px; backdrop-filter: blur(6px); }
+  .row { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+  button, select, input { font:inherit; color:var(--ink); background:#0f1424; border:1px solid rgba(34,211,238,.4); border-radius:6px; padding:5px 9px; }
+  button { cursor:pointer; } button.on { border-color:var(--gold); color:var(--gold); } button:disabled { opacity:.5; cursor:default; }
+  input { min-width:0; flex:1 1 160px; }
+  .dim { color:var(--dim); } .gold { color:var(--gold); } .accent { color:var(--accent); } .agent { color:var(--agent); }
+  #log { max-height:32vh; overflow:auto; white-space:pre-wrap; font-size:12px; }
+  #hint { position:fixed; right:12px; bottom:12px; color:var(--dim); font-size:12px; text-align:right; z-index:5; }
+  .dv-senses-btn { position:fixed; right:12px; top:12px; z-index:6; }
+  a { color:var(--accent); }
+  @media (max-width: 640px) { #hud { max-width:calc(100vw - 24px); } #log { max-height:22vh; } }
+</style>
+<script type="importmap">{ "imports": { "three": "./vendor/three/build/three.module.min.js", "three/addons/": "./vendor/three/addons/" } }</script>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<div id="hud">
+  <div class="card">
+    <div class="row">
+      <strong class="gold">dvengine</strong><span class="dim">· three.js r182 · cyborg-space/1</span>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <button id="btnLegacy">Legacy</button>
+      <button id="btnVerse" class="on">Verse</button>
+      <select id="spaceSel">
+        <option value="agora">agora · public</option><option value="journal">journal · member</option><option value="dojo">dojo · player</option>
+        <option value="boardroom">boardroom · overseer</option><option value="treasury">treasury · overseer</option><option value="warcouncil">warcouncil · overlord</option><option value="sanctum">sanctum · overlord</option>
+      </select>
+      <button id="btnEnter">enter</button>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <input id="wsUrl" placeholder="ws://localhost:8790/ws" value="">
+      <input id="claim" placeholder="paste a login333 claim (base64url.sig)">
+      <button id="btnConnect">connect</button>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <span id="status" class="dim">idle</span>
+    </div>
+  </div>
+  <div class="card" id="log"></div>
+</div>
+<div id="hint">WASD / arrows walk · Shift runs · drag orbits · wheel zooms · click an aivatar to focus (ArcballControls) · Esc unfocus · step into a portal ring</div>
+
+<!-- engine + scene document + legacy loader -->
+<script src="./engine/index.js"></script>
+<script src="./engine/scene.js"></script>
+<script src="./engine/legacy.js"></script>
+<!-- the 37 awe ports, eager for the demo (DVEngine.lazy loads them on demand otherwise) -->
+<script src="./components/audio/index.js"></script>
+<script src="./components/avatar/index.js"></script>
+<script src="./components/background/index.js"></script>
+<script src="./components/batch/index.js"></script>
+<script src="./components/bird/index.js"></script>
+<script src="./components/camera/index.js"></script>
+<script src="./components/cloud/index.js"></script>
+<script src="./components/destination/index.js"></script>
+<script src="./components/dialog/index.js"></script>
+<script src="./components/dust/index.js"></script>
+<script src="./components/envmap/index.js"></script>
+<script src="./components/fog/index.js"></script>
+<script src="./components/godray/index.js"></script>
+<script src="./components/grass/index.js"></script>
+<script src="./components/group/index.js"></script>
+<script src="./components/iframe/index.js"></script>
+<script src="./components/image/index.js"></script>
+<script src="./components/impact/index.js"></script>
+<script src="./components/instancedmesh/index.js"></script>
+<script src="./components/interaction/index.js"></script>
+<script src="./components/lighting/index.js"></script>
+<script src="./components/mesh/index.js"></script>
+<script src="./components/model/index.js"></script>
+<script src="./components/navmesh/index.js"></script>
+<script src="./components/object/index.js"></script>
+<script src="./components/particles/index.js"></script>
+<script src="./components/postprocessing/index.js"></script>
+<script src="./components/quarks/index.js"></script>
+<script src="./components/rain/index.js"></script>
+<script src="./components/reflector/index.js"></script>
+<script src="./components/spline/index.js"></script>
+<script src="./components/terrain/index.js"></script>
+<script src="./components/text/index.js"></script>
+<script src="./components/video/index.js"></script>
+<script src="./components/vrmanims/index.js"></script>
+<script src="./components/water/index.js"></script>
+<script src="./components/wave/index.js"></script>
+<!-- the DeltaVerse components (verse/arcball.math.js first: the aivatar's arm reads it at use time) -->
+<script src="./verse/arcball.math.js"></script>
+<script src="./components/substrate/index.js"></script>
+<script src="./components/portal/index.js"></script>
+<script src="./components/zone/index.js"></script>
+<script src="./components/piece/index.js"></script>
+<script src="./components/aivatar/index.js"></script>
+<script src="./components/thot-memory/index.js"></script>
+<script src="./components/participant/index.js"></script>
+<script src="./components/remote-participant/index.js"></script>
+<!-- net · xr · verse -->
+<script src="./net/interp.js"></script>
+<script src="./net/index.js"></script>
+<script src="./net/peer.js"></script>
+<script src="./net/host.js"></script>
+<script src="./xr/probe.js"></script>
+<script src="./xr/teleport.js"></script>
+<script src="./verse/rung.js"></script>
+<script src="./verse/world.js"></script>
+<script src="./verse/camera.js"></script>
+<script src="./verse/senses.js"></script>
+<script src="./verse/journey.js"></script>
+<script src="./verse/holdings.js"></script>
+<script src="./verse/inft.js"></script>
+<script src="./verse/thot.js"></script>
+<script src="./verse/index.js"></script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { ArcballControls } from 'three/addons/controls/ArcballControls.js';
+  import { TransformControls } from 'three/addons/controls/TransformControls.js';
+  import { VRButton } from 'three/addons/webxr/VRButton.js';
+  import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+  window.THREE = THREE; window.OrbitControls = OrbitControls; window.ArcballControls = ArcballControls; window.TransformControls = TransformControls; window.VRButton = VRButton; window.RoomEnvironment = RoomEnvironment;
+
+  const $ = (id) => document.getElementById(id);
+  const logEl = $('log'), statusEl = $('status');
+  const log = (s, cls) => { const d = document.createElement('div'); if (cls) d.className = cls; d.textContent = s; logEl.prepend(d); while (logEl.childNodes.length > 60) logEl.lastChild.remove(); };
+  const status = (s) => { statusEl.textContent = s; };
+  let mode = 'verse', verse = null, legacySpace = null;
+
+  DVXR.probe().then((p) => log('probe · webgpu ' + p.webgpu + ' · vr ' + p.vr + ' · ar ' + p.ar, 'dim'));
+  log('optional globals present: ' + DVVerse.optionalGlobals.filter((g) => !!window[g]).join(' ') || 'none', 'dim');
+
+  function teardown() {
+    if (verse) { try { verse.leave(); } catch (e) {} verse = null; }
+    if (legacySpace) { try { legacySpace.dispose(); } catch (e) {} legacySpace = null; }
+    document.querySelectorAll('.dv-senses-btn').forEach((b) => b.remove());
+  }
+  async function enterVerse() {
+    teardown(); mode = 'verse';
+    const spaceId = $('spaceSel').value, claim = $('claim').value.trim() || undefined, url = $('wsUrl').value.trim() || undefined;
+    status('entering ' + spaceId + '…');
+    const ident = DVVerse.rung.identify(claim);
+    log('claim → rung ' + ident.rung + ' (' + ident.rank + ')' + (ident.expired ? ' EXPIRED' : '') + ' · decoded only, the anchor verifies', 'dim');
+    try {
+      verse = await DVVerse.enter({ canvas: $('cv'), spaceId, claim, net: url ? { url, name: ident.name || 'participant', avatar: { kind: 'primitive', seed: 11 } } : null, senses: true, xr: true, host: document.body });
+    } catch (e) { status('failed: ' + e.message); log('enter failed: ' + e.message, 'agent'); return; }
+    status(spaceId + ' · rung ' + verse.rung + ' (' + verse.rank + ')' + (verse.theme && verse.theme.id ? ' · theme ' + verse.theme.id : '') + (url ? ' · net ' + url : ' · offline'));
+    verse.on('ready', (r) => log('ready · agents ' + r.agents.join(',') + ' · zones ' + r.zones.length + ' · skipped ' + r.skipped.length, 'accent'));
+    verse.on('zone', (z) => log((z.inside ? '→ ' : '← ') + z.id + (z.locked ? ' (veiled: ' + z.minRole + ')' : ''), 'dim'));
+    verse.on('portal', (p) => log('portal → ' + p.to + (p.locked ? ' LOCKED (needs ' + p.minRole + ')' : ''), p.locked ? 'agent' : 'gold'));
+    verse.on('focus', (f) => log(f.id ? 'focus ' + f.id + ' · ArcballControls' : 'unfocus · third-person', 'accent'));
+    verse.on('say', (m) => log(m.agent + ': ' + m.text + ' [' + (m.emotion || '') + ']', 'agent'));
+    verse.on('voucher', (v) => log(DVVerse.describeVoucher(v), 'gold'));
+    verse.on('triad', (t) => log('triad · role ' + t.role + ' · host ' + (t.host || '-') + ' · peers ' + (t.peers || []).length, 'accent'));
+    verse.on('host', (h) => log('host · ' + h.status + (h.extra && h.extra.reason ? ' (' + h.extra.reason + ')' : ''), 'dim'));
+    verse.on('welcome', (w) => log('welcome · ' + w.sessionId + ' · rung ' + w.rung + ' ' + w.rank + (w.insecure ? ' · INSECURE anchor' : ''), 'gold'));
+    verse.on('denied', (d) => log('denied · ' + d.reason + ' (min ' + d.minRole + ')', 'agent'));
+    verse.on('error', (e) => log('net · ' + (e.code || '') + ' ' + (e.message || ''), 'agent'));
+    verse.on('senses', (s) => log('senses · ' + JSON.stringify(s), 'dim'));
+    verse.on('stage', (s) => log('stage · ' + s.stage, 'gold'));
+    // the local agents speak on a slow loop when offline (the anchor drives `say` when connected)
+    if (!url) { const ids = Object.keys(verse.agents); let i = 0; verse._sayT = setInterval(() => { if (!verse || !ids.length) return; const id = ids[i++ % ids.length], a = verse.agents[id], lines = (verse.doc.agents.find((x) => x.id === id) || {}).say || []; if (lines.length) a.say(lines[Math.floor(Math.random() * lines.length)], ['calm', 'curious', 'joy'][i % 3]); }, 9000); verse.on('left', () => clearInterval(verse._sayT)); }
+  }
+  async function enterLegacy() {
+    teardown(); mode = 'legacy';
+    status('legacy · awe static-scene.json…');
+    legacySpace = DVEngine.Space($('cv'), { controls: true });
+    try { const s = await DVLegacyScene.mount(legacySpace, './legacy/static-scene.json'); legacySpace.start(); status('legacy · mounted ' + s.mounted.length + ' · skipped ' + s.skipped.length); s.skipped.forEach((k) => log('skipped ' + k.id + ' (' + k.type + '): ' + k.reason, 'dim')); }
+    catch (e) { status('legacy failed: ' + e.message); }
+  }
+  $('btnVerse').onclick = () => { $('btnVerse').classList.add('on'); $('btnLegacy').classList.remove('on'); enterVerse(); };
+  $('btnLegacy').onclick = () => { $('btnLegacy').classList.add('on'); $('btnVerse').classList.remove('on'); enterLegacy(); };
+  $('btnEnter').onclick = () => (mode === 'legacy' ? enterLegacy() : enterVerse());
+  $('btnConnect').onclick = () => { if (!$('wsUrl').value.trim()) $('wsUrl').value = 'ws://localhost:8790/ws'; enterVerse(); };
+  enterVerse();
+</script>
+</body>
+</html>

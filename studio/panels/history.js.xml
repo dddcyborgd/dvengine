@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="studio/panels/history.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-studio</kind>
+  <github sha="fa034f165d57e336d1a8070205a73a9b5392353e" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVStudio: framework-free editor panels over DVScene + DVTransform.</how>
+    <why>The awe studio was React/Next; the concepts were kept, the framework was not.</why>
+  </migration>
+</doc>

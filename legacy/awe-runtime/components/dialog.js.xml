@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="legacy/awe-runtime/components/dialog.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>legacy-reflection</kind>
+  <github sha="f45b3d3d427bccb1c69d44e1d4297e91fde56f7c" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="frozen">
+    <how>The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.</how>
+    <why>Legacy mode is a reflection of the oncyber work, kept pristine.</why>
+  </migration>
+</doc>

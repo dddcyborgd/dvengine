@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="transform/gates.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>asset-desk</kind>
+  <github sha="170501e36aa8fba0d05daec2d74166a673c7dc05" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>Node asset desk over vendored gltf-transform; gate table reports pure-JS / wasm / native honestly.</how>
+    <why>Optimisation is offline tooling, never shipped to the client.</why>
+  </migration>
+</doc>

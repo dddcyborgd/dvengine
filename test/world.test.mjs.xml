@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="test/world.test.mjs" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>node</lane>
+  <kind>test</kind>
+  <github sha="2a8407bfd892e908f9f936c2a9c3413c1f482e3d" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-mjs" status="live">
+    <how>node --test.</how>
+    <why>No test framework dependency.</why>
+  </migration>
+</doc>

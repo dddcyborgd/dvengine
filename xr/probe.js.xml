@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="xr/probe.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>dvengine-xr</kind>
+  <github sha="b6f57f00c89e6e412092eb64470b28eb31ea8281" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="live">
+    <how>DVXR: WebGPU/WebXR probes and teleport (from nGn/cycle.html + interaction/gallery-room.html).</how>
+    <why>Capability cards instead of blank frames.</why>
+  </migration>
+</doc>

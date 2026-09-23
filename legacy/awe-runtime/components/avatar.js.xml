@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc for="legacy/awe-runtime/components/avatar.js" repo="dddcyborgd/dvengine" generatedBy="scripts/doc-js.mjs">
+  <lane>prototype</lane>
+  <kind>legacy-reflection</kind>
+  <github sha="415dd14b912859d35a04e4f120be642d35f5822f" upstream="https://github.com/dddcyborgd/dvengine"/>
+  <migration target="stays-js" status="frozen">
+    <how>The faithful oncyber reflection (AweRuntime copy + static-scene). Do not refine here.</how>
+    <why>Legacy mode is a reflection of the oncyber work, kept pristine.</why>
+  </migration>
+</doc>
