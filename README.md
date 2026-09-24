@@ -9,6 +9,7 @@
 - https://github.com/oncyberio/gltftransform ← a fork of https://github.com/donmccurdy/glTF-Transform by Don McCurdy (the transform desk's core, MIT)
 - https://threejs.org r182, including `ArcballControls` (the focus camera around an aivatar)
 - the DeltaVerse — https://github.com/AgenticPlace/DeltaVerse (the consumer; nGn substrates, login333, bubblerooms, iNFT/THOT)
+- [cyborg-shell](https://github.com/dddcyborgd/cyborg-shell) — the **client delivery**: the Tauri v2 shell this engine is carried to a desktop or handheld inside. dvengine is what runs in its webview, and what becomes the host when a participant serves their space to peers.
 
 ## The posture (clean-room)
 
